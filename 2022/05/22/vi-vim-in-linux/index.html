@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="FPGA Game Machine Project, Home - Junyi Liang">
-    <meta name="description" content="A game machine which implements the phone game Piano Tiles by FPGA.">
+    <meta name="keywords" content="Vi &amp; Vim in Linux, Home - Junyi Liang">
+    <meta name="description" content="Basic knowledge about Vi &amp; Vim in Linux">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>FPGA Game Machine Project | Home - Junyi Liang</title>
+    <title>Vi &amp; Vim in Linux | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/18/D7TSjqg4pksxm3a.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">FPGA Game Machine Project</h1>
+                    <h1 class="description center-align post-title">Vi &amp; Vim in Linux</h1>
                 </div>
             </div>
         </div>
@@ -386,24 +386,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/liangjunyi.github.io/tags/FPGA/">
-                                <span class="chip bg-color">FPGA</span>
+                            <a href="/liangjunyi.github.io/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
                             </a>
                         
-                            <a href="/liangjunyi.github.io/tags/Finite-State-Machine/">
-                                <span class="chip bg-color">Finite State Machine</span>
-                            </a>
-                        
-                            <a href="/liangjunyi.github.io/tags/Datapath/">
-                                <span class="chip bg-color">Datapath</span>
-                            </a>
-                        
-                            <a href="/liangjunyi.github.io/tags/Arithmetic-Logic-Unit-ALU/">
-                                <span class="chip bg-color">Arithmetic Logic Unit (ALU)</span>
-                            </a>
-                        
-                            <a href="/liangjunyi.github.io/tags/IO-control/">
-                                <span class="chip bg-color">IO control</span>
+                            <a href="/liangjunyi.github.io/tags/operating-system/">
+                                <span class="chip bg-color">operating system</span>
                             </a>
                         
                     </div>
@@ -414,8 +402,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/liangjunyi.github.io/categories/FPGA/" class="post-category">
-                                FPGA
+                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
+                                Linux
                             </a>
                         
                     </div>
@@ -427,28 +415,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    370
+                    358
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    1 Min
                 </div>
                 
 
@@ -471,124 +459,86 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Prezzer"><a href="#Prezzer" class="headerlink" title="Prezzer"></a>Prezzer</h1><h3 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h3><ul>
-<li>Tran Nguyen Bao Long</li>
-<li>Kat Yong Jie</li>
-<li>Liang Junyi</li>
-<li>Wang Zhuoran</li>
-<li>Lu Mingrui</li>
-<li>Han Jin</li>
-<li>Sun Zhengnan</li>
-<li>Yang Haocheng</li>
+                <h1 id="Vi-amp-Vim-in-Linux"><a href="#Vi-amp-Vim-in-Linux" class="headerlink" title="Vi &amp; Vim in Linux"></a>Vi &amp; Vim in Linux</h1><h2 id="basic-description-about-vi-amp-vim"><a href="#basic-description-about-vi-amp-vim" class="headerlink" title="basic description about vi &amp; vim"></a>basic description about vi &amp; vim</h2><p>vi is Linux built in text editor</p>
+<p>vim is the enhanced version to vi, can do program</p>
+<h2 id="three-patterns-by-vi-amp-vim"><a href="#three-patterns-by-vi-amp-vim" class="headerlink" title="three patterns by vi &amp; vim"></a>three patterns by vi &amp; vim</h2><ul>
+<li>normal pattern 正常模式<ul>
+<li>can not edit in this pattern</li>
 </ul>
-<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>For our 50.002 project, we have created a single-player game called Prezzer. The objective of the game is to score the highest amount of points possible before the 30 seconds count down and avoid pressing the wrong button.</p>
-<p>This is a game whereby the player must observe a matrix of LED lights, this LED matrix consists of three columns and four rows and there are 3 different coloured lights: red, green and blue player need to press different times to clear different color LED: red 3 times, green 2 times and red 1 times, and each row only lights one LED, Player need to press the right buttons based on the LED light at the lowest level with the corresponding colors and position.</p>
-<p>The coloured LED will move down after we press the button correctly from the top to the bottom. If the player presses the wrong button. The game ends if the player presses the wrong button or runs out of time, and the final score will be displayed on the 7 seg on the top left of the game and time left will be displayed on the 7 seg on the top right of the game.</p>
-<h3 id="How-to-play"><a href="#How-to-play" class="headerlink" title="How to play"></a>How to play</h3><ol>
-<li>Press RESET button to start</li>
-<li>Colored tiles will be randomly generated on the three columns</li>
-<li>Press button below corresponding column</li>
-<li>Clear as many tiles as you can within 30 seconds and get the max score</li>
-<li>Pressing a button for the wrong column will mean game over.</li>
-</ol>
-<h3 id="Tiles-scores"><a href="#Tiles-scores" class="headerlink" title="Tiles scores"></a>Tiles scores</h3><ul>
-<li>Red: 3 presses &#x3D; 3 points</li>
-<li>Green: 2 presses &#x3D; 2 points</li>
-<li>Blue: 1 press &#x3D; 1 point</li>
+</li>
+<li>edit pattern 编辑模式</li>
+<li>cmd line pattern 命令行模式</li>
 </ul>
-<p>Red turns to Green turns to Blue CLEAR for each correct press</p>
-<h3 id="ALU-Function"><a href="#ALU-Function" class="headerlink" title="ALU Function"></a>ALU Function</h3><table>
-<thead>
-<tr>
-<th>Operation</th>
-<th>ALUFN</th>
-<th>Decimal</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ADD</td>
-<td>0000</td>
-<td>0</td>
-</tr>
-<tr>
-<td>SUB</td>
-<td>0001</td>
-<td>1</td>
-</tr>
-<tr>
-<td>MUL (extra)</td>
-<td>0010</td>
-<td>2</td>
-</tr>
-<tr>
-<td>CMPEQ</td>
-<td>0011</td>
-<td>3</td>
-</tr>
-<tr>
-<td>CMPLT</td>
-<td>0100</td>
-<td>4</td>
-</tr>
-<tr>
-<td>CMPLE</td>
-<td>0101</td>
-<td>5</td>
-</tr>
-<tr>
-<td>AND</td>
-<td>0110</td>
-<td>6</td>
-</tr>
-<tr>
-<td>OR</td>
-<td>0111</td>
-<td>7</td>
-</tr>
-<tr>
-<td>XOR</td>
-<td>1000</td>
-<td>8</td>
-</tr>
-<tr>
-<td>A</td>
-<td>1001</td>
-<td>9</td>
-</tr>
-<tr>
-<td>SHL</td>
-<td>1010</td>
-<td>10</td>
-</tr>
-<tr>
-<td>SHR</td>
-<td>1011</td>
-<td>11</td>
-</tr>
-<tr>
-<td>SRA</td>
-<td>1100</td>
-<td>12</td>
-</tr>
-<tr>
-<td>SHD(extra)</td>
-<td>1101</td>
-<td>13</td>
-</tr>
-<tr>
-<td>B(extra)</td>
-<td>1110</td>
-<td>14</td>
-</tr>
-<tr>
-<td>ENQ(extra)</td>
-<td>1111</td>
-<td>15</td>
-</tr>
-</tbody></table>
-<h3 id="Finite-State-Machine"><a href="#Finite-State-Machine" class="headerlink" title="Finite State Machine"></a>Finite State Machine</h3><p><img src="https://s2.loli.net/2022/05/18/9SUiIrtzADcaMw3.png" alt="image-20220518162522273"></p>
-<h3 id="Datapath"><a href="#Datapath" class="headerlink" title="Datapath"></a>Datapath</h3><p><img src="https://s2.loli.net/2022/05/18/WgMfF9HcGOLhiDV.png" alt="image-20220518162707353"></p>
-<h3 id="Game-Video"><a href="#Game-Video" class="headerlink" title="Game Video"></a>Game Video</h3><p><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1I1gZKp6AiTt99a2aXB55q5OHeVtaDIEL">https://drive.google.com/drive/folders/1I1gZKp6AiTt99a2aXB55q5OHeVtaDIEL</a></p>
+<h2 id="operating-process"><a href="#operating-process" class="headerlink" title="operating process"></a>operating process</h2><h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> Hello.java<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://s2.loli.net/2022/05/22/OVQKMnNU3glEbr4.png" alt="image-20220522170231266"></p>
+<p>by this command, we go to normal pattern, from our command line</p>
+<p><img src="https://s2.loli.net/2022/05/22/uq4t2XNYa8Gw5Eg.png" alt="image-20220522170425702"></p>
+<h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">type</span> i <span class="token comment"># 摁下i</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>now we are in edit pattern</p>
+<p><img src="https://s2.loli.net/2022/05/22/mxjYWdJ3VzeSR5T.png" alt="image-20220522170558960"></p>
+<p>we can write our file here</p>
+<h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><p>After editing</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">we <span class="token builtin class-name">type</span> esc first  <span class="token comment"># 摁下esc</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>now we leave the edit pattern and go to normal pattern now</p>
+<p><img src="https://s2.loli.net/2022/05/22/KIrTDZzySEfCpxU.png" alt="image-20220522171432159"></p>
+<p>then type</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">:wq <span class="token comment"># write(save) and quit</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://s2.loli.net/2022/05/22/oNIKehzbUL4MClr.png" alt="image-20220522172138024"></p>
+<p><img src="https://s2.loli.net/2022/05/22/Is7E4atN6PTzmR8.png" alt="image-20220522171815264"></p>
+<h4 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h4><p>if you want edit this file again</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> Hello.java<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://s2.loli.net/2022/05/22/JHtj6Lavx9fTqWB.png" alt="image-20220522172027683"></p>
+<h2 id="how-to-change-vi-amp-vim"><a href="#how-to-change-vi-amp-vim" class="headerlink" title="how to change vi &amp; vim"></a>how to change vi &amp; vim</h2><p><img src="https://s2.loli.net/2022/05/22/5TQscPwDxLqnR3I.png" alt="image-20220522165131419"></p>
+<h2 id="shortcut-key-words-快捷键"><a href="#shortcut-key-words-快捷键" class="headerlink" title="shortcut key words 快捷键"></a>shortcut key words 快捷键</h2><h4 id="under-normal-pattern-copy-and-paste"><a href="#under-normal-pattern-copy-and-paste" class="headerlink" title="under normal pattern : copy and paste"></a>under normal pattern : copy and paste</h4><ul>
+<li>copy current line : yy</li>
+<li>paste : p<ul>
+<li>copy 5 line below current line : 5yy 包括复制当前行</li>
+</ul>
+</li>
+<li>delete current line : dd<ul>
+<li>delete 5 line below current line : 5dd 包括删除当前行</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>these are under normal pattern, if you are in edit pattern, it will just type yy in the file</p>
+</blockquote>
+<h4 id="search-a-word-in-the-file"><a href="#search-a-word-in-the-file" class="headerlink" title="search a word in the file"></a>search a word in the file</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/hello<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">type</span> enter <span class="token comment"># 摁下回车开始查找</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">type</span> n <span class="token comment"># 下一个，查到最后一个单词则回到开头</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="set-number-for-line"><a href="#set-number-for-line" class="headerlink" title="set number for line"></a>set number for line</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">:</span> <span class="token builtin class-name">set</span> nu <span class="token comment"># 设置行号</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://s2.loli.net/2022/05/22/bqmNxlnLCo5ZEhB.png" alt="image-20220522173207087"></p>
+<p><img src="https://s2.loli.net/2022/05/22/9tnNXgimkxzyuTY.png" alt="image-20220522173412258"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">:</span> <span class="token builtin class-name">set</span> nonu <span class="token comment"># 取消行号</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="go-to-the-last-line-and-first-line"><a href="#go-to-the-last-line-and-first-line" class="headerlink" title="go to the last line and first line"></a>go to the last line and first line</h4><blockquote>
+<p>under normal pattern</p>
+</blockquote>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">G <span class="token comment"># go to last line</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gg <span class="token comment"># go to first line</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="undo"><a href="#undo" class="headerlink" title="undo"></a>undo</h4><p>at the normal pattern </p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">u <span class="token comment"># undo</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>if do some editions in edit pattern, can type esc go to normal pattern, then type u to undo all the editions you did just now</p>
+</blockquote>
+<h4 id="move-the-cursor"><a href="#move-the-cursor" class="headerlink" title="move the cursor"></a>move the cursor</h4><p>at the normal pattern</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">20</span> <span class="token builtin class-name">shift</span> g <span class="token comment"># move to the 20th line</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>有可能键盘因为摁完shift后变成中文输入法，可以采取的措施是打开大写输入</p>
+</blockquote>
 
                 
             </div>
@@ -615,7 +565,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/18/fpga-game-machine-project/">https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/18/fpga-game-machine-project/</a>
+                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -653,24 +603,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/liangjunyi.github.io/tags/FPGA/">
-                                    <span class="chip bg-color">FPGA</span>
+                                <a href="/liangjunyi.github.io/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
                                 </a>
                             
-                                <a href="/liangjunyi.github.io/tags/Finite-State-Machine/">
-                                    <span class="chip bg-color">Finite State Machine</span>
-                                </a>
-                            
-                                <a href="/liangjunyi.github.io/tags/Datapath/">
-                                    <span class="chip bg-color">Datapath</span>
-                                </a>
-                            
-                                <a href="/liangjunyi.github.io/tags/Arithmetic-Logic-Unit-ALU/">
-                                    <span class="chip bg-color">Arithmetic Logic Unit (ALU)</span>
-                                </a>
-                            
-                                <a href="/liangjunyi.github.io/tags/IO-control/">
-                                    <span class="chip bg-color">IO control</span>
+                                <a href="/liangjunyi.github.io/tags/operating-system/">
+                                    <span class="chip bg-color">operating system</span>
                                 </a>
                             
                         </div>
@@ -718,28 +656,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/">
+                <a href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/19/pQ9HRfLIcu3kV6Z.png" class="responsive-img" alt="Open an app in Linux">
+                        <img src="https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png" class="responsive-img" alt="Vi &amp; Vim in Linux">
                         
-                        <span class="card-title">Open an app in Linux</span>
+                        <span class="card-title">Vi &amp; Vim in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Open an app in Linux by using command line
+                            Basic knowledge about Vi & Vim in Linux
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -752,6 +691,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -774,30 +714,30 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/18/android-app-project/">
+                <a href="/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/18/JLYfhcdEkR4xa9Z.jpg" class="responsive-img" alt="Android App">
+                        <img src="https://s2.loli.net/2022/05/19/pQ9HRfLIcu3kV6Z.png" class="responsive-img" alt="Open an app in Linux">
                         
-                        <span class="card-title">Android App</span>
+                        <span class="card-title">Open an app in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            A POC Recipe Android Application using Google Mediapipe Hands Tracking model for smart touchless scrolling.
+                            Open an app in Linux by using command line
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/Android/" class="post-category">
-                                    Android
+                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
@@ -807,20 +747,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liangjunyi.github.io/tags/Android-app-development/">
-                        <span class="chip bg-color">Android app development</span>
+                    <a href="/liangjunyi.github.io/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
-                    <a href="/liangjunyi.github.io/tags/Design-patterns/">
-                        <span class="chip bg-color">Design patterns</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/Data-Base/">
-                        <span class="chip bg-color">Data Base</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/Hand-Detection/">
-                        <span class="chip bg-color">Hand Detection</span>
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
                     </a>
                     
                 </div>
