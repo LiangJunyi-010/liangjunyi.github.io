@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Set password for root</title>
+      <link href="/liangjunyi.github.io/2022/05/22/set-password-for-root/"/>
+      <url>/liangjunyi.github.io/2022/05/22/set-password-for-root/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux-set-root-password"><a href="#Linux-set-root-password" class="headerlink" title="Linux set root password"></a>Linux set root password</h1><ol><li><pre><code class="bash">sudo passwd root</code></pre></li><li><p>enter user’s password</p></li><li><p>enter the root password that you want set</p></li><li><p>reenter root password</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Shutdown Restart and Logout</title>
       <link href="/liangjunyi.github.io/2022/05/22/shutdown-restart-and-logout/"/>
       <url>/liangjunyi.github.io/2022/05/22/shutdown-restart-and-logout/</url>
