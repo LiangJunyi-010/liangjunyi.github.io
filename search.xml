@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Shutdown Restart and Logout</title>
+      <link href="/liangjunyi.github.io/2022/05/22/shutdown-restart-and-logout/"/>
+      <url>/liangjunyi.github.io/2022/05/22/shutdown-restart-and-logout/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Shutdown-Restart-and-Logout"><a href="#Shutdown-Restart-and-Logout" class="headerlink" title="Shutdown Restart and Logout"></a>Shutdown Restart and Logout</h1><h2 id="Shutdown-amp-Restart"><a href="#Shutdown-amp-Restart" class="headerlink" title="Shutdown &amp; Restart"></a>Shutdown &amp; Restart</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">shutdown</span> -h now <span class="token comment"># 立即进行关机</span><span class="token function">shutdown</span> -h <span class="token number">1</span> <span class="token comment"># 1分钟后关机</span><span class="token function">shutdown</span> -r now <span class="token comment"># 立刻重启计算机</span><span class="token function">halt</span> <span class="token comment"># 关机，同上</span><span class="token function">reboot</span> <span class="token comment"># 重启，同上</span><span class="token function">sync</span> <span class="token comment"># 吧内存数据同步到磁盘</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>recommend type sync every time before shutdown</p></blockquote><h2 id="Login-and-Logout"><a href="#Login-and-Logout" class="headerlink" title="Login and Logout"></a>Login and Logout</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">su</span> - root <span class="token comment"># 切换成管理员</span><span class="token function">su</span> - username <span class="token comment"># 切换用户</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">logout</span> <span class="token comment"># 注销用户</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><p>current user is Tom, go to root.</p><p>Then logout at root, it will go back to Tom.</p><p>Then logout again, it will shutdown.</p><h3 id="Notice"><a href="#Notice" class="headerlink" title="Notice"></a>Notice</h3><p>It will different when you operate this in Linux and in xshell.</p><p>In Linux, there is no logout for Tom.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vi &amp; Vim in Linux</title>
       <link href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/"/>
       <url>/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/</url>
