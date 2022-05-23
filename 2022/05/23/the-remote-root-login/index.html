@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="User management, Home - Junyi Liang">
-    <meta name="description" content="User management for add user, delete user, set user&#39;s permission">
+    <meta name="keywords" content="The remote root login, Home - Junyi Liang">
+    <meta name="description" content="Abled the remote root login">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>User management | Home - Junyi Liang</title>
+    <title>The remote root login | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/22/x29LSnfIKTvyZMQ.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/23/jSXcBLHiPJhWZdt.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">User management</h1>
+                    <h1 class="description center-align post-title">The remote root login</h1>
                 </div>
             </div>
         </div>
@@ -415,7 +415,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-22
+                    2022-05-23
                 </div>
                 
 
@@ -429,7 +429,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    393
+                    30
                 </div>
                 
 
@@ -459,89 +459,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="User-management"><a href="#User-management" class="headerlink" title="User management"></a>User management</h1><h2 id="User-part"><a href="#User-part" class="headerlink" title="User part"></a>User part</h2><h3 id="Add-new-user"><a href="#Add-new-user" class="headerlink" title="Add new user"></a>Add new user</h3><ul>
-<li><p>Basic command line</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<blockquote>
-<p>此方法虽然添加了用户，但是有可能没有默认创建文件夹，如果没有创建</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>可以解决这个问题</p>
-<p>注意如果刚刚执行完上面的语句，需要先删除刚刚的user才能再次创建他，没有办法有两个同名的user</p>
-</blockquote>
-<h4 id="example"><a href="#example" class="headerlink" title="example :"></a>example :</h4><p><img src="https://s2.loli.net/2022/05/22/oFr1ltYL2G8jvOe.png" alt="image-20220522213056132"></p>
-<ul>
-<li><p>Example</p>
-<ul>
-<li>add a user <code>milan</code>, default user directory is &#x2F;home&#x2F;milan</li>
-</ul>
+                <ol>
+<li><p>install ssh service</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">ssh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li><p>detail</p>
-<ul>
-<li><p>when create user successful, auto create directory for user at same time</p>
+<li><p>edit config file</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> /etc/ssh/sshd_config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>change PermitRootLogin ‘s value into yes</p>
+<p><img src="https://s2.loli.net/2022/05/23/YunjedXmhZWDtgQ.png" alt="image-20220523200715794"></p>
 </li>
-<li><p>if we use </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -d The specified directory username <span class="token comment"># useradd -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li><p>restart ssh service</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/etc/init.d/ssh restart<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
 
-<p>also create a user but this user will use the specified directory instead of generating a new directory</p>
-<blockquote>
-<p>此方法同上</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m -d The specified directory username<span class="token comment"># useradd -m -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>可以解决这个问题</p>
-</blockquote>
-<p><img src="https://s2.loli.net/2022/05/22/18SibYR4H2WteVI.png" alt="image-20220522213953461"></p>
-<blockquote>
-<p>给创建的用户指定了家目录</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Set-password-for-new-user"><a href="#Set-password-for-new-user" class="headerlink" title="Set password for new user"></a>Set password for new user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">passwd</span> username <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>This operation also need under root </p>
-</blockquote>
-<h3 id="Delete-user"><a href="#Delete-user" class="headerlink" title="Delete user"></a>Delete user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>only delete this user</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> -r username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>Not only delete the user, but also delete the directory</p>
-<h3 id="Querying-User-Information"><a href="#Querying-User-Information" class="headerlink" title="Querying User Information"></a>Querying User Information</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">id</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h4 id="examples"><a href="#examples" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/8P9HBovYZbRr6es.png" alt="image-20220523174054780"></p>
-<p><img src="https://s2.loli.net/2022/05/23/QPJmgTs2dlwRVaC.png" alt="image-20220523174403469"></p>
-<h3 id="Switch-users"><a href="#Switch-users" class="headerlink" title="Switch users"></a>Switch users</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">su</span> - username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li><p>In Linux, if the current user has insufficient rights, you can switch to a user with higher right</p>
-</li>
-<li><p>A password is not required to change from a high-privilege user to a low-privilege user</p>
-</li>
-<li><p>Otherwise you need a password</p>
-</li>
-<li><p>To return to the original user, use the exit&#x2F;logout command</p>
-</li>
-</ul>
-<blockquote>
-<p>在操作linux中，如果当前权限不够，可以切换至更高权限的用户</p>
-<p>从高权限用户到低权限用户不需要密码</p>
-<p>反之需要密码</p>
-<p>如果想回到原来用户使用exit&#x2F;logout指令</p>
-</blockquote>
-<h4 id="examples-1"><a href="#examples-1" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/6EjAWvnoJelfF9Z.png" alt="image-20220523175242905"></p>
-<h3 id="Who-am-i"><a href="#Who-am-i" class="headerlink" title="Who am i"></a>Who am i</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">who</span> am i<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">whoami</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>it will show the initial login user’s information</p>
-<h4 id="examples-2"><a href="#examples-2" class="headerlink" title="examples :"></a>examples :</h4><p>i am at root currently, but it will show the init login user – liangjunyi</p>
-<p><img src="https://s2.loli.net/2022/05/23/uinKFQ4VG9EyYLS.png" alt="image-20220523180109271"></p>
-<p><img src="https://s2.loli.net/2022/05/23/bIhWSCz5QD3FrqP.png" alt="image-20220523180147131"></p>
-<h2 id="User-Group-part"><a href="#User-Group-part" class="headerlink" title="User Group part"></a>User Group part</h2><h3 id="Add-new-group"><a href="#Add-new-group" class="headerlink" title="Add new group"></a>Add new group</h3>
                 
             </div>
             <hr/>
@@ -567,7 +498,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/user-management/">https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/user-management/</a>
+                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/23/the-remote-root-login/">https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/23/the-remote-root-login/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -658,28 +589,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/22/shutdown-restart-and-logout/">
+                <a href="/liangjunyi.github.io/2022/05/23/the-remote-root-login/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/22/5jGtAqeYnwihW72.png" class="responsive-img" alt="Shutdown Restart and Logout">
+                        <img src="https://s2.loli.net/2022/05/23/jSXcBLHiPJhWZdt.png" class="responsive-img" alt="The remote root login">
                         
-                        <span class="card-title">Shutdown Restart and Logout</span>
+                        <span class="card-title">The remote root login</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Shutdown Restart and Logout by command line in Linux
+                            Abled the remote root login
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -692,6 +624,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -714,18 +647,18 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">
+                <a href="/liangjunyi.github.io/2022/05/22/set-password-for-root/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png" class="responsive-img" alt="Vi &amp; Vim in Linux">
+                        <img src="https://s2.loli.net/2022/05/22/pafAIkNwU35EhtQ.png" class="responsive-img" alt="Set password for root">
                         
-                        <span class="card-title">Vi &amp; Vim in Linux</span>
+                        <span class="card-title">Set password for root</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Basic knowledge about Vi & Vim in Linux
+                            Set password for root
                         
                     </div>
                     <div class="publish-info">

@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Open an app in Linux, Home - Junyi Liang">
-    <meta name="description" content="Open an app in Linux by using command line">
+    <meta name="keywords" content="User &amp; User Group management, Home - Junyi Liang">
+    <meta name="description" content="User management for add user, delete user, set user&#39;s permission">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Open an app in Linux | Home - Junyi Liang</title>
+    <title>User &amp; User Group management | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/19/pQ9HRfLIcu3kV6Z.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/22/x29LSnfIKTvyZMQ.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Open an app in Linux</h1>
+                    <h1 class="description center-align post-title">User &amp; User Group management</h1>
                 </div>
             </div>
         </div>
@@ -415,21 +415,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-19
+                    2022-05-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-19
+                    2022-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    448
+                    435
                 </div>
                 
 
@@ -459,85 +459,117 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Open-an-app-in-Linux"><a href="#Open-an-app-in-Linux" class="headerlink" title="Open an app in Linux"></a>Open an app in Linux</h1><h2 id="Open-app"><a href="#Open-app" class="headerlink" title="Open app"></a>Open app</h2><p>For example open firefox, we can type in terminal </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">firefox $<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="User-management"><a href="#User-management" class="headerlink" title="User management"></a>User management</h1><h2 id="User-part"><a href="#User-part" class="headerlink" title="User part"></a>User part</h2><h3 id="Add-new-user"><a href="#Add-new-user" class="headerlink" title="Add new user"></a>Add new user</h3><ul>
+<li><p>Basic command line</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<blockquote>
+<p>此方法虽然添加了用户，但是有可能没有默认创建文件夹，如果没有创建</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>可以解决这个问题</p>
+<p>注意如果刚刚执行完上面的语句，需要先删除刚刚的user才能再次创建他，没有办法有两个同名的user</p>
+</blockquote>
+<h4 id="example"><a href="#example" class="headerlink" title="example :"></a>example :</h4><p><img src="https://s2.loli.net/2022/05/22/oFr1ltYL2G8jvOe.png" alt="image-20220522213056132"></p>
+<ul>
+<li><p>Example</p>
+<ul>
+<li>add a user <code>milan</code>, default user directory is &#x2F;home&#x2F;milan</li>
+</ul>
+</li>
+<li><p>detail</p>
+<ul>
+<li><p>when create user successful, auto create directory for user at same time</p>
+</li>
+<li><p>if we use </p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -d The specified directory username <span class="token comment"># useradd -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>also create a user but this user will use the specified directory instead of generating a new directory</p>
+<blockquote>
+<p>此方法同上</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m -d The specified directory username<span class="token comment"># useradd -m -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>可以解决这个问题</p>
+</blockquote>
+<p><img src="https://s2.loli.net/2022/05/22/18SibYR4H2WteVI.png" alt="image-20220522213953461"></p>
+<blockquote>
+<p>给创建的用户指定了家目录</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Set-password-for-new-user"><a href="#Set-password-for-new-user" class="headerlink" title="Set password for new user"></a>Set password for new user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">passwd</span> username <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
-<ul>
-<li>no need go to specific folder, can directly type this command in the terminal</li>
-<li>The reason add <code>$</code> at end is aim to run firefox at backend, so that the terminal will not be occupied by Firefox</li>
-<li>if you forget type <code>$</code>, you can type <code>Ctrl+Z</code> and then type <code>bg</code> and return.</li>
-</ul>
+<p>This operation also need under root </p>
 </blockquote>
-<h2 id="Close-app"><a href="#Close-app" class="headerlink" title="Close app"></a>Close app</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Delete-user"><a href="#Delete-user" class="headerlink" title="Delete user"></a>Delete user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>only delete this user</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> -r username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Not only delete the user, but also delete the directory</p>
+<h3 id="Querying-User-Information"><a href="#Querying-User-Information" class="headerlink" title="Querying User Information"></a>Querying User Information</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">id</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="examples"><a href="#examples" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/8P9HBovYZbRr6es.png" alt="image-20220523174054780"></p>
+<p><img src="https://s2.loli.net/2022/05/23/QPJmgTs2dlwRVaC.png" alt="image-20220523174403469"></p>
+<h3 id="Switch-users"><a href="#Switch-users" class="headerlink" title="Switch users"></a>Switch users</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">su</span> - username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
-<li>show the currently running process</li>
+<li><p>In Linux, if the current user has insufficient rights, you can switch to a user with higher right</p>
+</li>
+<li><p>A password is not required to change from a high-privilege user to a low-privilege user</p>
+</li>
+<li><p>Otherwise you need a password</p>
+</li>
+<li><p>To return to the original user, use the exit&#x2F;logout command</p>
+</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> aux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>在操作linux中，如果当前权限不够，可以切换至更高权限的用户</p>
+<p>从高权限用户到低权限用户不需要密码</p>
+<p>反之需要密码</p>
+<p>如果想回到原来用户使用exit&#x2F;logout指令</p>
+</blockquote>
+<h4 id="examples-1"><a href="#examples-1" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/6EjAWvnoJelfF9Z.png" alt="image-20220523175242905"></p>
+<h3 id="Who-am-i"><a href="#Who-am-i" class="headerlink" title="Who am i"></a>Who am i</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">who</span> am i<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>is to show all the currently running process and their state</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">whoami</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>it means search</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> evince<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>it will show the initial login user’s information</p>
+<h4 id="examples-2"><a href="#examples-2" class="headerlink" title="examples :"></a>examples :</h4><p>i am at root currently, but it will show the init login user – liangjunyi</p>
+<p><img src="https://s2.loli.net/2022/05/23/uinKFQ4VG9EyYLS.png" alt="image-20220523180109271"></p>
+<p><img src="https://s2.loli.net/2022/05/23/bIhWSCz5QD3FrqP.png" alt="image-20220523180147131"></p>
+<h2 id="User-Group-part"><a href="#User-Group-part" class="headerlink" title="User Group part"></a>User Group part</h2><p>Unified management of users with common&#x2F;permission in the system</p>
+<blockquote>
+<p>系统对有 共性&#x2F;权限 的用户进行统一管理</p>
+</blockquote>
+<h3 id="Add-new-group"><a href="#Add-new-group" class="headerlink" title="Add new group"></a>Add new group</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">groupadd</span> groupname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>search for evince process</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> evince     <span class="token comment">#查到evince的进程</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Delete-a-group"><a href="#Delete-a-group" class="headerlink" title="Delete a group"></a>Delete a group</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">groupdel</span> groupname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>|:管道符号,command1 |command2,将command1输出结果通过管道作为command2命令的输入参数.</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">kill</span> -s <span class="token number">9</span> pid   <span class="token comment">#杀死进程号为PID的进程，例如：kill -9 6705</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Add-group-when-add-user"><a href="#Add-group-when-add-user" class="headerlink" title="Add group when add user"></a>Add group when add user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -g groupname username
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="Some-commands"><a href="#Some-commands" class="headerlink" title="Some commands"></a>Some commands</h2><h3 id="ps命令-Process-Status"><a href="#ps命令-Process-Status" class="headerlink" title="ps命令 (Process Status)"></a>ps命令 (Process Status)</h3><p><code>ps aux</code>‘output format</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token environment constant">USER</span> PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>格式说明：</p>
-<ul>
-<li><p>USER: 行程拥有者</p>
-</li>
-<li><p>PID: pid 就是这个程序的 ID </p>
-</li>
-<li><p>%CPU: 占用的 CPU 使用率</p>
-</li>
-<li><p>%MEM: 占用的记忆体使用率</p>
-</li>
-<li><p>VSZ: 占用的虚拟记忆体大小</p>
-</li>
-<li><p>RSS: 占用的记忆体大小</p>
-</li>
-<li><p>TTY: 终端的次要装置号码 (minor device number of tty)</p>
-</li>
-<li><p>STAT: 该行程的状态，linux的进程有5种状态：</p>
-<ul>
-<li><p>D 不可中断 uninterruptible sleep (usually IO)  (收到信号不唤醒和不可运行, 进程必须等待直到有中断发生)</p>
-</li>
-<li><p>R 运行 runnable (on run queue)      (正在运行或在运行队列中等待)</p>
-</li>
-<li><p>S 中断 sleeping     (休眠中, 受阻, 在等待某个条件的形成或接受到信号)</p>
-</li>
-<li><p>T 停止 traced or stopped    (进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行)</p>
-</li>
-<li><p>Z 僵死 a defunct (”zombie”) process   (进程已终止, 但进程描述符存在, 直到父进程调用wait4()系统调用后释放)</p>
-</li>
-<li><p>注: 其它状态还包括W(无驻留页), &lt;(高优先级进程), N(低优先级进程), L(内存锁页).</p>
-</li>
-</ul>
-</li>
-<li><p>START: 进程开始时间</p>
-</li>
-<li><p>TIME: 执行的时间</p>
-</li>
-<li><p>COMMAND:所执行的指令</p>
-</li>
-</ul>
+
+
+
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -564,7 +596,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/">https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/</a>
+                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/user-user-group-management/">https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/user-user-group-management/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -659,18 +691,18 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/22/user-user-group-management/">
+                <a href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/22/x29LSnfIKTvyZMQ.png" class="responsive-img" alt="User &amp; User Group management">
+                        <img src="https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png" class="responsive-img" alt="Vi &amp; Vim in Linux">
                         
-                        <span class="card-title">User &amp; User Group management</span>
+                        <span class="card-title">Vi &amp; Vim in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            User management for add user, delete user, set user's permission
+                            Basic knowledge about Vi & Vim in Linux
                         
                     </div>
                     <div class="publish-info">
@@ -711,30 +743,30 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/18/fpga-game-machine-project/">
+                <a href="/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/18/D7TSjqg4pksxm3a.png" class="responsive-img" alt="FPGA Game Machine Project">
+                        <img src="https://s2.loli.net/2022/05/19/pQ9HRfLIcu3kV6Z.png" class="responsive-img" alt="Open an app in Linux">
                         
-                        <span class="card-title">FPGA Game Machine Project</span>
+                        <span class="card-title">Open an app in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            A game machine which implements the phone game Piano Tiles by FPGA.
+                            Open an app in Linux by using command line
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/FPGA/" class="post-category">
-                                    FPGA
+                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
@@ -744,24 +776,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liangjunyi.github.io/tags/FPGA/">
-                        <span class="chip bg-color">FPGA</span>
+                    <a href="/liangjunyi.github.io/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
-                    <a href="/liangjunyi.github.io/tags/Finite-State-Machine/">
-                        <span class="chip bg-color">Finite State Machine</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/Datapath/">
-                        <span class="chip bg-color">Datapath</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/Arithmetic-Logic-Unit-ALU/">
-                        <span class="chip bg-color">Arithmetic Logic Unit (ALU)</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/IO-control/">
-                        <span class="chip bg-color">IO control</span>
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
                     </a>
                     
                 </div>
