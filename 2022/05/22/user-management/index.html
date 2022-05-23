@@ -429,7 +429,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    231
+                    393
                 </div>
                 
 
@@ -459,7 +459,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="User-management"><a href="#User-management" class="headerlink" title="User management"></a>User management</h1><h2 id="Add-new-user"><a href="#Add-new-user" class="headerlink" title="Add new user"></a>Add new user</h2><ul>
+                <h1 id="User-management"><a href="#User-management" class="headerlink" title="User management"></a>User management</h1><h2 id="User-part"><a href="#User-part" class="headerlink" title="User part"></a>User part</h2><h3 id="Add-new-user"><a href="#Add-new-user" class="headerlink" title="Add new user"></a>Add new user</h3><ul>
 <li><p>Basic command line</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
@@ -470,7 +470,7 @@
 <p>可以解决这个问题</p>
 <p>注意如果刚刚执行完上面的语句，需要先删除刚刚的user才能再次创建他，没有办法有两个同名的user</p>
 </blockquote>
-<p><img src="https://s2.loli.net/2022/05/22/oFr1ltYL2G8jvOe.png" alt="image-20220522213056132"></p>
+<h4 id="example"><a href="#example" class="headerlink" title="example :"></a>example :</h4><p><img src="https://s2.loli.net/2022/05/22/oFr1ltYL2G8jvOe.png" alt="image-20220522213056132"></p>
 <ul>
 <li><p>Example</p>
 <ul>
@@ -499,18 +499,49 @@
 </ul>
 </li>
 </ul>
-<h2 id="Set-password-for-new-user"><a href="#Set-password-for-new-user" class="headerlink" title="Set password for new user"></a>Set password for new user</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">passwd</span> username <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Set-password-for-new-user"><a href="#Set-password-for-new-user" class="headerlink" title="Set password for new user"></a>Set password for new user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">passwd</span> username <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
 <p>This operation also need under root </p>
 </blockquote>
-<h2 id="Delete-user"><a href="#Delete-user" class="headerlink" title="Delete user"></a>Delete user</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Delete-user"><a href="#Delete-user" class="headerlink" title="Delete user"></a>Delete user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>only delete this user</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> -r username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>Not only delete the user, but also delete the directory</p>
+<h3 id="Querying-User-Information"><a href="#Querying-User-Information" class="headerlink" title="Querying User Information"></a>Querying User Information</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">id</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<h4 id="examples"><a href="#examples" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/8P9HBovYZbRr6es.png" alt="image-20220523174054780"></p>
+<p><img src="https://s2.loli.net/2022/05/23/QPJmgTs2dlwRVaC.png" alt="image-20220523174403469"></p>
+<h3 id="Switch-users"><a href="#Switch-users" class="headerlink" title="Switch users"></a>Switch users</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">su</span> - username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><p>In Linux, if the current user has insufficient rights, you can switch to a user with higher right</p>
+</li>
+<li><p>A password is not required to change from a high-privilege user to a low-privilege user</p>
+</li>
+<li><p>Otherwise you need a password</p>
+</li>
+<li><p>To return to the original user, use the exit&#x2F;logout command</p>
+</li>
+</ul>
+<blockquote>
+<p>在操作linux中，如果当前权限不够，可以切换至更高权限的用户</p>
+<p>从高权限用户到低权限用户不需要密码</p>
+<p>反之需要密码</p>
+<p>如果想回到原来用户使用exit&#x2F;logout指令</p>
+</blockquote>
+<h4 id="examples-1"><a href="#examples-1" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/6EjAWvnoJelfF9Z.png" alt="image-20220523175242905"></p>
+<h3 id="Who-am-i"><a href="#Who-am-i" class="headerlink" title="Who am i"></a>Who am i</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">who</span> am i<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">whoami</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>it will show the initial login user’s information</p>
+<h4 id="examples-2"><a href="#examples-2" class="headerlink" title="examples :"></a>examples :</h4><p>i am at root currently, but it will show the init login user – liangjunyi</p>
+<p><img src="https://s2.loli.net/2022/05/23/uinKFQ4VG9EyYLS.png" alt="image-20220523180109271"></p>
+<p><img src="https://s2.loli.net/2022/05/23/bIhWSCz5QD3FrqP.png" alt="image-20220523180147131"></p>
+<h2 id="User-Group-part"><a href="#User-Group-part" class="headerlink" title="User Group part"></a>User Group part</h2><h3 id="Add-new-group"><a href="#Add-new-group" class="headerlink" title="Add new group"></a>Add new group</h3>
                 
             </div>
             <hr/>
@@ -912,7 +943,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">4.7k</span>
+                        class="white-color">4.9k</span>
             
             
             
