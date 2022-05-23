@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Home - Junyi Liang">
-    <meta name="description" content="This is Liang Junyi&#39;s Blog">
+    <meta name="keywords" content="User management, Home - Junyi Liang">
+    <meta name="description" content="User management for add user, delete user, set user&#39;s permission">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Home - Junyi Liang</title>
+    <title>User management | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/liangjunyi.github.io/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/22/x29LSnfIKTvyZMQ.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">User management</h1>
                 </div>
             </div>
         </div>
@@ -384,12 +384,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/liangjunyi.github.io/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/operating-system/">
+                                <span class="chip bg-color">operating system</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
+                                Linux
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -398,21 +415,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    39
+                    204
                 </div>
                 
 
@@ -442,11 +459,47 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class="line-numbers language-none"><code class="language-none">title: 404
-date: 2018-09-30 17:25:30
-type: &quot;404&quot;
-layout: &quot;404&quot;
-description: &quot;Oops～，Can not find the page ,我崩溃了！找不到你想要的页面 :(&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="User-management"><a href="#User-management" class="headerlink" title="User management"></a>User management</h1><h2 id="Add-new-user"><a href="#Add-new-user" class="headerlink" title="Add new user"></a>Add new user</h2><ul>
+<li><p>Basic command line</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<blockquote>
+<p>此方法虽然添加了用户，但是有可能没有默认创建文件夹，如果没有创建</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>可以解决这个问题</p>
+<p>注意如果刚刚执行完上面的语句，需要先删除刚刚的user才能再次创建他，没有办法有两个同名的user</p>
+</blockquote>
+<p><img src="https://s2.loli.net/2022/05/22/oFr1ltYL2G8jvOe.png" alt="image-20220522213056132"></p>
+<ul>
+<li><p>Example</p>
+<ul>
+<li>add a user <code>milan</code>, default user directory is &#x2F;home&#x2F;milan</li>
+</ul>
+</li>
+<li><p>detail</p>
+<ul>
+<li><p>when create user successful, auto create directory for user at same time</p>
+</li>
+<li><p>if we use </p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -d The specified directory username <span class="token comment"># useradd -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>also create a user but this user will use the specified directory instead of generating a new directory</p>
+<blockquote>
+<p>此方法同上</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m -d The specified directory username<span class="token comment"># useradd -m -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>可以解决这个问题</p>
+</blockquote>
+<p><img src="https://s2.loli.net/2022/05/22/18SibYR4H2WteVI.png" alt="image-20220522213953461"></p>
+<blockquote>
+<p>给创建的用户指定了家目录</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Set-password-for-new-user"><a href="#Set-password-for-new-user" class="headerlink" title="Set password for new user"></a>Set password for new user</h2>
                 
             </div>
             <hr/>
@@ -472,7 +525,7 @@ description: &quot;Oops～，Can not find the page ,我崩溃了！找不到你�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/404.html">https://LiagJunyi-010.github.io/liangjunyi.github.io/404.html</a>
+                    <a href="https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/user-management/">https://LiagJunyi-010.github.io/liangjunyi.github.io/2022/05/22/user-management/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +562,15 @@ description: &quot;Oops～，Can not find the page ,我崩溃了！找不到你�
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/liangjunyi.github.io/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/operating-system/">
+                                    <span class="chip bg-color">operating system</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -555,39 +616,52 @@ description: &quot;Oops～，Can not find the page ,我崩溃了！找不到你�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/liangjunyi.github.io/404.html">
+                <a href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">
                     <div class="card-image">
                         
+                        <img src="https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png" class="responsive-img" alt="Vi &amp; Vim in Linux">
                         
-                        <img src="/liangjunyi.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">Vi &amp; Vim in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Basic knowledge about Vi & Vim in Linux
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Liang Junyi
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/liangjunyi.github.io/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -595,37 +669,51 @@ description: &quot;Oops～，Can not find the page ,我崩溃了！找不到你�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/404.html">
+                <a href="/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/">
                     <div class="card-image">
                         
+                        <img src="https://s2.loli.net/2022/05/19/pQ9HRfLIcu3kV6Z.png" class="responsive-img" alt="Open an app in Linux">
                         
-                        <img src="/liangjunyi.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">Open an app in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Open an app in Linux by using command line
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Liang Junyi
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/liangjunyi.github.io/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
