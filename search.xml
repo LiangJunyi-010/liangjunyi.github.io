@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Run level</title>
+      <link href="/liangjunyi.github.io/2022/05/24/run-level/"/>
+      <url>/liangjunyi.github.io/2022/05/24/run-level/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Run-level"><a href="#Run-level" class="headerlink" title="Run level"></a>Run level</h1><h2 id="Meaning-of-each-run-level"><a href="#Meaning-of-each-run-level" class="headerlink" title="Meaning of each run level"></a>Meaning of each run level</h2><p>0：关机</p><p>1：单用户【找回丢失密码】 </p><p>2： 多用户状态没有网络服务 （不常用）</p><p>3：多用户状态有网络服务 （常用）</p><p>4：系统未使用保留给用户</p><p>5：图形界面 （常用）</p><p>6：系统重启</p><h2 id="switch-run-level"><a href="#switch-run-level" class="headerlink" title="switch run level"></a>switch run level</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">init <span class="token punctuation">[</span>0123456<span class="token punctuation">]</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="set-default-run-level"><a href="#set-default-run-level" class="headerlink" title="set default run level"></a>set default run level</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">systemctl get-default <span class="token comment"># 查看当前默认runlevel</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">systemctl set-default Target.target # 设置默认runlevel<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://s2.loli.net/2022/05/24/xcbsGz2vnrJLECV.png" alt="image-20220524153902289"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>The remote root login</title>
       <link href="/liangjunyi.github.io/2022/05/23/the-remote-root-login/"/>
       <url>/liangjunyi.github.io/2022/05/23/the-remote-root-login/</url>
