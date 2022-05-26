@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>File/Directory instruction</title>
+      <link href="/liangjunyi.github.io/2022/05/26/file-directory-instruction/"/>
+      <url>/liangjunyi.github.io/2022/05/26/file-directory-instruction/</url>
+      
+        <content type="html"><![CDATA[<h1 id="File-x2F-Directory-instruction"><a href="#File-x2F-Directory-instruction" class="headerlink" title="File&#x2F;Directory instruction"></a>File&#x2F;Directory instruction</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">pwd</span> <span class="token comment"># 展示当前路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ls</span> <span class="token comment"># 显示当前文件夹下的东西</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>-a 显示当前目录所有的文件和目录，包括隐藏的</li><li>-l 以列表的方式显示信息</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Find root Password</title>
       <link href="/liangjunyi.github.io/2022/05/26/find-root-password/"/>
       <url>/liangjunyi.github.io/2022/05/26/find-root-password/</url>
