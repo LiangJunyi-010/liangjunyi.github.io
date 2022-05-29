@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="FPGA Game Machine Project, Home - Junyi Liang">
-    <meta name="description" content="A game machine which implements the phone game Piano Tiles by FPGA.">
+    <meta name="keywords" content="ROS create workspace and package, Home - Junyi Liang">
+    <meta name="description" content="OS create workspace and package">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>FPGA Game Machine Project | Home - Junyi Liang</title>
+    <title>ROS create workspace and package | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/18/D7TSjqg4pksxm3a.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/29/PYV76TLuOm4JMrQ.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">FPGA Game Machine Project</h1>
+                    <h1 class="description center-align post-title">ROS create workspace and package</h1>
                 </div>
             </div>
         </div>
@@ -386,24 +386,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/liangjunyi.github.io/tags/FPGA/">
-                                <span class="chip bg-color">FPGA</span>
+                            <a href="/liangjunyi.github.io/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
                             </a>
                         
-                            <a href="/liangjunyi.github.io/tags/Finite-State-Machine/">
-                                <span class="chip bg-color">Finite State Machine</span>
+                            <a href="/liangjunyi.github.io/tags/operating-system/">
+                                <span class="chip bg-color">operating system</span>
                             </a>
                         
-                            <a href="/liangjunyi.github.io/tags/Datapath/">
-                                <span class="chip bg-color">Datapath</span>
-                            </a>
-                        
-                            <a href="/liangjunyi.github.io/tags/Arithmetic-Logic-Unit-ALU/">
-                                <span class="chip bg-color">Arithmetic Logic Unit (ALU)</span>
-                            </a>
-                        
-                            <a href="/liangjunyi.github.io/tags/IO-control/">
-                                <span class="chip bg-color">IO control</span>
+                            <a href="/liangjunyi.github.io/tags/ROS/">
+                                <span class="chip bg-color">ROS</span>
                             </a>
                         
                     </div>
@@ -414,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/liangjunyi.github.io/categories/FPGA/" class="post-category">
-                                FPGA
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                ROS
                             </a>
                         
                     </div>
@@ -427,28 +419,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    370
+                    107
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    1 Min
                 </div>
                 
 
@@ -471,124 +463,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Prezzer"><a href="#Prezzer" class="headerlink" title="Prezzer"></a>Prezzer</h1><h3 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h3><ul>
-<li>Tran Nguyen Bao Long</li>
-<li>Kat Yong Jie</li>
-<li>Liang Junyi</li>
-<li>Wang Zhuoran</li>
-<li>Lu Mingrui</li>
-<li>Han Jin</li>
-<li>Sun Zhengnan</li>
-<li>Yang Haocheng</li>
+                <h1 id="ROS-create-workspace-and-package"><a href="#ROS-create-workspace-and-package" class="headerlink" title="ROS create workspace and package"></a>ROS create workspace and package</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>workspace is a folder, containing relative files and folder</p>
+<ul>
+<li>src: Source Space</li>
+<li>build: Build Space</li>
+<li>devel: Development Space</li>
+<li>install: Install Space</li>
 </ul>
-<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>For our 50.002 project, we have created a single-player game called Prezzer. The objective of the game is to score the highest amount of points possible before the 30 seconds count down and avoid pressing the wrong button.</p>
-<p>This is a game whereby the player must observe a matrix of LED lights, this LED matrix consists of three columns and four rows and there are 3 different coloured lights: red, green and blue player need to press different times to clear different color LED: red 3 times, green 2 times and red 1 times, and each row only lights one LED, Player need to press the right buttons based on the LED light at the lowest level with the corresponding colors and position.</p>
-<p>The coloured LED will move down after we press the button correctly from the top to the bottom. If the player presses the wrong button. The game ends if the player presses the wrong button or runs out of time, and the final score will be displayed on the 7 seg on the top left of the game and time left will be displayed on the 7 seg on the top right of the game.</p>
-<h3 id="How-to-play"><a href="#How-to-play" class="headerlink" title="How to play"></a>How to play</h3><ol>
-<li>Press RESET button to start</li>
-<li>Colored tiles will be randomly generated on the three columns</li>
-<li>Press button below corresponding column</li>
-<li>Clear as many tiles as you can within 30 seconds and get the max score</li>
-<li>Pressing a button for the wrong column will mean game over.</li>
-</ol>
-<h3 id="Tiles-scores"><a href="#Tiles-scores" class="headerlink" title="Tiles scores"></a>Tiles scores</h3><ul>
-<li>Red: 3 presses &#x3D; 3 points</li>
-<li>Green: 2 presses &#x3D; 2 points</li>
-<li>Blue: 1 press &#x3D; 1 point</li>
-</ul>
-<p>Red turns to Green turns to Blue CLEAR for each correct press</p>
-<h3 id="ALU-Function"><a href="#ALU-Function" class="headerlink" title="ALU Function"></a>ALU Function</h3><table>
-<thead>
-<tr>
-<th>Operation</th>
-<th>ALUFN</th>
-<th>Decimal</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ADD</td>
-<td>0000</td>
-<td>0</td>
-</tr>
-<tr>
-<td>SUB</td>
-<td>0001</td>
-<td>1</td>
-</tr>
-<tr>
-<td>MUL (extra)</td>
-<td>0010</td>
-<td>2</td>
-</tr>
-<tr>
-<td>CMPEQ</td>
-<td>0011</td>
-<td>3</td>
-</tr>
-<tr>
-<td>CMPLT</td>
-<td>0100</td>
-<td>4</td>
-</tr>
-<tr>
-<td>CMPLE</td>
-<td>0101</td>
-<td>5</td>
-</tr>
-<tr>
-<td>AND</td>
-<td>0110</td>
-<td>6</td>
-</tr>
-<tr>
-<td>OR</td>
-<td>0111</td>
-<td>7</td>
-</tr>
-<tr>
-<td>XOR</td>
-<td>1000</td>
-<td>8</td>
-</tr>
-<tr>
-<td>A</td>
-<td>1001</td>
-<td>9</td>
-</tr>
-<tr>
-<td>SHL</td>
-<td>1010</td>
-<td>10</td>
-</tr>
-<tr>
-<td>SHR</td>
-<td>1011</td>
-<td>11</td>
-</tr>
-<tr>
-<td>SRA</td>
-<td>1100</td>
-<td>12</td>
-</tr>
-<tr>
-<td>SHD(extra)</td>
-<td>1101</td>
-<td>13</td>
-</tr>
-<tr>
-<td>B(extra)</td>
-<td>1110</td>
-<td>14</td>
-</tr>
-<tr>
-<td>ENQ(extra)</td>
-<td>1111</td>
-<td>15</td>
-</tr>
-</tbody></table>
-<h3 id="Finite-State-Machine"><a href="#Finite-State-Machine" class="headerlink" title="Finite State Machine"></a>Finite State Machine</h3><p><img src="https://s2.loli.net/2022/05/18/9SUiIrtzADcaMw3.png" alt="image-20220518162522273"></p>
-<h3 id="Datapath"><a href="#Datapath" class="headerlink" title="Datapath"></a>Datapath</h3><p><img src="https://s2.loli.net/2022/05/18/WgMfF9HcGOLhiDV.png" alt="image-20220518162707353"></p>
-<h3 id="Game-Video"><a href="#Game-Video" class="headerlink" title="Game Video"></a>Game Video</h3><p><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1I1gZKp6AiTt99a2aXB55q5OHeVtaDIEL">https://drive.google.com/drive/folders/1I1gZKp6AiTt99a2aXB55q5OHeVtaDIEL</a></p>
+<p><strong>example</strong></p>
+<p><img src="https://s2.loli.net/2022/05/29/JnCedVgN71iQmYS.png" alt="image-20220529201346535"></p>
+<h2 id="2-create-workspace"><a href="#2-create-workspace" class="headerlink" title="2. create workspace"></a>2. create workspace</h2><p><strong>create workspace</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> -p ~/catkin_ws/src<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws/src<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_init_workspace<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>compile the workspace</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws/ <span class="token comment"># go back to the workspace root</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_make<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_make <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>setup the environment variable</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> devel/setup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token variable">$ROS_PACKAGE_PATH</span> <span class="token comment"># check environemnt variable</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="3-create-package"><a href="#3-create-package" class="headerlink" title="3. create package"></a>3. create package</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws/src <span class="token comment"># go to src folder under your root folder</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_create_pkg <span class="token operator">&lt;</span>package_name<span class="token operator">></span> <span class="token punctuation">[</span>depend1<span class="token punctuation">]</span> <span class="token punctuation">[</span>depend2<span class="token punctuation">]</span> <span class="token punctuation">[</span>depend3<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>example</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_create_pkg test_pkg roscpp rospy std_msgs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>compile the package</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws <span class="token comment"># go back to root folder again</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/catkin_ws/devel/sessssstup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 
                 
             </div>
@@ -615,7 +529,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/18/fpga-game-machine-project/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/18/fpga-game-machine-project/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/29/untitled/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/29/untitled/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -653,24 +567,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/liangjunyi.github.io/tags/FPGA/">
-                                    <span class="chip bg-color">FPGA</span>
+                                <a href="/liangjunyi.github.io/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
                                 </a>
                             
-                                <a href="/liangjunyi.github.io/tags/Finite-State-Machine/">
-                                    <span class="chip bg-color">Finite State Machine</span>
+                                <a href="/liangjunyi.github.io/tags/operating-system/">
+                                    <span class="chip bg-color">operating system</span>
                                 </a>
                             
-                                <a href="/liangjunyi.github.io/tags/Datapath/">
-                                    <span class="chip bg-color">Datapath</span>
-                                </a>
-                            
-                                <a href="/liangjunyi.github.io/tags/Arithmetic-Logic-Unit-ALU/">
-                                    <span class="chip bg-color">Arithmetic Logic Unit (ALU)</span>
-                                </a>
-                            
-                                <a href="/liangjunyi.github.io/tags/IO-control/">
-                                    <span class="chip bg-color">IO control</span>
+                                <a href="/liangjunyi.github.io/tags/ROS/">
+                                    <span class="chip bg-color">ROS</span>
                                 </a>
                             
                         </div>
@@ -718,34 +624,92 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/">
+                <a href="/liangjunyi.github.io/2022/05/29/untitled/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/19/pQ9HRfLIcu3kV6Z.png" class="responsive-img" alt="Open an app in Linux">
+                        <img src="https://s2.loli.net/2022/05/29/PYV76TLuOm4JMrQ.png" class="responsive-img" alt="ROS create workspace and package">
                         
-                        <span class="card-title">Open an app in Linux</span>
+                        <span class="card-title">ROS create workspace and package</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Open an app in Linux by using command line
+                            OS create workspace and package
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                    ROS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/liangjunyi.github.io/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/liangjunyi.github.io/2022/05/29/the-usage-of-ros-tools/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2022/05/29/PYV76TLuOm4JMrQ.png" class="responsive-img" alt="ROS tools in Linux by command line">
+                        
+                        <span class="card-title">ROS tools in Linux by command line</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ROS tools in Linux by command line
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                    ROS
                                 </a>
                             
                             
@@ -763,64 +727,8 @@
                         <span class="chip bg-color">operating system</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/18/android-app-project/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.loli.net/2022/05/18/JLYfhcdEkR4xa9Z.jpg" class="responsive-img" alt="Android App">
-                        
-                        <span class="card-title">Android App</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            A POC Recipe Android Application using Google Mediapipe Hands Tracking model for smart touchless scrolling.
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/liangjunyi.github.io/categories/Android/" class="post-category">
-                                    Android
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/liangjunyi.github.io/tags/Android-app-development/">
-                        <span class="chip bg-color">Android app development</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/Design-patterns/">
-                        <span class="chip bg-color">Design patterns</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/Data-Base/">
-                        <span class="chip bg-color">Data Base</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/Hand-Detection/">
-                        <span class="chip bg-color">Hand Detection</span>
+                    <a href="/liangjunyi.github.io/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
                     </a>
                     
                 </div>
