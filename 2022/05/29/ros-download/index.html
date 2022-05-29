@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Vi &amp; Vim in Linux, Home - Junyi Liang">
-    <meta name="description" content="Basic knowledge about Vi &amp; Vim in Linux">
+    <meta name="keywords" content="ROS download, Home - Junyi Liang">
+    <meta name="description" content="ROS download, suitable for ubuntu 20.04">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Vi &amp; Vim in Linux | Home - Junyi Liang</title>
+    <title>ROS download | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/29/IR7Uyg89FaSH16b.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Vi &amp; Vim in Linux</h1>
+                    <h1 class="description center-align post-title">ROS download</h1>
                 </div>
             </div>
         </div>
@@ -394,6 +394,10 @@
                                 <span class="chip bg-color">operating system</span>
                             </a>
                         
+                            <a href="/liangjunyi.github.io/tags/ROS/">
+                                <span class="chip bg-color">ROS</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -415,28 +419,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-22
+                    2022-05-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-22
+                    2022-05-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    358
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    7 Min
                 </div>
                 
 
@@ -459,86 +463,106 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Vi-amp-Vim-in-Linux"><a href="#Vi-amp-Vim-in-Linux" class="headerlink" title="Vi &amp; Vim in Linux"></a>Vi &amp; Vim in Linux</h1><h2 id="basic-description-about-vi-amp-vim"><a href="#basic-description-about-vi-amp-vim" class="headerlink" title="basic description about vi &amp; vim"></a>basic description about vi &amp; vim</h2><p>vi is Linux built in text editor</p>
-<p>vim is the enhanced version to vi, can do program</p>
-<h2 id="three-patterns-by-vi-amp-vim"><a href="#three-patterns-by-vi-amp-vim" class="headerlink" title="three patterns by vi &amp; vim"></a>three patterns by vi &amp; vim</h2><ul>
-<li>normal pattern 正常模式<ul>
-<li>can not edit in this pattern</li>
-</ul>
-</li>
-<li>edit pattern 编辑模式</li>
-<li>cmd line pattern 命令行模式</li>
-</ul>
-<h2 id="operating-process"><a href="#operating-process" class="headerlink" title="operating process"></a>operating process</h2><h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> Hello.java<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h3 id="1、添加ROS软件源"><a href="#1、添加ROS软件源" class="headerlink" title="1、添加ROS软件源"></a>1、添加ROS软件源</h3><p><strong>将以下命令复制到ubuntu的终端执行</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">sh</span> -c <span class="token string">'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://s2.loli.net/2022/05/22/OVQKMnNU3glEbr4.png" alt="image-20220522170231266"></p>
-<p>by this command, we go to normal pattern, from our command line</p>
-<p><img src="https://s2.loli.net/2022/05/22/uq4t2XNYa8Gw5Eg.png" alt="image-20220522170425702"></p>
-<h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">type</span> i <span class="token comment"># 摁下i</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>或者用下面这条命令（据说这条命令可以提高下载速度）</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">sh</span> -c <span class="token string">'. /etc/lsb-release &amp;&amp; echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>now we are in edit pattern</p>
-<p><img src="https://s2.loli.net/2022/05/22/mxjYWdJ3VzeSR5T.png" alt="image-20220522170558960"></p>
-<p>we can write our file here</p>
-<h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><p>After editing</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">we <span class="token builtin class-name">type</span> esc first  <span class="token comment"># 摁下esc</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2、添加密钥"><a href="#2、添加密钥" class="headerlink" title="2、添加密钥"></a>2、添加密钥</h3><p><strong>将以下命令复制到ubuntu的终端执行</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> apt-key adv --keyserver <span class="token string">'hkp://keyserver.ubuntu.com:80'</span> --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>now we leave the edit pattern and go to normal pattern now</p>
-<p><img src="https://s2.loli.net/2022/05/22/KIrTDZzySEfCpxU.png" alt="image-20220522171432159"></p>
-<p>then type</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">:wq <span class="token comment"># write(save) and quit</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>成功后会显示如下界面：</strong></p>
+<p><strong><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201004161015910.png#pic_center"><img src="https://img-blog.csdnimg.cn/20201004161015910.png#pic_center" alt="img"></a></strong></p>
+<h3 id="3、更新软件源"><a href="#3、更新软件源" class="headerlink" title="3、更新软件源"></a>3、更新软件源</h3><p><strong>将以下命令复制到ubuntu的终端执行（在这里顺便说一下，如果用wifi更新慢或者失败的话，切换至手机热点，再执行下面的命令试一下）</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://s2.loli.net/2022/05/22/oNIKehzbUL4MClr.png" alt="image-20220522172138024"></p>
-<p><img src="https://s2.loli.net/2022/05/22/Is7E4atN6PTzmR8.png" alt="image-20220522171815264"></p>
-<h4 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h4><p>if you want edit this file again</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> Hello.java<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>成功后会显示如下界面：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201004161503897.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201004161503897.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
+<h3 id="4、做完上面的三步就可以开始安装ROS了"><a href="#4、做完上面的三步就可以开始安装ROS了" class="headerlink" title="4、做完上面的三步就可以开始安装ROS了"></a>4、做完上面的三步就可以开始安装ROS了</h3><p><strong>将以下命令复制到ubuntu的终端执行（安装ROS的指令）</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> ros-melodic-desktop-full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://s2.loli.net/2022/05/22/JHtj6Lavx9fTqWB.png" alt="image-20220522172027683"></p>
-<h2 id="how-to-change-vi-amp-vim"><a href="#how-to-change-vi-amp-vim" class="headerlink" title="how to change vi &amp; vim"></a>how to change vi &amp; vim</h2><p><img src="https://s2.loli.net/2022/05/22/5TQscPwDxLqnR3I.png" alt="image-20220522165131419"></p>
-<h2 id="shortcut-key-words-快捷键"><a href="#shortcut-key-words-快捷键" class="headerlink" title="shortcut key words 快捷键"></a>shortcut key words 快捷键</h2><h4 id="under-normal-pattern-copy-and-paste"><a href="#under-normal-pattern-copy-and-paste" class="headerlink" title="under normal pattern : copy and paste"></a>under normal pattern : copy and paste</h4><ul>
-<li>copy current line : yy</li>
-<li>paste : p<ul>
-<li>copy 5 line below current line : 5yy 包括复制当前行</li>
-</ul>
-</li>
-<li>delete current line : dd<ul>
-<li>delete 5 line below current line : 5dd 包括删除当前行</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>these are under normal pattern, if you are in edit pattern, it will just type yy in the file</p>
-</blockquote>
-<h4 id="search-a-word-in-the-file"><a href="#search-a-word-in-the-file" class="headerlink" title="search a word in the file"></a>search a word in the file</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/hello<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>因ubuntu版本的不同其安装指令也有可能不同，我的是ubuntu20.04 执行上面的代码时显示：无法定位软件包 ros-melodic-desktop-full ，然后改为执行下面的命令来安装：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> ros-noetic-desktop-full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">type</span> enter <span class="token comment"># 摁下回车开始查找</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>会显示如下界面：</strong><br><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201004162836852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201004162836852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
+<p><strong>输入Y继续（保证有网络），就这568MB我下了整整一天。。。。。前80%挺快的用了1分钟左右吧，从81%到100%那速度是真慢啊，当然你可以尝试换一下软件源试一试，换源方法见文章<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44339029/article/details/108916820">Ubuntu如何通过简单的几步操作来配置系统的软件源、找不到软件和更新怎么办？（带动态图文介绍）</a></strong></p>
+<p><strong>如果在安装过程中你有事需要关闭电脑，可以输入ctrl+c暂停安装，然后正常关闭就可以了，下一次有时间继续安装的时候，按ctrl+alt+t打开终端后，按↑就可以调出之前输入过的安装命令sudo apt install ros-noetic-desktop-full，然后回车输入密码后，就可以继续安装了，我就是分3次下完的。。。</strong><br><strong>安装完后的界面如下（我又重新输入了一遍安装命令，确认已经是最新版了）：</strong></p>
+<p><strong><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201006191050146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201006191050146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></strong></p>
+<h3 id="5、初始化rosdep"><a href="#5、初始化rosdep" class="headerlink" title="5、初始化rosdep"></a>5、初始化rosdep</h3><p><strong>输入以下的命令，先对其初始化一下</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> rosdep init <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">type</span> n <span class="token comment"># 下一个，查到最后一个单词则回到开头</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>如果出现以下界面，那么恭喜你，你可以省下一些麻烦了，直接跳到第6步就行了：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201006200812951.png#pic_center"><img src="https://img-blog.csdnimg.cn/20201006200812951.png#pic_center" alt="img"></a></p>
+<p><strong>如果出现了以下几种错误，也不要担心，下面几种错误我都经历过 ，当然也就为大家整理好了解决方法</strong><br><strong>（1）错误1：找不到命令</strong><br> <strong>尝试着输入以下命令</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python-rosdep2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="set-number-for-line"><a href="#set-number-for-line" class="headerlink" title="set number for line"></a>set number for line</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">:</span> <span class="token builtin class-name">set</span> nu <span class="token comment"># 设置行号</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>或者：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python3-rosdep2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://s2.loli.net/2022/05/22/bqmNxlnLCo5ZEhB.png" alt="image-20220522173207087"></p>
-<p><img src="https://s2.loli.net/2022/05/22/9tnNXgimkxzyuTY.png" alt="image-20220522173412258"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">:</span> <span class="token builtin class-name">set</span> nonu <span class="token comment"># 取消行号</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>这时候它会出现以下的界面，输入Y继续</strong></p>
+<p><strong><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201006201904124.png#pic_center"><img src="https://img-blog.csdnimg.cn/20201006201904124.png#pic_center" alt="img"></a></strong></p>
+<p><strong><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201006202015671.png#pic_center"><img src="https://img-blog.csdnimg.cn/20201006202015671.png#pic_center" alt="img"></a></strong></p>
+<p><strong>到这里如果再输入sudo rosdep init命令试试，如果出现了之前介绍的，我们想要的界面，请跳到第6步，若出现了新的错误，请继续看本步（第5步）的内容</strong></p>
+<p><strong>（2）错误2：ERROR: cannot download default sources list from:https : &#x2F;&#x2F;raw.githubusercontent.com&#x2F;ros&#x2F;rosdistro&#x2F;master&#x2F;rosdep&#x2F;sources.list.d&#x2F;20-default.listWebsite may be down.<br>输入以下命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> gedit /etc/hosts<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="go-to-the-last-line-and-first-line"><a href="#go-to-the-last-line-and-first-line" class="headerlink" title="go to the last line and first line"></a>go to the last line and first line</h4><blockquote>
-<p>under normal pattern</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">G <span class="token comment"># go to last line</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>然后在打开的hosts文件中添加如下的内容，然后保存退出</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">199.232</span>.28.133 raw.githubusercontent.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gg <span class="token comment"># go to first line</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>到这里如果再输入sudo rosdep init命令试试，如果出现了之前介绍的，我们想要的界面，请跳到第6步，若出现了新的错误，请继续看本步（第5步）的内容</strong></p>
+<p><strong>（3）错误3：ERROR: default sources list file already exists: &#x2F;etc&#x2F;ros &#x2F;rosdep&#x2F;sources.list.d&#x2F;20-default.listPlease delete if you wish to re-initialize</strong><br><strong>输入以下命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /etc/ros/rosdep/sources.list.d/20-default.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="undo"><a href="#undo" class="headerlink" title="undo"></a>undo</h4><p>at the normal pattern </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">u <span class="token comment"># undo</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>到这里如果再输入sudo rosdep init命令试试，应该就会出现了之前介绍的我们想要的界面了</strong><br><strong>6、更新rosdep</strong><br><strong>输入以下命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosdep update <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<blockquote>
-<p>if do some editions in edit pattern, can type esc go to normal pattern, then type u to undo all the editions you did just now</p>
-</blockquote>
-<h4 id="move-the-cursor"><a href="#move-the-cursor" class="headerlink" title="move the cursor"></a>move the cursor</h4><p>at the normal pattern</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">20</span> <span class="token builtin class-name">shift</span> g <span class="token comment"># move to the 20th line</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>怎么说呢，这一步真的很令人难受，很容易出现没有找到资源或者链接超时之类的错误，比如：unable to process source或error loading sources list: The read operation timed out</strong><br><strong>我在网上查阅了很多的资料，但是针对每个人的网络不同这些效果也不同，以上的错误多半是网络原因导致的，可以切换成手机热点试一下，每个人的状况可能不太一样，反正我试了一下毫无作用，然后当天试了20遍左右（也就是只要出错了，就再输入rosdep update重新试一下），一直出错，然后我有点事就出去了，等到第二天下午再试的时候一遍就成功了（所以说，不急着用的同学，在试了几遍后如果一直错误，可以换不同的时间段再试（说白了，这个跟你的网络波动有关，玄学。。。）），成功后的界面如下所示：</strong><br><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201007163757827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201007163757827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
+<p><strong>急着用的小伙伴只能不断的重复试了，下面介绍一种我在网上查到的一种用vim提高成功几率的方法（我没试过哈）</strong><br><strong>（1）需要先安装vim</strong><br><strong>输入以下指令，首先切换到root用户</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span> root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<blockquote>
-<p>有可能键盘因为摁完shift后变成中文输入法，可以采取的措施是打开大写输入</p>
-</blockquote>
+<p><strong>输入以下指令，下载安装vim，然后输入y，确定下载安装</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">vim</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>最后输入vim，确认一下有没有安装成功</strong><br><strong>（2）利用vim调大DOWNLOAD_TIMEOUT的值</strong><br><strong>更改 &#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;dist-packages&#x2F;rosdep2&#x2F;下的三个文件sources_ list.py、gbpdistro_support.py、rep3.py中的DOWNLOAD_TIMEOUT &#x3D; 15.0值，改大一点，可以改成60试一下</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> /usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py
+<span class="token function">sudo</span> <span class="token function">vim</span> /usr/lib/python2.7/dist-packages/rosdep2/sources_list.py
+<span class="token function">sudo</span> <span class="token function">vim</span> /usr/lib/python2.7/dist-packages/rosdep2/rep3.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>打开文件，在命令行模式输入“:&#x2F;DOWNLOAD_TIMEOUT”搜索到参数设置的地方，修改过后输入:wq保存退出就行了。这个修改过后只是成功的几率会高很多，后面执行命令的时候发现卡住了就Ctrl + C重来多执行几次试一下</strong><br><strong>7、设置环境变量</strong><br><strong>输入以下命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">"source /opt/ros/melodic/setup.bash"</span> <span class="token operator">>></span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>或者下面的这行代码，注意到底是melodic还是noetic或者是kinetic是由你的ubuntu的版本决定的，比如我的ubuntu是20.04版本的，对应的是noetic，也就是应该下面的这行代码，而不是上面那行</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">"source /opt/ros/noetic/setup.bash"</span> <span class="token operator">>></span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>输入以下命令，运行该脚本让环境变量生效</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>8、 安装rosinstall</strong><br><strong>输入以下命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python-rosinstall python-rosinstall-generator python-wstool build-essential<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>如果提示没有可安装候选，如下所示：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201007185653900.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201007185653900.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
+<h5 id="按照提示更换软件包就行了，按照提示更改为以下命令："><a href="#按照提示更换软件包就行了，按照提示更改为以下命令：" class="headerlink" title="按照提示更换软件包就行了，按照提示更改为以下命令："></a>按照提示更换软件包就行了，按照提示更改为以下命令：</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python3-rosinstall python3-rosinstall-generator python3-wstool<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="9、-验证ROS是否安装成功"><a href="#9、-验证ROS是否安装成功" class="headerlink" title="9、 验证ROS是否安装成功"></a>9、 验证ROS是否安装成功</h3><p><strong>按正常来说ROS到这里就安装完成了，现在我们来验证一下，输入以下命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>如果出现了以下的问题说明，之前的安装没有安装全</strong></p>
+<p><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201007193119544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201007193119544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
+<p><strong>输入以下命令，把没安装的安装一下就好了（如果显示有几个安装包无法下载，是因为网络的原因重新输入以下命令就行了）</strong></p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">sudo apt install ros-noetic-desktop-full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>到这里再输入roscore看一下，若安装成功会显示如下界面：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201007193747683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201007193747683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
+<p><strong>然后我们启动一下小海龟的仿真器试一试，按ctrl+alt+t打开一个新的终端，输入以下命令</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>按ctrl+alt+t再打开一个新的终端，输入以下命令</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtle_teleop_key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>这时候你按键盘上的↑↓←→键就可以控制小海龟移动了！！！</strong><br><strong>那么恭喜你的ROS已经成功安装完了！！！</strong></p>
+<p><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201007194425419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201007194425419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
 
                 
             </div>
@@ -555,7 +579,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/liangjunyi.github.io/about" rel="external nofollow noreferrer">Liang Junyi</a>
+                    <a href="/liangjunyi.github.io/about" rel="external nofollow noreferrer">古月居</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -565,7 +589,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/29/ros-download/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/29/ros-download/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -578,7 +602,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint policy. If reproduced, please indicate source
-                    <a href="/liangjunyi.github.io/about" target="_blank">Liang Junyi</a>
+                    <a href="/liangjunyi.github.io/about" target="_blank">古月居</a>
                     !
                 </span>
             </div>
@@ -609,6 +633,10 @@
                             
                                 <a href="/liangjunyi.github.io/tags/operating-system/">
                                     <span class="chip bg-color">operating system</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/ROS/">
+                                    <span class="chip bg-color">ROS</span>
                                 </a>
                             
                         </div>
@@ -656,28 +684,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/22/shutdown-restart-and-logout/">
+                <a href="/liangjunyi.github.io/2022/05/29/ros-download/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/22/5jGtAqeYnwihW72.png" class="responsive-img" alt="Shutdown Restart and Logout">
+                        <img src="https://s2.loli.net/2022/05/29/IR7Uyg89FaSH16b.png" class="responsive-img" alt="ROS download">
                         
-                        <span class="card-title">Shutdown Restart and Logout</span>
+                        <span class="card-title">ROS download</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Shutdown Restart and Logout by command line in Linux
+                            ROS download, suitable for ubuntu 20.04
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -690,6 +719,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -699,6 +729,10 @@
                     
                     <a href="/liangjunyi.github.io/tags/operating-system/">
                         <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
                     </a>
                     
                 </div>
@@ -712,23 +746,23 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/22/user-user-group-management/">
+                <a href="/liangjunyi.github.io/2022/05/26/file-directory-instruction/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/22/x29LSnfIKTvyZMQ.png" class="responsive-img" alt="User &amp; User Group management">
+                        <img src="https://s2.loli.net/2022/05/26/KmNPShH6r8yZn4p.png" class="responsive-img" alt="File/Directory instruction">
                         
-                        <span class="card-title">User &amp; User Group management</span>
+                        <span class="card-title">File/Directory instruction</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            User management for add user, delete user, set user's permission
+                            File/Directory instruction
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-26
                             </span>
                         <span class="publish-author">
                             
