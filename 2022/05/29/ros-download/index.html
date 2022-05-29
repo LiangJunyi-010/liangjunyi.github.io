@@ -514,7 +514,8 @@
 <p><strong>（3）错误3：ERROR: default sources list file already exists: &#x2F;etc&#x2F;ros &#x2F;rosdep&#x2F;sources.list.d&#x2F;20-default.listPlease delete if you wish to re-initialize</strong><br><strong>输入以下命令：</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /etc/ros/rosdep/sources.list.d/20-default.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><strong>到这里如果再输入sudo rosdep init命令试试，应该就会出现了之前介绍的我们想要的界面了</strong><br><strong>6、更新rosdep</strong><br><strong>输入以下命令：</strong></p>
+<p><strong>到这里如果再输入sudo rosdep init命令试试，应该就会出现了之前介绍的我们想要的界面了</strong></p>
+<h3 id="6、更新rosdep"><a href="#6、更新rosdep" class="headerlink" title="6、更新rosdep"></a>6、更新rosdep</h3><p><strong>输入以下命令：</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosdep update <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>怎么说呢，这一步真的很令人难受，很容易出现没有找到资源或者链接超时之类的错误，比如：unable to process source或error loading sources list: The read operation timed out</strong><br><strong>我在网上查阅了很多的资料，但是针对每个人的网络不同这些效果也不同，以上的错误多半是网络原因导致的，可以切换成手机热点试一下，每个人的状况可能不太一样，反正我试了一下毫无作用，然后当天试了20遍左右（也就是只要出错了，就再输入rosdep update重新试一下），一直出错，然后我有点事就出去了，等到第二天下午再试的时候一遍就成功了（所以说，不急着用的同学，在试了几遍后如果一直错误，可以换不同的时间段再试（说白了，这个跟你的网络波动有关，玄学。。。）），成功后的界面如下所示：</strong><br><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201007163757827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201007163757827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
@@ -529,7 +530,8 @@
 <span class="token function">sudo</span> <span class="token function">vim</span> /usr/lib/python2.7/dist-packages/rosdep2/sources_list.py
 <span class="token function">sudo</span> <span class="token function">vim</span> /usr/lib/python2.7/dist-packages/rosdep2/rep3.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><strong>打开文件，在命令行模式输入“:&#x2F;DOWNLOAD_TIMEOUT”搜索到参数设置的地方，修改过后输入:wq保存退出就行了。这个修改过后只是成功的几率会高很多，后面执行命令的时候发现卡住了就Ctrl + C重来多执行几次试一下</strong><br><strong>7、设置环境变量</strong><br><strong>输入以下命令：</strong></p>
+<p><strong>打开文件，在命令行模式输入“:&#x2F;DOWNLOAD_TIMEOUT”搜索到参数设置的地方，修改过后输入:wq保存退出就行了。这个修改过后只是成功的几率会高很多，后面执行命令的时候发现卡住了就Ctrl + C重来多执行几次试一下</strong></p>
+<h3 id="7、设置环境变量"><a href="#7、设置环境变量" class="headerlink" title="7、设置环境变量"></a>7、设置环境变量</h3><p><strong>输入以下命令：</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">"source /opt/ros/melodic/setup.bash"</span> <span class="token operator">>></span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>或者下面的这行代码，注意到底是melodic还是noetic或者是kinetic是由你的ubuntu的版本决定的，比如我的ubuntu是20.04版本的，对应的是noetic，也就是应该下面的这行代码，而不是上面那行</strong></p>
@@ -538,12 +540,13 @@
 <p><strong>输入以下命令，运行该脚本让环境变量生效</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><strong>8、 安装rosinstall</strong><br><strong>输入以下命令：</strong></p>
+<h3 id="8、-安装rosinstall"><a href="#8、-安装rosinstall" class="headerlink" title="8、 安装rosinstall"></a>8、 安装rosinstall</h3><p><strong>输入以下命令：</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python-rosinstall python-rosinstall-generator python-wstool build-essential<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>如果提示没有可安装候选，如下所示：</strong></p>
 <p><a target="_blank" rel="noopener" href="https://img-blog.csdnimg.cn/20201007185653900.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center"><img src="https://img-blog.csdnimg.cn/20201007185653900.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MzM5MDI5,size_16,color_FFFFFF,t_70#pic_center" alt="img"></a></p>
-<h5 id="按照提示更换软件包就行了，按照提示更改为以下命令："><a href="#按照提示更换软件包就行了，按照提示更改为以下命令：" class="headerlink" title="按照提示更换软件包就行了，按照提示更改为以下命令："></a>按照提示更换软件包就行了，按照提示更改为以下命令：</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python3-rosinstall python3-rosinstall-generator python3-wstool<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>按照提示更换软件包就行了，按照提示更改为以下命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python3-rosinstall python3-rosinstall-generator python3-wstool<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="9、-验证ROS是否安装成功"><a href="#9、-验证ROS是否安装成功" class="headerlink" title="9、 验证ROS是否安装成功"></a>9、 验证ROS是否安装成功</h3><p><strong>按正常来说ROS到这里就安装完成了，现在我们来验证一下，输入以下命令：</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
