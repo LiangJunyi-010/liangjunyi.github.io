@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Home - Junyi Liang">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Implement Subscriber, Home - Junyi Liang">
+    <meta name="description" content="Implement Subscriber by c++ and python">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Hello World | Home - Junyi Liang</title>
+    <title>Implement Subscriber | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/liangjunyi.github.io/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/30/KiqmzMBs9r6LYnj.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Implement Subscriber</h1>
                 </div>
             </div>
         </div>
@@ -386,14 +386,39 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/liangjunyi.github.io/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/liangjunyi.github.io/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/operating-system/">
+                                <span class="chip bg-color">operating system</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/ROS/">
+                                <span class="chip bg-color">ROS</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/c/">
+                                <span class="chip bg-color">c++</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                ROS
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -402,21 +427,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    73
+                    300
                 </div>
                 
 
@@ -446,19 +471,72 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="Implement-Subscriber"><a href="#Implement-Subscriber" class="headerlink" title="Implement Subscriber"></a>Implement Subscriber</h1><h2 id="1-python-part"><a href="#1-python-part" class="headerlink" title="(1) python part"></a>(1) python part</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token comment">########################################################################</span>
+<span class="token comment">####          Copyright 2020 GuYueHome (www.guyuehome.com).          ###</span>
+<span class="token comment">########################################################################</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token comment"># 该例程将订阅/turtle1/pose话题，消息类型turtlesim::Pose</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token keyword">import</span> rospy
+<span class="token keyword">from</span> turtlesim<span class="token punctuation">.</span>msg <span class="token keyword">import</span> Pose
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<span class="token keyword">def</span> <span class="token function">poseCallback</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rospy<span class="token punctuation">.</span>loginfo<span class="token punctuation">(</span><span class="token string">"Turtle pose: x:%0.6f, y:%0.6f"</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>x<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">pose_subscriber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment"># ROS节点初始化</span>
+    rospy<span class="token punctuation">.</span>init_node<span class="token punctuation">(</span><span class="token string">'pose_subscriber'</span><span class="token punctuation">,</span> anonymous<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+	<span class="token comment"># 创建一个Subscriber，订阅名为/turtle1/pose的topic，注册回调函数poseCallback</span>
+    rospy<span class="token punctuation">.</span>Subscriber<span class="token punctuation">(</span><span class="token string">"/turtle1/pose"</span><span class="token punctuation">,</span> Pose<span class="token punctuation">,</span> poseCallback<span class="token punctuation">)</span>
+
+	<span class="token comment"># 循环等待回调函数</span>
+    rospy<span class="token punctuation">.</span>spin<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    pose_subscriber<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-C-part"><a href="#2-C-part" class="headerlink" title="(2)C++ part"></a>(2)C++ part</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************
+Copyright 2020 GuYueHome (www.guyuehome.com).
+***********************************************************************&#x2F;
+
+&#x2F;**
+ * 该例程将订阅&#x2F;turtle1&#x2F;pose话题，消息类型turtlesim::Pose
+ *&#x2F;
+ 
+#include &lt;ros&#x2F;ros.h&gt;
+#include &quot;turtlesim&#x2F;Pose.h&quot;
+
+&#x2F;&#x2F; 接收到订阅的消息后，会进入消息回调函数
+void poseCallback(const turtlesim::Pose::ConstPtr&amp; msg)
+&#123;
+    &#x2F;&#x2F; 将接收到的消息打印出来
+    ROS_INFO(&quot;Turtle pose: x:%0.6f, y:%0.6f&quot;, msg-&gt;x, msg-&gt;y);
+&#125;
+
+int main(int argc, char **argv)
+&#123;
+    &#x2F;&#x2F; 初始化ROS节点
+    ros::init(argc, argv, &quot;pose_subscriber&quot;);
+
+    &#x2F;&#x2F; 创建节点句柄
+    ros::NodeHandle n;
+
+    &#x2F;&#x2F; 创建一个Subscriber，订阅名为&#x2F;turtle1&#x2F;pose的topic，注册回调函数poseCallback
+    ros::Subscriber pose_sub &#x3D; n.subscribe(&quot;&#x2F;turtle1&#x2F;pose&quot;, 10, poseCallback);
+
+    &#x2F;&#x2F; 循环等待回调函数
+    ros::spin();
+
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -485,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/18/hello-world/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/18/hello-world/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/30/implement-subscriber/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/30/implement-subscriber/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -523,8 +601,24 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/liangjunyi.github.io/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/liangjunyi.github.io/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/operating-system/">
+                                    <span class="chip bg-color">operating system</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/ROS/">
+                                    <span class="chip bg-color">ROS</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/c/">
+                                    <span class="chip bg-color">c++</span>
                                 </a>
                             
                         </div>
@@ -572,34 +666,100 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/18/linux-folder/">
+                <a href="/liangjunyi.github.io/2022/05/30/implement-subscriber/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/18/mg3tS84BlbPRMHv.png" class="responsive-img" alt="Linux folder">
+                        <img src="https://s2.loli.net/2022/05/30/KiqmzMBs9r6LYnj.png" class="responsive-img" alt="Implement Subscriber">
                         
-                        <span class="card-title">Linux folder</span>
+                        <span class="card-title">Implement Subscriber</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Introduce the basic Linux Directory Structure
+                            Implement Subscriber by c++ and python
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                    ROS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/liangjunyi.github.io/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/c/">
+                        <span class="chip bg-color">c++</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/liangjunyi.github.io/2022/05/30/implement-publisher/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2022/05/30/KiqmzMBs9r6LYnj.png" class="responsive-img" alt="Implement Publisher">
+                        
+                        <span class="card-title">Implement Publisher</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Implement Publisher by c++ and python
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                    ROS
                                 </a>
                             
                             
@@ -617,50 +777,16 @@
                         <span class="chip bg-color">operating system</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/18/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/liangjunyi.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Liang Junyi
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
+                    <a href="/liangjunyi.github.io/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
+                    </a>
                     
-                    <a href="/liangjunyi.github.io/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/liangjunyi.github.io/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/c/">
+                        <span class="chip bg-color">c++</span>
                     </a>
                     
                 </div>
