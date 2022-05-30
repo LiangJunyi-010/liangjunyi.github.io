@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="File/Directory instruction, Home - Junyi Liang">
-    <meta name="description" content="File/Directory instruction">
+    <meta name="keywords" content="Linux &amp; environment variables, Home - Junyi Liang">
+    <meta name="description" content="Linux &amp; environment variables such as adding, searching, deleting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>File/Directory instruction | Home - Junyi Liang</title>
+    <title>Linux &amp; environment variables | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/26/KmNPShH6r8yZn4p.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/30/6gYbcK4FVk8LDXT.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">File/Directory instruction</h1>
+                    <h1 class="description center-align post-title">Linux &amp; environment variables</h1>
                 </div>
             </div>
         </div>
@@ -415,21 +415,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-26
+                    2022-05-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-27
+                    2022-05-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    106
+                    178
                 </div>
                 
 
@@ -459,28 +459,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="File-x2F-Directory-instruction"><a href="#File-x2F-Directory-instruction" class="headerlink" title="File&#x2F;Directory instruction"></a>File&#x2F;Directory instruction</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">pwd</span> <span class="token comment"># 展示当前路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="Linux-amp-environment-variables"><a href="#Linux-amp-environment-variables" class="headerlink" title="Linux &amp; environment variables"></a>Linux &amp; environment variables</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><ol>
+<li><p>Linux’s environment variables stored in variable PATH, so can use <code>echo $PATH</code> to check</p>
+</li>
+<li><p>Linux’s environment variables separate by <code>:</code></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">1</span>></span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">2</span>></span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">3</span>></span>:------:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> N<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h2 id="2-searching"><a href="#2-searching" class="headerlink" title="2. searching"></a>2. searching</h2><ol>
+<li><p>search all PATH value</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>check PATH environment variable</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>listing all set environemnt variables</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>in the home folder</p>
+<p><code>ctrl h</code> find all Hidden files (name begin with .)</p>
+<p>open <code>.bashrc</code> and edit</p>
+</li>
+<li><p>open <code>.bashrc</code> by command</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h2 id="3-adding"><a href="#3-adding" class="headerlink" title="3. adding"></a>3. adding</h2><ol>
+<li><p><strong>temporarily adding</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">NAME</span><span class="token operator">=</span>VALUE<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ls</span> <span class="token comment"># 显示当前文件夹下的东西</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>examples:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">export JAVA_HOME&#x3D;&#x2F;opt&#x2F;openjdk11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>-a 显示当前目录所有的文件和目录，包括隐藏的</li>
-<li>-l 以列表的方式显示信息</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token comment"># 切换目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/usr/local/nginx/sbin/:<span class="token environment constant">$PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>cd ~  回到自己的家目录</li>
-<li>cd .. 回到当前目录的上一级目录</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">makdir <span class="token comment"># 创建目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>adding &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F; index adding to the  environment temporarily</strong></p>
+</li>
+<li><p>current user adding permanent</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>-p :创建多级目录</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rmdir</span> <span class="token comment"># 删除空目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>add <code>export PATH=&quot;/usr/local/nginx/sbin/:$PATH&quot;</code> at the end of the file</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>all users adding permanent</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rm</span> -rf <span class="token comment"># 删除非空目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>add <code>export PATH=&quot;/usr/local/nginx/sbin/:$PATH&quot;</code> at the end of the file</strong></p>
+<pre class="line-numbers language-bash\" data-language="bash\"><code class="language-bash\">source  &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h2 id="4-deleting"><a href="#4-deleting" class="headerlink" title="4. deleting"></a>4. deleting</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">unset</span> VARIABLE_NAME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>examples:</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">unset</span> JAVA_HOME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
                 
@@ -508,7 +536,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/26/file-directory-instruction/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/26/file-directory-instruction/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/30/linux-environment-variable/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/30/linux-environment-variable/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,28 +627,82 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/29/ros-download/">
+                <a href="/liangjunyi.github.io/2022/05/30/linux-environment-variable/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/29/IR7Uyg89FaSH16b.png" class="responsive-img" alt="ROS download">
+                        <img src="https://s2.loli.net/2022/05/30/6gYbcK4FVk8LDXT.png" class="responsive-img" alt="Linux &amp; environment variables">
                         
-                        <span class="card-title">ROS download</span>
+                        <span class="card-title">Linux &amp; environment variables</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ROS download, suitable for ubuntu 20.04
+                            Linux & environment variables such as adding, searching, deleting
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-29
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/liangjunyi.github.io/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/liangjunyi.github.io/2022/05/29/ros-create-workspace-and-package/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2022/05/29/A8kbNj7SmBFngK3.png" class="responsive-img" alt="ROS create workspace and package">
+                        
+                        <span class="card-title">ROS create workspace and package</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            OS create workspace and package
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -646,58 +728,6 @@
                     
                     <a href="/liangjunyi.github.io/tags/ROS/">
                         <span class="chip bg-color">ROS</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/26/find-root-password/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.loli.net/2022/05/26/5ZjdB7TArJFb6GV.png" class="responsive-img" alt="Find root Password">
-                        
-                        <span class="card-title">Find root Password</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Find root Password by GRUB
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-26
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/liangjunyi.github.io/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/liangjunyi.github.io/tags/operating-system/">
-                        <span class="chip bg-color">operating system</span>
                     </a>
                     
                 </div>
