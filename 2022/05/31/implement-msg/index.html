@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Run level, Home - Junyi Liang">
-    <meta name="description" content="the meaning of each runlevel,switch run level, set default run level">
+    <meta name="keywords" content="Implement msg, Home - Junyi Liang">
+    <meta name="description" content="Implement msg by c++ and python">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Run level | Home - Junyi Liang</title>
+    <title>Implement msg | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/24/8WFRQLAvPJekEim.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/30/KiqmzMBs9r6LYnj.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Run level</h1>
+                    <h1 class="description center-align post-title">Implement msg</h1>
                 </div>
             </div>
         </div>
@@ -394,6 +394,18 @@
                                 <span class="chip bg-color">operating system</span>
                             </a>
                         
+                            <a href="/liangjunyi.github.io/tags/ROS/">
+                                <span class="chip bg-color">ROS</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/c/">
+                                <span class="chip bg-color">c++</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -402,8 +414,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                Linux
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                ROS
                             </a>
                         
                     </div>
@@ -415,28 +427,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-24
+                    2022-05-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-24
+                    2022-05-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    96
+                    789
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    4 Min
                 </div>
                 
 
@@ -459,20 +471,203 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Run-level"><a href="#Run-level" class="headerlink" title="Run level"></a>Run level</h1><h2 id="Meaning-of-each-run-level"><a href="#Meaning-of-each-run-level" class="headerlink" title="Meaning of each run level"></a>Meaning of each run level</h2><p>0：关机</p>
-<p>1：单用户【找回丢失密码】 </p>
-<p>2： 多用户状态没有网络服务 （不常用）</p>
-<p>3：多用户状态有网络服务 （常用）</p>
-<p>4：系统未使用保留给用户</p>
-<p>5：图形界面 （常用）</p>
-<p>6：系统重启</p>
-<h2 id="switch-run-level"><a href="#switch-run-level" class="headerlink" title="switch run level"></a>switch run level</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">init <span class="token punctuation">[</span>0123456<span class="token punctuation">]</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="Implement-Publisher"><a href="#Implement-Publisher" class="headerlink" title="Implement Publisher"></a>Implement Publisher</h1><h2 id="1-code-part"><a href="#1-code-part" class="headerlink" title="1. code part"></a>1. code part</h2><h3 id="1-msg"><a href="#1-msg" class="headerlink" title="(1) msg"></a>(1) msg</h3><pre class="line-numbers language-none"><code class="language-none">string name
+uint8  sex
+uint8  age
 
-<h2 id="set-default-run-level"><a href="#set-default-run-level" class="headerlink" title="set default run level"></a>set default run level</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">systemctl get-default <span class="token comment"># 查看当前默认runlevel</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+uint8 unknown &#x3D; 0
+uint8 male    &#x3D; 1
+uint8 female  &#x3D; 2 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">systemctl set-default Target.target # 设置默认runlevel<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-python"><a href="#2-python" class="headerlink" title="(2) python"></a>(2) python</h3><p>person_publisher.py</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
 
-<p><img src="https://s2.loli.net/2022/05/24/xcbsGz2vnrJLECV.png" alt="image-20220524153902289"></p>
+<span class="token comment">########################################################################</span>
+<span class="token comment">####          Copyright 2020 GuYueHome (www.guyuehome.com).          ###</span>
+<span class="token comment">########################################################################</span>
+
+<span class="token comment"># 该例程将发布/person_info话题，自定义消息类型learning_topic::Person</span>
+
+<span class="token keyword">import</span> rospy
+<span class="token keyword">from</span> learning_topic<span class="token punctuation">.</span>msg <span class="token keyword">import</span> Person
+
+<span class="token keyword">def</span> <span class="token function">velocity_publisher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment"># ROS节点初始化</span>
+	rospy<span class="token punctuation">.</span>init_node<span class="token punctuation">(</span><span class="token string">'person_publisher'</span><span class="token punctuation">,</span> anonymous<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+	<span class="token comment"># 创建一个Publisher，发布名为/person_info的topic，消息类型为learning_topic::Person，队列长度10</span>
+	person_info_pub <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Publisher<span class="token punctuation">(</span><span class="token string">'/person_info'</span><span class="token punctuation">,</span> Person<span class="token punctuation">,</span> queue_size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+	<span class="token comment">#设置循环的频率</span>
+	rate <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Rate<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+	<span class="token keyword">while</span> <span class="token keyword">not</span> rospy<span class="token punctuation">.</span>is_shutdown<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+		<span class="token comment"># 初始化learning_topic::Person类型的消息</span>
+		person_msg <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token punctuation">)</span>
+		person_msg<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Tom"</span>
+		person_msg<span class="token punctuation">.</span>age  <span class="token operator">=</span> <span class="token number">18</span>
+		person_msg<span class="token punctuation">.</span>sex  <span class="token operator">=</span> Person<span class="token punctuation">.</span>male
+    	<span class="token comment"># 发布消息</span>
+		person_info_pub<span class="token punctuation">.</span>publish<span class="token punctuation">(</span>person_msg<span class="token punctuation">)</span>
+		rospy<span class="token punctuation">.</span>loginfo<span class="token punctuation">(</span><span class="token string">"Publsh person message[%s, %d, %d]"</span><span class="token punctuation">,</span> 
+				person_msg<span class="token punctuation">.</span>name<span class="token punctuation">,</span> person_msg<span class="token punctuation">.</span>age<span class="token punctuation">,</span> person_msg<span class="token punctuation">.</span>sex<span class="token punctuation">)</span>
+		<span class="token comment"># 按照循环频率延时</span>
+		rate<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        velocity_publisher<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> rospy<span class="token punctuation">.</span>ROSInterruptException<span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>person_subscriber.py</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+
+<span class="token comment">########################################################################</span>
+<span class="token comment">####          Copyright 2020 GuYueHome (www.guyuehome.com).          ###</span>
+<span class="token comment">########################################################################</span>
+
+<span class="token comment"># 该例程将订阅/person_info话题，自定义消息类型learning_topic::Person</span>
+
+<span class="token keyword">import</span> rospy
+<span class="token keyword">from</span> learning_topic<span class="token punctuation">.</span>msg <span class="token keyword">import</span> Person
+
+<span class="token keyword">def</span> <span class="token function">personInfoCallback</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rospy<span class="token punctuation">.</span>loginfo<span class="token punctuation">(</span><span class="token string">"Subcribe Person Info: name:%s  age:%d  sex:%d"</span><span class="token punctuation">,</span> 
+			 msg<span class="token punctuation">.</span>name<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>age<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sex<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">person_subscriber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment"># ROS节点初始化</span>
+    rospy<span class="token punctuation">.</span>init_node<span class="token punctuation">(</span><span class="token string">'person_subscriber'</span><span class="token punctuation">,</span> anonymous<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+	<span class="token comment"># 创建一个Subscriber，订阅名为/person_info的topic，注册回调函数personInfoCallback</span>
+    rospy<span class="token punctuation">.</span>Subscriber<span class="token punctuation">(</span><span class="token string">"/person_info"</span><span class="token punctuation">,</span> Person<span class="token punctuation">,</span> personInfoCallback<span class="token punctuation">)</span>
+
+	<span class="token comment"># 循环等待回调函数</span>
+    rospy<span class="token punctuation">.</span>spin<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    person_subscriber<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-C"><a href="#3-C" class="headerlink" title="(3) C++"></a>(3) C++</h3><p>person_publisher.cpp</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************
+Copyright 2020 GuYueHome (www.guyuehome.com).
+***********************************************************************&#x2F;
+
+&#x2F;**
+ * 该例程将发布&#x2F;person_info话题，自定义消息类型learning_topic::Person
+ *&#x2F;
+ 
+#include &lt;ros&#x2F;ros.h&gt;
+#include &quot;learning_topic&#x2F;Person.h&quot;
+
+int main(int argc, char **argv)
+&#123;
+    &#x2F;&#x2F; ROS节点初始化
+    ros::init(argc, argv, &quot;person_publisher&quot;);
+
+    &#x2F;&#x2F; 创建节点句柄
+    ros::NodeHandle n;
+
+    &#x2F;&#x2F; 创建一个Publisher，发布名为&#x2F;person_info的topic，消息类型为learning_topic::Person，队列长度10
+    ros::Publisher person_info_pub &#x3D; n.advertise&lt;learning_topic::Person&gt;(&quot;&#x2F;person_info&quot;, 10);
+
+    &#x2F;&#x2F; 设置循环的频率
+    ros::Rate loop_rate(1);
+
+    int count &#x3D; 0;
+    while (ros::ok())
+    &#123;
+        &#x2F;&#x2F; 初始化learning_topic::Person类型的消息
+    	learning_topic::Person person_msg;
+		person_msg.name &#x3D; &quot;Tom&quot;;
+		person_msg.age  &#x3D; 18;
+		person_msg.sex  &#x3D; learning_topic::Person::male;
+
+        &#x2F;&#x2F; 发布消息
+		person_info_pub.publish(person_msg);
+
+       	ROS_INFO(&quot;Publish Person Info: name:%s  age:%d  sex:%d&quot;, 
+				  person_msg.name.c_str(), person_msg.age, person_msg.sex);
+
+        &#x2F;&#x2F; 按照循环频率延时
+        loop_rate.sleep();
+    &#125;
+
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>person_subscriber.cpp</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************
+Copyright 2020 GuYueHome (www.guyuehome.com).
+***********************************************************************&#x2F;
+
+&#x2F;**
+ * 该例程将订阅&#x2F;person_info话题，自定义消息类型learning_topic::Person
+ *&#x2F;
+ 
+#include &lt;ros&#x2F;ros.h&gt;
+#include &quot;learning_topic&#x2F;Person.h&quot;
+
+&#x2F;&#x2F; 接收到订阅的消息后，会进入消息回调函数
+void personInfoCallback(const learning_topic::Person::ConstPtr&amp; msg)
+&#123;
+    &#x2F;&#x2F; 将接收到的消息打印出来
+    ROS_INFO(&quot;Subcribe Person Info: name:%s  age:%d  sex:%d&quot;, 
+			 msg-&gt;name.c_str(), msg-&gt;age, msg-&gt;sex);
+&#125;
+
+int main(int argc, char **argv)
+&#123;
+    &#x2F;&#x2F; 初始化ROS节点
+    ros::init(argc, argv, &quot;person_subscriber&quot;);
+
+    &#x2F;&#x2F; 创建节点句柄
+    ros::NodeHandle n;
+
+    &#x2F;&#x2F; 创建一个Subscriber，订阅名为&#x2F;person_info的topic，注册回调函数personInfoCallback
+    ros::Subscriber person_info_sub &#x3D; n.subscribe(&quot;&#x2F;person_info&quot;, 10, personInfoCallback);
+
+    &#x2F;&#x2F; 循环等待回调函数
+    ros::spin();
+
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-set-up-env"><a href="#2-set-up-env" class="headerlink" title="2. set up env"></a>2. set up env</h2><h3 id="1-msg-part"><a href="#1-msg-part" class="headerlink" title="(1) msg part"></a>(1) msg part</h3><ol>
+<li><p>go to <code>package.xml</code> , add following </p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">></span></span>message_generation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">></span></span>message_runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec_depend</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+</li>
+<li><p>go to CMakeLists.txt, add following</p>
+<pre class="line-numbers language-none"><code class="language-none">find_package( …… message_generation)
+
+add_message_files(FILES Person.msg)
+generate_messages(DEPENDENCIES std_msgs)
+
+catkin_package(…… message_runtime)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://s2.loli.net/2022/05/31/zNT21PX5VOJmw3S.png" alt="image-20220531151255415"></p>
+</li>
+</ol>
+<p><img src="https://s2.loli.net/2022/05/31/nctWR6GZ73iFePv.png" alt="image-20220531151334444"></p>
+<p><img src="https://s2.loli.net/2022/05/31/RTEngH5Ya3dx84c.png" alt="image-20220531151401674"></p>
+<h3 id="2-C"><a href="#2-C" class="headerlink" title="(2) C++"></a>(2) C++</h3><p>go to the <code>CMakeLists.txt</code> file, add these two command here</p>
+<pre class="line-numbers language-none"><code class="language-none">add_executable(person_publisher src&#x2F;person_publisher.cpp)
+target_link_libraries(person_publisher $&#123;catkin_LIBRARIES&#125;)
+add_dependencies(person_publisher $&#123;PROJECT_NAME&#125;_generate_messages_cpp)
+
+add_executable(person_subscriber src&#x2F;person_subscriber.cpp)
+target_link_libraries(person_subscriber $&#123;catkin_LIBRARIES&#125;)
+add_dependencies(person_subscriber $&#123;PROJECT_NAME&#125;_generate_messages_cpp)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://s2.loli.net/2022/05/31/4jZDsHt1p2nmTMY.png" alt="image-20220531151555739"></p>
 
                 
             </div>
@@ -499,7 +694,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/24/run-level/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/24/run-level/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/31/implement-msg/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/31/implement-msg/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,6 +738,18 @@
                             
                                 <a href="/liangjunyi.github.io/tags/operating-system/">
                                     <span class="chip bg-color">operating system</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/ROS/">
+                                    <span class="chip bg-color">ROS</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/c/">
+                                    <span class="chip bg-color">c++</span>
                                 </a>
                             
                         </div>
@@ -590,40 +797,42 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/26/find-root-password/">
+                <a href="/liangjunyi.github.io/2022/05/31/implement-msg/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/26/5ZjdB7TArJFb6GV.png" class="responsive-img" alt="Find root Password">
+                        <img src="https://s2.loli.net/2022/05/30/KiqmzMBs9r6LYnj.png" class="responsive-img" alt="Implement msg">
                         
-                        <span class="card-title">Find root Password</span>
+                        <span class="card-title">Implement msg</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Find root Password by GRUB
+                            Implement msg by c++ and python
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                    ROS
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -633,6 +842,18 @@
                     
                     <a href="/liangjunyi.github.io/tags/operating-system/">
                         <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/c/">
+                        <span class="chip bg-color">c++</span>
                     </a>
                     
                 </div>
@@ -646,30 +867,30 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/23/the-remote-root-login/">
+                <a href="/liangjunyi.github.io/2022/05/30/implement-publisher/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/23/jSXcBLHiPJhWZdt.png" class="responsive-img" alt="The remote root login">
+                        <img src="https://s2.loli.net/2022/05/30/KiqmzMBs9r6LYnj.png" class="responsive-img" alt="Implement Publisher">
                         
-                        <span class="card-title">The remote root login</span>
+                        <span class="card-title">Implement Publisher</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Abled the remote root login
+                            Implement Publisher by c++ and python
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
+                                    ROS
                                 </a>
                             
                             
@@ -685,6 +906,18 @@
                     
                     <a href="/liangjunyi.github.io/tags/operating-system/">
                         <span class="chip bg-color">operating system</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/c/">
+                        <span class="chip bg-color">c++</span>
                     </a>
                     
                 </div>
