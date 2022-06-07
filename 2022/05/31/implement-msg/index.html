@@ -478,7 +478,6 @@ uint8  age
 uint8 unknown &#x3D; 0
 uint8 male    &#x3D; 1
 uint8 female  &#x3D; 2 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="2-python"><a href="#2-python" class="headerlink" title="(2) python"></a>(2) python</h3><p>person_publisher.py</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python3</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
@@ -518,7 +517,6 @@ uint8 female  &#x3D; 2 <span aria-hidden="true" class="line-numbers-rows"><span>
     <span class="token keyword">except</span> rospy<span class="token punctuation">.</span>ROSInterruptException<span class="token punctuation">:</span>
         <span class="token keyword">pass</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>person_subscriber.py</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python3</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
@@ -548,7 +546,6 @@ uint8 female  &#x3D; 2 <span aria-hidden="true" class="line-numbers-rows"><span>
 
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     person_subscriber<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="3-C"><a href="#3-C" class="headerlink" title="(3) C++"></a>(3) C++</h3><p>person_publisher.cpp</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************
 Copyright 2020 GuYueHome (www.guyuehome.com).
@@ -597,7 +594,6 @@ int main(int argc, char **argv)
     return 0;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>person_subscriber.cpp</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************
 Copyright 2020 GuYueHome (www.guyuehome.com).
@@ -635,14 +631,13 @@ int main(int argc, char **argv)
     return 0;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="2-set-up-env"><a href="#2-set-up-env" class="headerlink" title="2. set up env"></a>2. set up env</h2><h3 id="1-msg-part"><a href="#1-msg-part" class="headerlink" title="(1) msg part"></a>(1) msg part</h3><ol>
 <li><p>go to <code>package.xml</code> , add following </p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">></span></span>message_generation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">></span></span>message_runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec_depend</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
 </li>
+</ol>
+<ol>
 <li><p>go to CMakeLists.txt, add following</p>
 <pre class="line-numbers language-none"><code class="language-none">find_package( …… message_generation)
 
@@ -650,12 +645,9 @@ add_message_files(FILES Person.msg)
 generate_messages(DEPENDENCIES std_msgs)
 
 catkin_package(…… message_runtime)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p><img src="https://s2.loli.net/2022/05/31/zNT21PX5VOJmw3S.png" alt="image-20220531151255415"></p>
 </li>
 </ol>
+<p>   <img src="https://s2.loli.net/2022/05/31/zNT21PX5VOJmw3S.png" alt="image-20220531151255415"></p>
 <p><img src="https://s2.loli.net/2022/05/31/nctWR6GZ73iFePv.png" alt="image-20220531151334444"></p>
 <p><img src="https://s2.loli.net/2022/05/31/RTEngH5Ya3dx84c.png" alt="image-20220531151401674"></p>
 <h3 id="2-C"><a href="#2-C" class="headerlink" title="(2) C++"></a>(2) C++</h3><p>go to the <code>CMakeLists.txt</code> file, add these two command here</p>
@@ -666,7 +658,6 @@ add_dependencies(person_publisher $&#123;PROJECT_NAME&#125;_generate_messages_cp
 add_executable(person_subscriber src&#x2F;person_subscriber.cpp)
 target_link_libraries(person_subscriber $&#123;catkin_LIBRARIES&#125;)
 add_dependencies(person_subscriber $&#123;PROJECT_NAME&#125;_generate_messages_cpp)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p><img src="https://s2.loli.net/2022/05/31/4jZDsHt1p2nmTMY.png" alt="image-20220531151555739"></p>
 
                 
@@ -1098,7 +1089,7 @@ add_dependencies(person_subscriber $&#123;PROJECT_NAME&#125;_generate_messages_c
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">12.7k</span>
+                        class="white-color">12.5k</span>
             
             
             

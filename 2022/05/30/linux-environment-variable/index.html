@@ -429,7 +429,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    178
+                    173
                 </div>
                 
 
@@ -463,7 +463,8 @@
 <li><p>Linux’s environment variables stored in variable PATH, so can use <code>echo $PATH</code> to check</p>
 </li>
 <li><p>Linux’s environment variables separate by <code>:</code></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">1</span>></span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">2</span>></span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">3</span>></span>:------:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> N<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">1</span>></span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">2</span>></span>:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> <span class="token operator"><span class="token file-descriptor important">3</span>></span>:------:<span class="token operator">&lt;</span><span class="token environment constant">PATH</span> N<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 </ol>
 <h2 id="2-searching"><a href="#2-searching" class="headerlink" title="2. searching"></a>2. searching</h2><ol>
 <li><p>search all PATH value</p>
@@ -480,36 +481,31 @@
 <p>open <code>.bashrc</code> and edit</p>
 </li>
 <li><p>open <code>.bashrc</code> by command</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 </ol>
 <h2 id="3-adding"><a href="#3-adding" class="headerlink" title="3. adding"></a>3. adding</h2><ol>
 <li><p><strong>temporarily adding</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">NAME</span><span class="token operator">=</span>VALUE<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>examples:</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">export JAVA_HOME&#x3D;&#x2F;opt&#x2F;openjdk11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/usr/local/nginx/sbin/:<span class="token environment constant">$PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>adding &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F; index adding to the  environment temporarily</strong></p>
+<p><strong>adding /usr/local/nginx/sbin/ index adding to the  environment temporarily</strong></p>
 </li>
 <li><p>current user adding permanent</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>add <code>export PATH=&quot;/usr/local/nginx/sbin/:$PATH&quot;</code> at the end of the file</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>all users adding permanent</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>add <code>export PATH=&quot;/usr/local/nginx/sbin/:$PATH&quot;</code> at the end of the file</strong></p>
-<pre class="line-numbers language-bash\" data-language="bash\"><code class="language-bash\">source  &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class="line-numbers language-bash\" data-language="bash\"><code class="language-bash\">source  &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 </ol>
 <h2 id="4-deleting"><a href="#4-deleting" class="headerlink" title="4. deleting"></a>4. deleting</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">unset</span> VARIABLE_NAME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>examples:</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">unset</span> JAVA_HOME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 
                 
             </div>
@@ -928,7 +924,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">12.7k</span>
+                        class="white-color">12.5k</span>
             
             
             

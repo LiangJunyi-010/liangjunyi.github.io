@@ -513,7 +513,6 @@
     <span class="token keyword">except</span> rospy<span class="token punctuation">.</span>ROSInterruptException<span class="token punctuation">:</span>
         <span class="token keyword">pass</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="2-C"><a href="#2-C" class="headerlink" title="(2) C++"></a>(2) C++</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************
 Copyright 2020 GuYueHome (www.guyuehome.com).
 ***********************************************************************&#x2F;
@@ -558,17 +557,13 @@ int main(int argc, char **argv)
 
 	return 0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="2-set-up-env"><a href="#2-set-up-env" class="headerlink" title="2. set up env"></a>2. set up env</h2><h3 id="1-python-1"><a href="#1-python-1" class="headerlink" title="(1) python"></a>(1) python</h3><ol>
 <li>create a folder under your <code>&lt;package&gt;</code> named scripts, it is because distinguish between python and c++</li>
-<li>go to the terminal</li>
+<li>go to the terminal </li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node <span class="token comment"># another terminal</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun learning_topic velocity_publisher.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>we can see the turtle move</p>
 <h3 id="2-C-1"><a href="#2-C-1" class="headerlink" title="(2) C++"></a>(2) C++</h3><ol>
 <li><p>put the c code in the <code>&lt;package&gt;/src</code> folder </p>
@@ -576,22 +571,19 @@ int main(int argc, char **argv)
 <li><p>go to the <code>CMakeLists.txt</code> file, add these two command here</p>
 <pre class="line-numbers language-none"><code class="language-none">add_executable(velocity_publisher src&#x2F;velocity_publisher.cpp)
 target_link_libraries(velocity_publisher $&#123;catkin_LIBRARIES&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <p><img src="https://s2.loli.net/2022/05/30/zuVSMOZvqUNdGeQ.png" alt="image-20220530154424496"></p>
 </li>
 <li><p>go to the workspace root folder and open terminal here</p>
 </li>
 <li><p>compile the c++ file</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_make<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>if can see <code>0%</code> to <code>100%</code> means success</p>
 </li>
 <li><p>then go to the terminal </p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node <span class="token comment"># another terminal</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun learning_topic velocity_publisher<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun learning_topic velocity_publisher<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 </ol>
 
                 
@@ -1031,7 +1023,7 @@ target_link_libraries(velocity_publisher $&#123;catkin_LIBRARIES&#125;)<span ari
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">12.7k</span>
+                        class="white-color">12.5k</span>
             
             
             

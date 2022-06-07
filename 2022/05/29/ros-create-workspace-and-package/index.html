@@ -474,35 +474,22 @@
 <p><img src="https://s2.loli.net/2022/05/29/JnCedVgN71iQmYS.png" alt="image-20220529201346535"></p>
 <h2 id="2-create-workspace"><a href="#2-create-workspace" class="headerlink" title="2. create workspace"></a>2. create workspace</h2><p><strong>create workspace</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> -p ~/catkin_ws/src<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws/src<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_init_workspace<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>compile the workspace</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws/ <span class="token comment"># go back to the workspace root</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_make<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_make <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>setup the environment variable</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> devel/setup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token variable">$ROS_PACKAGE_PATH</span> <span class="token comment"># check environemnt variable</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <h2 id="3-create-package"><a href="#3-create-package" class="headerlink" title="3. create package"></a>3. create package</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws/src <span class="token comment"># go to src folder under your root folder</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_create_pkg <span class="token operator">&lt;</span>package_name<span class="token operator">></span> <span class="token punctuation">[</span>depend1<span class="token punctuation">]</span> <span class="token punctuation">[</span>depend2<span class="token punctuation">]</span> <span class="token punctuation">[</span>depend3<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>example</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_create_pkg test_pkg roscpp rospy std_msgs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><strong>compile the package</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws <span class="token comment"># go back to root folder again</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/catkin_ws/devel/sessssstup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 
                 
             </div>
@@ -913,7 +900,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">12.7k</span>
+                        class="white-color">12.5k</span>
             
             
             
