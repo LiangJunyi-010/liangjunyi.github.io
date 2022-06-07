@@ -519,11 +519,11 @@
 <p>But if $\bar{X}$ &#x3D; False, can not decide X</p>
 </blockquote>
 <blockquote>
-<p>Case 3: If $edge(\bar{X}\rightarrow X) \space &amp; \space edge(X\rightarrow \bar{X})$ exists in the graph at same time</p>
+<p>Case 3: If $edge(\bar{X}\rightarrow X) \space and \space edge(X\rightarrow \bar{X})$ exists in the graph at same time</p>
 <p>One edge requires X to be TRUE and the other one requires X to be FALSE.</p>
 <p>Thus, there is no possible assignment in such a case.</p>
 </blockquote>
-<p><strong>CONCLUSION:</strong> If any two variables $X$ and $\bar{X}$ are on a cycle i.e. $edge(\bar{X}\rightarrow X) \space &amp; \space edge(X\rightarrow \bar{X})$  both exists, then the CNF is unsatisfiable. Otherwise, there is a possible assignment and the CNF is satisfiable. </p>
+<p><strong>CONCLUSION:</strong> If any two variables $X$ and $\bar{X}$ are on a cycle i.e. $edge(\bar{X}\rightarrow X) \space and \space edge(X\rightarrow \bar{X})$  both exists, then the CNF is unsatisfiable. Otherwise, there is a possible assignment and the CNF is satisfiable. </p>
 <p><strong>CONCLUSION FROM IMPLEMENTATION POINT OF VIEW:</strong><br>If both $X$ and $\bar{X}$ lie in the same SCC (Strongly Connected Component), the CNF is unsatisfiable. </p>
 <h3 id="Strongly-Connected-Component"><a href="#Strongly-Connected-Component" class="headerlink" title="Strongly Connected Component:"></a>Strongly Connected Component:</h3><p>A Strongly Connected Component of a directed graph has nodes such that every node can be reach from every another node in that SCC. </p>
 <p>3 SCCs here</p>
