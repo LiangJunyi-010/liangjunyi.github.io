@@ -461,6 +461,7 @@
             <div id="articleContent">
                 <h1 id="Open-an-app-in-Linux"><a href="#Open-an-app-in-Linux" class="headerlink" title="Open an app in Linux"></a>Open an app in Linux</h1><h2 id="Open-app"><a href="#Open-app" class="headerlink" title="Open app"></a>Open app</h2><p>For example open firefox, we can type in terminal </p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">firefox $<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <ul>
 <li>no need go to specific folder, can directly type this command in the terminal</li>
@@ -469,28 +470,35 @@
 </ul>
 </blockquote>
 <h2 id="Close-app"><a href="#Close-app" class="headerlink" title="Close app"></a>Close app</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
-<li>show the currently running process </li>
+<li>show the currently running process</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> aux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
 <li>is to show all the currently running process and their state</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
 <li>it means search</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> evince<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
 <li>search for evince process</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> evince     <span class="token comment">#查到evince的进程</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
 <li>|:管道符号,command1 |command2,将command1输出结果通过管道作为command2命令的输入参数.</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">kill</span> -s <span class="token number">9</span> pid   <span class="token comment">#杀死进程号为PID的进程，例如：kill -9 6705</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="Some-commands"><a href="#Some-commands" class="headerlink" title="Some commands"></a>Some commands</h2><h3 id="ps命令-Process-Status"><a href="#ps命令-Process-Status" class="headerlink" title="ps命令 (Process Status)"></a>ps命令 (Process Status)</h3><p><code>ps aux</code>‘output format</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token environment constant">USER</span> PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>格式说明：</p>
 <ul>
 <li><p>USER: 行程拥有者</p>
@@ -509,7 +517,8 @@
 </li>
 <li><p>STAT: 该行程的状态，linux的进程有5种状态：</p>
 <ul>
-<li>D 不可中断 uninterruptible sleep (usually IO)  (收到信号不唤醒和不可运行, 进程必须等待直到有中断发生)</li>
+<li><p>D 不可中断 uninterruptible sleep (usually IO)  (收到信号不唤醒和不可运行, 进程必须等待直到有中断发生)</p>
+</li>
 <li><p>R 运行 runnable (on run queue)      (正在运行或在运行队列中等待)</p>
 </li>
 <li><p>S 中断 sleeping     (休眠中, 受阻, 在等待某个条件的形成或接受到信号)</p>
@@ -518,12 +527,16 @@
 </li>
 <li><p>Z 僵死 a defunct (”zombie”) process   (进程已终止, 但进程描述符存在, 直到父进程调用wait4()系统调用后释放)</p>
 </li>
-<li>注: 其它状态还包括W(无驻留页), &lt;(高优先级进程), N(低优先级进程), L(内存锁页).</li>
+<li><p>注: 其它状态还包括W(无驻留页), &lt;(高优先级进程), N(低优先级进程), L(内存锁页).</p>
+</li>
 </ul>
 </li>
-<li>START: 进程开始时间</li>
-<li>TIME: 执行的时间</li>
-<li>COMMAND:所执行的指令</li>
+<li><p>START: 进程开始时间</p>
+</li>
+<li><p>TIME: 执行的时间</p>
+</li>
+<li><p>COMMAND:所执行的指令</p>
+</li>
 </ul>
 
                 
@@ -646,18 +659,18 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/22/user-user-group-management/">
+                <a href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/22/x29LSnfIKTvyZMQ.png" class="responsive-img" alt="User &amp; User Group management">
+                        <img src="https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png" class="responsive-img" alt="Vi &amp; Vim in Linux">
                         
-                        <span class="card-title">User &amp; User Group management</span>
+                        <span class="card-title">Vi &amp; Vim in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            User management for add user, delete user, set user's permission
+                            Basic knowledge about Vi & Vim in Linux
                         
                     </div>
                     <div class="publish-info">
@@ -939,7 +952,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">12.5k</span>
+                        class="white-color">12.7k</span>
             
             
             

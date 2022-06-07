@@ -429,7 +429,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    691
+                    697
                 </div>
                 
 
@@ -461,22 +461,23 @@
             <div id="articleContent">
                 <h1 id="User-management"><a href="#User-management" class="headerlink" title="User management"></a>User management</h1><h2 id="User-part"><a href="#User-part" class="headerlink" title="User part"></a>User part</h2><h3 id="Add-new-user"><a href="#Add-new-user" class="headerlink" title="Add new user"></a>Add new user</h3><ul>
 <li><p>Basic command line</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <blockquote>
 <p>此方法虽然添加了用户，但是有可能没有默认创建文件夹，如果没有创建</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>可以解决这个问题</p>
 <p>注意如果刚刚执行完上面的语句，需要先删除刚刚的user才能再次创建他，没有办法有两个同名的user</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">adduser username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>这个也可以，创建完user后也会生成文件夹，更加推荐</p>
 </blockquote>
 <h4 id="example"><a href="#example" class="headerlink" title="example :"></a>example :</h4><p><img src="https://s2.loli.net/2022/05/22/oFr1ltYL2G8jvOe.png" alt="image-20220522213056132"></p>
 <ul>
 <li><p>Example</p>
 <ul>
-<li>add a user <code>milan</code>, default user directory is /home/milan</li>
+<li>add a user <code>milan</code>, default user directory is &#x2F;home&#x2F;milan</li>
 </ul>
 </li>
 <li><p>detail</p>
@@ -485,10 +486,12 @@
 </li>
 <li><p>if we use </p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -d The specified directory username <span class="token comment"># useradd -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>also create a user but this user will use the specified directory instead of generating a new directory</p>
 <blockquote>
 <p>此方法同上</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -m -d The specified directory username<span class="token comment"># useradd -m -d 指定目录 新加用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>可以解决这个问题</p>
 </blockquote>
 <p><img src="https://s2.loli.net/2022/05/22/18SibYR4H2WteVI.png" alt="image-20220522213953461"></p>
@@ -500,17 +503,22 @@
 </li>
 </ul>
 <h3 id="Set-password-for-new-user"><a href="#Set-password-for-new-user" class="headerlink" title="Set password for new user"></a>Set password for new user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">passwd</span> username <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <p>This operation also need under root </p>
 </blockquote>
 <h3 id="Delete-user"><a href="#Delete-user" class="headerlink" title="Delete user"></a>Delete user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>only delete this user</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">userdel</span> -r username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Not only delete the user, but also delete the directory</p>
 <h3 id="Querying-User-Information"><a href="#Querying-User-Information" class="headerlink" title="Querying User Information"></a>Querying User Information</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">id</span> username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h4 id="examples"><a href="#examples" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/8P9HBovYZbRr6es.png" alt="image-20220523174054780"></p>
 <p><img src="https://s2.loli.net/2022/05/23/QPJmgTs2dlwRVaC.png" alt="image-20220523174403469"></p>
 <h3 id="Switch-users"><a href="#Switch-users" class="headerlink" title="Switch users"></a>Switch users</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">su</span> - username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
 <li><p>In Linux, if the current user has insufficient rights, you can switch to a user with higher right</p>
 </li>
@@ -518,37 +526,47 @@
 </li>
 <li><p>Otherwise you need a password</p>
 </li>
-<li><p>To return to the original user, use the exit/logout command</p>
+<li><p>To return to the original user, use the exit&#x2F;logout command</p>
 </li>
 </ul>
 <blockquote>
 <p>在操作linux中，如果当前权限不够，可以切换至更高权限的用户</p>
 <p>从高权限用户到低权限用户不需要密码</p>
 <p>反之需要密码</p>
-<p>如果想回到原来用户使用exit/logout指令</p>
+<p>如果想回到原来用户使用exit&#x2F;logout指令</p>
 </blockquote>
 <h4 id="examples-1"><a href="#examples-1" class="headerlink" title="examples :"></a>examples :</h4><p><img src="https://s2.loli.net/2022/05/23/6EjAWvnoJelfF9Z.png" alt="image-20220523175242905"></p>
 <h3 id="Who-am-i"><a href="#Who-am-i" class="headerlink" title="Who am i"></a>Who am i</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">who</span> am i<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">whoami</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>it will show the initial login user’s information</p>
-<h4 id="examples-2"><a href="#examples-2" class="headerlink" title="examples :"></a>examples :</h4><p>i am at root currently, but it will show the init login user — liangjunyi</p>
+<h4 id="examples-2"><a href="#examples-2" class="headerlink" title="examples :"></a>examples :</h4><p>i am at root currently, but it will show the init login user – liangjunyi</p>
 <p><img src="https://s2.loli.net/2022/05/23/uinKFQ4VG9EyYLS.png" alt="image-20220523180109271"></p>
 <p><img src="https://s2.loli.net/2022/05/23/bIhWSCz5QD3FrqP.png" alt="image-20220523180147131"></p>
-<h2 id="User-Group-part"><a href="#User-Group-part" class="headerlink" title="User Group part"></a>User Group part</h2><p>Unified management of users with common/permission in the system</p>
+<h2 id="User-Group-part"><a href="#User-Group-part" class="headerlink" title="User Group part"></a>User Group part</h2><p>Unified management of users with common&#x2F;permission in the system</p>
 <blockquote>
-<p>系统对有 共性/权限 的用户进行统一管理</p>
+<p>系统对有 共性&#x2F;权限 的用户进行统一管理</p>
 </blockquote>
 <h3 id="Add-new-group"><a href="#Add-new-group" class="headerlink" title="Add new group"></a>Add new group</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">groupadd</span> groupname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h3 id="Delete-a-group"><a href="#Delete-a-group" class="headerlink" title="Delete a group"></a>Delete a group</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">groupdel</span> groupname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h3 id="Add-group-when-add-user"><a href="#Add-group-when-add-user" class="headerlink" title="Add group when add user"></a>Add group when add user</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">useradd</span> -g groupname username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h3 id="Change-user’s-group"><a href="#Change-user’s-group" class="headerlink" title="Change user’s group"></a>Change user’s group</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">usermod</span> -g groupname username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
 <h2 id="File-for-user-and-group"><a href="#File-for-user-and-group" class="headerlink" title="File for user and group"></a>File for user and group</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/etc/passwd 文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>user的配置文件，记录用户的各种信息</p>
 <p>每行的含义：</p>
 <ul>
 <li>用户名：口令：用户标识号：组标识号：注释性描述：主目录：登陆shell</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/etc/shadow 文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>口令的配置文件</p>
 <p>每行的含义：</p>
 <ul>
@@ -558,21 +576,28 @@
 </li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/etc/group 文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>group的配置文件，记录linux包含组的信息</p>
 <p>每行含义：</p>
 <ul>
 <li>组名：口令：组标识号：组内用户列表</li>
 </ul>
 <h2 id="Find-all-users-groups"><a href="#Find-all-users-groups" class="headerlink" title="Find all users, groups"></a>Find all users, groups</h2><h3 id="find-all-users"><a href="#find-all-users" class="headerlink" title="find all users"></a>find all users</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>or</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cut</span> -d <span class="token builtin class-name">:</span> -f <span class="token number">1</span> /etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>or</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /etc/passwd <span class="token operator">|</span><span class="token function">awk</span> -F <span class="token punctuation">\</span>: <span class="token string">'&#123;print $1&#125;'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>or</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /etc/passwd<span class="token operator">|</span><span class="token function">grep</span> -v nologin<span class="token operator">|</span><span class="token function">grep</span> -v <span class="token function">halt</span><span class="token operator">|</span><span class="token function">grep</span> -v <span class="token function">shutdown</span><span class="token operator">|</span><span class="token function">awk</span> -F<span class="token string">":"</span> <span class="token string">'&#123;print $1"|"$3"|"$4&#125;'</span><span class="token operator">|</span><span class="token function">more</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h3 id="find-all-groups"><a href="#find-all-groups" class="headerlink" title="find all groups"></a>find all groups</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /etc/group<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>or</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">getent group<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 
                 
             </div>
@@ -694,18 +719,18 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">
+                <a href="/liangjunyi.github.io/2022/05/22/shutdown-restart-and-logout/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png" class="responsive-img" alt="Vi &amp; Vim in Linux">
+                        <img src="https://s2.loli.net/2022/05/22/5jGtAqeYnwihW72.png" class="responsive-img" alt="Shutdown Restart and Logout">
                         
-                        <span class="card-title">Vi &amp; Vim in Linux</span>
+                        <span class="card-title">Shutdown Restart and Logout</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Basic knowledge about Vi & Vim in Linux
+                            Shutdown Restart and Logout by command line in Linux
                         
                     </div>
                     <div class="publish-info">
@@ -746,23 +771,23 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/19/open-an-app-in-linux/">
+                <a href="/liangjunyi.github.io/2022/05/22/vi-vim-in-linux/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/19/pQ9HRfLIcu3kV6Z.png" class="responsive-img" alt="Open an app in Linux">
+                        <img src="https://s2.loli.net/2022/05/22/3hpAU7PzromdMBD.png" class="responsive-img" alt="Vi &amp; Vim in Linux">
                         
-                        <span class="card-title">Open an app in Linux</span>
+                        <span class="card-title">Vi &amp; Vim in Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Open an app in Linux by using command line
+                            Basic knowledge about Vi & Vim in Linux
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
                             </span>
                         <span class="publish-author">
                             
@@ -975,7 +1000,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">12.5k</span>
+                        class="white-color">12.7k</span>
             
             
             

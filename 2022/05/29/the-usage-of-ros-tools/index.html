@@ -464,10 +464,14 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="ROS-tools-in-Linux"><a href="#ROS-tools-in-Linux" class="headerlink" title="ROS tools in Linux"></a>ROS tools in Linux</h1><h2 id="1-open-Turtlesim"><a href="#1-open-Turtlesim" class="headerlink" title="1. open Turtlesim"></a>1. open Turtlesim</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore <span class="token comment"># start the ROS Master</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node <span class="token comment"># start the turtlesim</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtle_teleop_key <span class="token comment"># start turtle control node</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/gokcpLmyPZBVDqR.png" alt="image-20220529151250691"></p>
 <h2 id="2-rqt-graph"><a href="#2-rqt-graph" class="headerlink" title="2. rqt_graph"></a>2. rqt_graph</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rqt_graph<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/wrOlhL1vedbkBGs.png" alt="image-20220529151602659"></p>
 <ul>
 <li><code>/turtlesim</code> node is  a simple simulator for teaching ROS concepts.</li>
@@ -475,12 +479,16 @@
 <li><code>/turtle1/cmd_vel</code> topic</li>
 </ul>
 <h2 id="3-rosnode-list"><a href="#3-rosnode-list" class="headerlink" title="3. rosnode list"></a>3. rosnode list</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosnode list <span class="token comment"># show the current nodes</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/FphekDm5ydRcTz3.png" alt="image-20220529173940604"></p>
 <h2 id="3-rosnode-info"><a href="#3-rosnode-info" class="headerlink" title="3. rosnode info"></a>3. rosnode info</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosnode info somenode <span class="token comment"># check somenode's information</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/IB8NcqrQJwsAl3i.png" alt="image-20220529181619612"></p>
 <h2 id="4-rostopic-list"><a href="#4-rostopic-list" class="headerlink" title="4. rostopic list"></a>4. rostopic list</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rostopic list <span class="token comment"># show the current topic</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/5jNCniHyRQD2mwM.png" alt="image-20220529182106662"></p>
 <h2 id="5-rostopic-pub"><a href="#5-rostopic-pub" class="headerlink" title="5. rostopic pub"></a>5. rostopic pub</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rostopic pub /turtle1/cmd_vel <span class="token comment"># </span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>click <code>tab</code> button twice </p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rostopic pub /turtle1/cmd_vel geometry_msgs/Twist <span class="token string">"linear: 
   x: 0.0
@@ -490,6 +498,7 @@ angular:
   x: 0.0
   y: 0.0
   z: 0.0"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/8xYF34qBuzleHOP.png" alt="image-20220529182504985"></p>
 <ul>
 <li>we can find turtle move</li>
@@ -504,32 +513,39 @@ angular:
   x: 0.0
   y: 0.0
   z: 0.0"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>add <code>-r 10</code> after pub, </p>
 <ul>
 <li><code>-r</code> means rate,</li>
-<li><code>10</code> means 10 times per second  </li>
+<li><code>10</code> means 10 times per second</li>
 </ul>
 <p><img src="https://s2.loli.net/2022/05/29/9qzsmeJSZ1G2Y3R.png" alt="image-20220529182826228"></p>
 <h2 id="6-rosmsg-show"><a href="#6-rosmsg-show" class="headerlink" title="6. rosmsg show"></a>6. rosmsg show</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosmsg show geometry_msgs/Twist<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/Qhyv4ZiUC1jN7lE.png" alt="image-20220529184730763"></p>
 <h2 id="7-rosservice-list"><a href="#7-rosservice-list" class="headerlink" title="7. rosservice list"></a>7. rosservice list</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosservice list <span class="token comment"># show all service</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/CPW5BKr3aOGspST.png" alt="image-20220529185604586"></p>
 <h2 id="8-rosservice-call"><a href="#8-rosservice-call" class="headerlink" title="8. rosservice call"></a>8. rosservice call</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosservice call /spawn <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>click tab for 2 times</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosservice call /spawn <span class="token string">"x: 2.0
 y: 2.0
 theta: 0.0
 name: 'turtle2'"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><img src="https://s2.loli.net/2022/05/29/EG48CFokNjaAKTc.png" alt="image-20220529190116119"></p>
 <p>we create another turtle</p>
 <p>now we call <code>rostopic list</code> again, we can find we have turtle2 here</p>
 <p><img src="https://s2.loli.net/2022/05/29/yrf4zPleNpY5Sxj.png" alt="image-20220529190225390"></p>
 <h2 id="9-rosbag-record"><a href="#9-rosbag-record" class="headerlink" title="9. rosbag record"></a>9. rosbag record</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosbag record -a -O cmd_record <span class="token comment"># record the data into cmd_record file</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
 <li>we can find a new file under current folder has been created</li>
 <li>named cmd_record.bag</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosbag play cmd_record.bag <span class="token comment"># play the data(the cmd_record file)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 
                 
             </div>
@@ -944,7 +960,7 @@ name: 'turtle2'"</span> <span aria-hidden="true" class="line-numbers-rows"><span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">12.5k</span>
+                        class="white-color">12.7k</span>
             
             
             
