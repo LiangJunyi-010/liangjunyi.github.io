@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="File/Directory instruction, Home - Junyi Liang">
-    <meta name="description" content="File/Directory instruction">
+    <meta name="keywords" content="Selenium IDE, Home - Junyi Liang">
+    <meta name="description" content="Using Selenium IDE for auto UI testing">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>File/Directory instruction | Home - Junyi Liang</title>
+    <title>Selenium IDE | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/05/26/KmNPShH6r8yZn4p.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/06/10/cXPUoJ8t2xw6DHa.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">File/Directory instruction</h1>
+                    <h1 class="description center-align post-title">Selenium IDE</h1>
                 </div>
             </div>
         </div>
@@ -386,12 +386,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/liangjunyi.github.io/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/liangjunyi.github.io/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
-                            <a href="/liangjunyi.github.io/tags/operating-system/">
-                                <span class="chip bg-color">operating system</span>
+                            <a href="/liangjunyi.github.io/tags/Python-test/">
+                                <span class="chip bg-color">Python test</span>
+                            </a>
+                        
+                            <a href="/liangjunyi.github.io/tags/Selenium/">
+                                <span class="chip bg-color">Selenium</span>
                             </a>
                         
                     </div>
@@ -402,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                Linux
+                            <a href="/liangjunyi.github.io/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -415,28 +419,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-26
+                    2022-06-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-05-27
+                    2022-06-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    106
+                    379
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -459,28 +463,79 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="File-x2F-Directory-instruction"><a href="#File-x2F-Directory-instruction" class="headerlink" title="File&#x2F;Directory instruction"></a>File&#x2F;Directory instruction</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">pwd</span> <span class="token comment"># 展示当前路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ls</span> <span class="token comment"># 显示当前文件夹下的东西</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>-a 显示当前目录所有的文件和目录，包括隐藏的</li>
-<li>-l 以列表的方式显示信息</li>
+                <h1 id="Selenium-IDE"><a href="#Selenium-IDE" class="headerlink" title="Selenium IDE"></a>Selenium IDE</h1><h2 id="1-Video"><a href="#1-Video" class="headerlink" title="1. Video"></a>1. Video</h2><p><img src="https://s2.loli.net/2022/06/10/v2bTi7tPIOFBNLW.gif" alt="1.auto_test"></p>
+<h2 id="2-Description"><a href="#2-Description" class="headerlink" title="2. Description"></a>2. Description</h2><ul>
+<li>Using a localhost web project as testing target, this project implement by Django frame.</li>
+<li>This web request user write a table and submit.</li>
+<li>This project connect to the local MySQL database to store the info.</li>
+<li>Using Selenium IDE to do the auto testing.<ul>
+<li>Login test<ul>
+<li>positive</li>
+<li>negative<ul>
+<li>not give username</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token comment"># 切换目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>cd ~  回到自己的家目录</li>
-<li>cd .. 回到当前目录的上一级目录</li>
+</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">makdir <span class="token comment"># 创建目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>-p :创建多级目录</li>
+</li>
+<li>Write table test<ul>
+<li>positive</li>
+<li>negative<ul>
+<li>not give order name</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rmdir</span> <span class="token comment"># 删除空目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Because for auto testing, temporarily close the verify-code part.  </p>
+</blockquote>
+<h2 id="3-Python-code"><a href="#3-Python-code" class="headerlink" title="3. Python code"></a>3. Python code</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Generated by Selenium IDE</span>
+<span class="token keyword">import</span> pytest
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>action_chains <span class="token keyword">import</span> ActionChains
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support <span class="token keyword">import</span> expected_conditions
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support<span class="token punctuation">.</span>wait <span class="token keyword">import</span> WebDriverWait
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>keys <span class="token keyword">import</span> Keys
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>desired_capabilities <span class="token keyword">import</span> DesiredCapabilities
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rm</span> -rf <span class="token comment"># 删除非空目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token keyword">class</span> <span class="token class-name">TestTableFillpositive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">setup_method</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> method<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Firefox<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span><span class="token builtin">vars</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  
+  <span class="token keyword">def</span> <span class="token function">teardown_method</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> method<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  
+  <span class="token keyword">def</span> <span class="token function">test_tableFillpositive</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"http://127.0.0.1:8001/login/"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"LAY-user-login-username"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"LAY-user-login-username"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">"admin"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"LAY-user-login-password"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"LAY-user-login-password"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">"123456"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"LAY-user-login-vercode"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"LAY-user-login-vercode"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">"0644"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"loginButton"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    WebDriverWait<span class="token punctuation">(</span>self<span class="token punctuation">.</span>driver<span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>expected_conditions<span class="token punctuation">.</span>visibility_of_element_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CSS_SELECTOR<span class="token punctuation">,</span> <span class="token string">".layui-logo"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>LINK_TEXT<span class="token punctuation">,</span> <span class="token string">"需求管理"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>LINK_TEXT<span class="token punctuation">,</span> <span class="token string">"需求申请"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>frame<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>CSS_SELECTOR<span class="token punctuation">,</span> <span class="token string">".layui-select-title > .layui-input"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>CSS_SELECTOR<span class="token punctuation">,</span> <span class="token string">"dd:nth-child(2)"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"order_date"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>CSS_SELECTOR<span class="token punctuation">,</span> <span class="token string">"tr:nth-child(2) > td:nth-child(7)"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"order_name"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"order_name"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"order_sys"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"order_sys"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">"system"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>CSS_SELECTOR<span class="token punctuation">,</span> <span class="token string">".layui-unselect:nth-child(4) > .layui-anim"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"order_desc"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"order_desc"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">"request"</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> <span class="token string">"submitBtn"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -508,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/26/file-directory-instruction/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/05/26/file-directory-instruction/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/10/selenium-ide/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/10/selenium-ide/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -546,12 +601,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/liangjunyi.github.io/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/liangjunyi.github.io/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
-                                <a href="/liangjunyi.github.io/tags/operating-system/">
-                                    <span class="chip bg-color">operating system</span>
+                                <a href="/liangjunyi.github.io/tags/Python-test/">
+                                    <span class="chip bg-color">Python test</span>
+                                </a>
+                            
+                                <a href="/liangjunyi.github.io/tags/Selenium/">
+                                    <span class="chip bg-color">Selenium</span>
                                 </a>
                             
                         </div>
@@ -599,53 +658,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/29/ros-download/">
+                <a href="/liangjunyi.github.io/2022/06/10/selenium-ide/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/29/IR7Uyg89FaSH16b.png" class="responsive-img" alt="ROS download">
+                        <img src="https://s2.loli.net/2022/06/10/cXPUoJ8t2xw6DHa.png" class="responsive-img" alt="Selenium IDE">
                         
-                        <span class="card-title">ROS download</span>
+                        <span class="card-title">Selenium IDE</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ROS download, suitable for ubuntu 20.04
+                            Using Selenium IDE for auto UI testing
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/ROS/" class="post-category">
-                                    ROS
+                            <a href="/liangjunyi.github.io/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liangjunyi.github.io/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/liangjunyi.github.io/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/liangjunyi.github.io/tags/operating-system/">
-                        <span class="chip bg-color">operating system</span>
+                    <a href="/liangjunyi.github.io/tags/Python-test/">
+                        <span class="chip bg-color">Python test</span>
                     </a>
                     
-                    <a href="/liangjunyi.github.io/tags/ROS/">
-                        <span class="chip bg-color">ROS</span>
+                    <a href="/liangjunyi.github.io/tags/Selenium/">
+                        <span class="chip bg-color">Selenium</span>
                     </a>
                     
                 </div>
@@ -659,30 +720,30 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/05/26/find-root-password/">
+                <a href="/liangjunyi.github.io/2022/06/09/python-test-1/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/05/26/5ZjdB7TArJFb6GV.png" class="responsive-img" alt="Find root Password">
+                        <img src="https://s2.loli.net/2022/06/09/tQBvFOWN4TrflcJ.png" class="responsive-img" alt="Unit test">
                         
-                        <span class="card-title">Find root Password</span>
+                        <span class="card-title">Unit test</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Find root Password by GRUB
+                            Introduce the Unit test & Integration testing in python
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/liangjunyi.github.io/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -692,12 +753,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liangjunyi.github.io/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/liangjunyi.github.io/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/liangjunyi.github.io/tags/operating-system/">
-                        <span class="chip bg-color">operating system</span>
+                    <a href="/liangjunyi.github.io/tags/Python-test/">
+                        <span class="chip bg-color">Python test</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/Unit-test/">
+                        <span class="chip bg-color">Unit test</span>
+                    </a>
+                    
+                    <a href="/liangjunyi.github.io/tags/Integration-test/">
+                        <span class="chip bg-color">Integration test</span>
                     </a>
                     
                 </div>
