@@ -4,7 +4,411 @@
   
     
     <entry>
-      <title>JavaScript(1)</title>
+      <title>Operating System 9 - Synchronous</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-9-synchronous/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-9-synchronous/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 8 - CPU allocation</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-8-cpu-allocation/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-8-cpu-allocation/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 7 - Process and Thread</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-7-process-and-thread/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-7-process-and-thread/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 6 - Context switch</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-6-context-switch/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-6-context-switch/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 5 - Virtual memory</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-5-virtual-memory/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-5-virtual-memory/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 4 - Discontinuous memory allocation</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-4-discontinuous-memory-allocation/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-4-discontinuous-memory-allocation/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 3 - Continuous memory allocation</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-3-continuous-memory-allocation/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-3-continuous-memory-allocation/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 2 - Basic Operation</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-2-basic-operation/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-2-basic-operation/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating System 1 - Introduction</title>
+      <link href="/liangjunyi.github.io/2022/06/19/operating-system-1-introduction/"/>
+      <url>/liangjunyi.github.io/2022/06/19/operating-system-1-introduction/</url>
+      
+        <content type="html"><![CDATA[<h2 id="操作系统的定义"><a href="#操作系统的定义" class="headerlink" title="操作系统的定义"></a>操作系统的定义</h2><p><strong>用户角度：</strong>操作系统是一个控制软件</p><ul><li><p>管理应用程序</p></li><li><p>为应用程序提供服务</p></li><li><p>杀死应用程序</p></li><li><p>资源管理</p></li><li><p>管理外设&#x2F;分配资源</p></li></ul><ol><li><p>在操作系统下，进程&lt;-&gt;CPU, 文件&lt;-&gt;磁盘，地址空间&lt;-&gt;内存。</p></li><li><p>操作系统的架构层次：硬件之上，应用软件之下(为应用软件提供服务支持)。</p></li><li><p>Linux，Windows界面属于外壳shell(与User交互)，而不是内核kernel，而kernel是研究重点，在shell之下。</p></li><li><p>Kernel包括：</p><ul><li><p>CPU调度器</p></li><li><p>物理内存管理</p></li><li><p>虚拟内存管理</p></li><li><p>文件系统管理</p></li><li><p>中断处理和IO设备驱动 (底层硬件)</p></li></ul></li><li><p>(5) OS Kernel的特征：</p><ul><li><p>并发(指一段时间内多个程序运行；而并行是指一个时间点上多个程序运行，要求多个CPU):计算机系统中同时存在多个运行的程序，需要OS管理和调度</p></li><li><p>共享：“同时”访问 或 互斥共享</p></li><li><p>虚拟：利用多道程序设计技术，让每一个用户都觉得有一个计算机专门为他服务</p></li><li><p>异步：程序的执行不是一步到底的，而是走走停停，向前推进的速度不可预知</p></li><li><p>但只要运行环境相同，OS要保证程序运行的结果也相同</p></li></ul></li></ol><h2 id="操作系统的结构"><a href="#操作系统的结构" class="headerlink" title="操作系统的结构"></a>操作系统的结构</h2><p><strong>(1)简单的操作系统</strong><br>MS-DOS 不分模块的单体内核 (内部通过函数调用访问,缺点，复杂，紧耦合，易受攻击)</p><p><strong>(2)微内核</strong><br>尽可能把内核功能移植到用户空间，缺点性能低。</p><p><strong>(3)外核，内核分为一块</strong></p><p>一块负责和硬件打交道，另一部分和应用打交道。</p><p><strong>(4)虚拟机</strong><br>VMs(虚拟机)-&gt;VMM(虚拟机监视器)-&gt;物理机硬件，多操作系统共享硬件资源。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python Exception and Debug</title>
+      <link href="/liangjunyi.github.io/2022/06/18/exception-and-debug/"/>
+      <url>/liangjunyi.github.io/2022/06/18/exception-and-debug/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Python-Exception-and-Debug"><a href="#Python-Exception-and-Debug" class="headerlink" title="Python Exception and Debug"></a>Python Exception and Debug</h1><h2 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h2><p>处理一些不可预料的情况，比如文件不存在，空间满了，通讯超时等等。</p><p>遇到这些问题了程序该如何执行？</p><p>这就是异常处理的价值和我们处理异常的目的。</p><h2 id="Python常见的异常"><a href="#Python常见的异常" class="headerlink" title="Python常见的异常"></a>Python常见的异常</h2><ul><li>ZeroDivisionError</li><li>NameError</li><li>TypeError</li></ul><h3 id="Eg"><a href="#Eg" class="headerlink" title="Eg:"></a>Eg:</h3><h4 id="ZeroDivisionError"><a href="#ZeroDivisionError" class="headerlink" title="ZeroDivisionError"></a>ZeroDivisionError</h4><p><img src="https://s2.loli.net/2022/06/18/ds5BLRupw9Xn4YF.png" alt="image-20220618180916517"></p><ul><li>这么写，没有任何的语法错误，IDE不会报错</li></ul><p><img src="https://s2.loli.net/2022/06/18/uh9NHbsnZYCQ8Wy.png" alt="image-20220618181014653"></p><ul><li>但是一运行起来就发现了错误</li></ul><h4 id="NameError"><a href="#NameError" class="headerlink" title="NameError"></a>NameError</h4><p><img src="https://s2.loli.net/2022/06/18/Z1mzoOG9N7iL3aD.png" alt="image-20220618181230216"></p><ul><li>之前没有定义过b，但是这里用到了</li></ul><h4 id="TypeError"><a href="#TypeError" class="headerlink" title="TypeError"></a>TypeError</h4><p><img src="https://s2.loli.net/2022/06/18/DK9Zi4vhFsSlWzN.png" alt="image-20220618181313133"></p><ul><li>两个不同类型的数强制进行运算</li></ul><h2 id="Python-的异常处理语法"><a href="#Python-的异常处理语法" class="headerlink" title="Python 的异常处理语法"></a>Python 的异常处理语法</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>程序执行语句块<span class="token keyword">except</span> ExceptionName <span class="token keyword">as</span> alias<span class="token punctuation">:</span>    异常处理语句块<span class="token keyword">except</span> ExceptionName <span class="token keyword">as</span> alias<span class="token punctuation">:</span>    异常处理语句块<span class="token keyword">except</span> ExceptionName <span class="token keyword">as</span> alias<span class="token punctuation">:</span>    异常处理语句块<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token keyword">else</span><span class="token punctuation">:</span>    无异常时处理语句块<span class="token keyword">finally</span><span class="token punctuation">:</span>    必须处理语句块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>Exception 类型有很多，可以层层分析，对应着处理。最后可以加上处理 Exception 的语句，因为 Exception是父类，能捕获所有的异常。</li><li>Exception</li></ul><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="example-1-简单例子"><a href="#example-1-简单例子" class="headerlink" title="example 1 - 简单例子"></a>example 1 - 简单例子</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">except</span> NameError <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">except</span> ZeroDivisionError <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-------------End of the process-------------'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>结果</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'ZeroDivisionError'</span><span class="token operator">></span>division by zero<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>End of the process<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>Process finished <span class="token keyword">with</span> exit code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>10&#x2F;0 ， ZeroDivisionError 的异常被成功 catch</li></ul><h3 id="example-2-合并两个-except"><a href="#example-2-合并两个-except" class="headerlink" title="example 2 - 合并两个 except"></a>example 2 - 合并两个 except</h3><ul><li>从上面的例子可以看到，我们的程序对于两个不同异常的处理手段是一样的，那么可以合并</li></ul><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">except</span> <span class="token punctuation">(</span>NameError<span class="token punctuation">,</span> ZeroDivisionError<span class="token punctuation">)</span> <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-------------End of the process-------------'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'ZeroDivisionError'</span><span class="token operator">></span>division by zero<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>End of the process<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>Process finished <span class="token keyword">with</span> exit code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>依然成功执行了</li></ul><h3 id="example-3-Exception"><a href="#example-3-Exception" class="headerlink" title="example 3 - Exception"></a>example 3 - Exception</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'2'</span><span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token keyword">except</span> <span class="token punctuation">(</span>NameError<span class="token punctuation">,</span> ZeroDivisionError<span class="token punctuation">)</span> <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-------------End of the process-------------'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'TypeError'</span><span class="token operator">></span>can only concatenate <span class="token builtin">str</span> <span class="token punctuation">(</span><span class="token keyword">not</span> <span class="token string">"int"</span><span class="token punctuation">)</span> to <span class="token builtin">str</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>End of the process<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>Process finished <span class="token keyword">with</span> exit code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><p>我们可以在最后抓住Exception，这样不管任何类型的异常，无论考虑到的还是没考虑到的，都能抓住。</p></li><li><p>我们没有针对TypeError 进行捕获，但依然catch了。</p></li></ul><h3 id="example-4-else"><a href="#example-4-else" class="headerlink" title="example 4 - else"></a>example 4 - else</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>    a <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">+</span><span class="token number">1</span><span class="token keyword">except</span> <span class="token punctuation">(</span>NameError<span class="token punctuation">,</span> ZeroDivisionError<span class="token punctuation">)</span> <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">else</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'else'</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-------------End of the process-------------'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">else</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>End of the process<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>Process finished <span class="token keyword">with</span> exit code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ul><li>语句中没有任何错误，所以程序执行else语句</li><li>当任一一个错误被捕获，else语句都不会被执行</li></ul><h3 id="example-5-finally"><a href="#example-5-finally" class="headerlink" title="example 5 - finally"></a>example 5 - finally</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">except</span> <span class="token punctuation">(</span>NameError<span class="token punctuation">,</span> ZeroDivisionError<span class="token punctuation">)</span> <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token keyword">else</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'else'</span><span class="token punctuation">)</span><span class="token keyword">finally</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'finally'</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-------------End of the process-------------'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'ZeroDivisionError'</span><span class="token operator">></span>division by zero<span class="token keyword">finally</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>End of the process<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>Process finished <span class="token keyword">with</span> exit code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>finally 语句一定会执行</li><li>就算程序没错误，执行了else，也会执行finally</li></ul><h2 id="Python-内置异常类型"><a href="#Python-内置异常类型" class="headerlink" title="Python 内置异常类型"></a>Python 内置异常类型</h2><p><img src="https://s2.loli.net/2022/06/18/rIg2QXnFwE74hsA.png" alt="image-20220618214423110"></p><h2 id="主动抛出异常-raise"><a href="#主动抛出异常-raise" class="headerlink" title="主动抛出异常 - raise"></a>主动抛出异常 - raise</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Exception </tag>
+            
+            <tag> Debug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript提高之面向对象(六)</title>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-7/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-7/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript提高之面向对象(六)</title>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-6/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-6/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript进阶之BOM技术(五)</title>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-5/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-5/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript进阶之DOM技术(四)</title>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-4/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录总览"><a href="#目录总览" class="headerlink" title="目录总览"></a>目录总览</h1><p><img src="https://img-blog.csdnimg.cn/f073657f05c248ffa8056bf437e66edb.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F1Z2Vuc3Rlcm5fUVhM,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p><h1 id="1、DOM简介"><a href="#1、DOM简介" class="headerlink" title="1、DOM简介"></a>1、DOM简介</h1><h2 id="1-1、什么是DOM"><a href="#1-1、什么是DOM" class="headerlink" title="1.1、什么是DOM"></a>1.1、什么是DOM</h2><p>文档对象模型（Document Object Model，简称 DOM），是 W3C 组织推荐的处理可扩展标记语言（HTML或者XML）的标准编程接口</p><p>W3C 已经定义了一系列的 DOM 接口，通过这些 DOM 接口可以改变网页的内容、结构和样式。</p><p><img src="https://s2.loli.net/2022/06/13/jIwaBZrqJz3cKXP.png" alt="image-20220613170848302"></p><ul><li>文档：一个页面就是一个文档，DOM中使用doucument来表示</li><li>元素：页面中的所有标签都是元素，DOM中使用 element 表示</li><li>节点：网页中的所有内容都是节点（标签，属性，文本，注释等），DOM中使用node表示</li></ul><p>DOM 把以上内容都看做是对象</p><h1 id="2、获取元素"><a href="#2、获取元素" class="headerlink" title="2、获取元素"></a>2、获取元素</h1><h2 id="2-1、如何获取页面元素"><a href="#2-1、如何获取页面元素" class="headerlink" title="2.1、如何获取页面元素"></a>2.1、如何获取页面元素</h2><p>DOM在我们实际开发中主要用来操作元素。</p><p>我们如何来获取页面中的元素呢?</p><p>获取页面中的元素可以使用以下几种方式:</p><ul><li>根据 ID 获取</li><li>根据标签名获取</li><li>通过 HTML5 新增的方法获取</li><li>特殊元素获取</li></ul><h2 id="2-2、根据ID获取"><a href="#2-2、根据ID获取" class="headerlink" title="2.2、根据ID获取"></a>2.2、根据ID获取</h2><p>使用 getElementByld() 方法可以获取带ID的元素对象</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">doucument<span class="token punctuation">.</span><span class="token function">getElementByld</span><span class="token punctuation">(</span><span class="token string">'id名'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用 <code>console.dir()</code> 可以打印我们获取的元素对象，更好的查看对象里面的属性和方法。</p><p><strong>示例</strong></p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"time"</span><span class="token operator">></span><span class="token number">2019</span><span class="token operator">-</span><span class="token number">9</span><span class="token operator">-</span><span class="token number">9</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token operator">&lt;</span>script<span class="token operator">></span>    <span class="token comment">// 1.因为我们文档页面从上往下加载，所以得先有标签，所以script写在标签下面</span>    <span class="token comment">// 2.get 获得 element 元素 by 通过 驼峰命名法</span>    <span class="token comment">// 3.参数 id是大小写敏感的字符串</span>    <span class="token comment">// 4.返回的是一个元素对象</span>    <span class="token keyword">var</span> timer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'time'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 5. console.dir 打印我们的元素对象，更好的查看里面的属性和方法</span>    console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-3、根据标签名获取"><a href="#2-3、根据标签名获取" class="headerlink" title="2.3、根据标签名获取"></a>2.3、根据标签名获取</h2><p>根据<strong>标签名</strong>获取，使用 <code>getElementByTagName()</code> 方法可以返回带有指定标签名的<strong>对象的集合</strong></p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">doucument<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'标签名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>因为得到的是一个对象的集合，所以我们想要操作里面的元素就需要遍历</li><li>得到元素对象是动态的</li><li>返回的是获取过来元素对象的集合，以伪数组的形式存储</li><li>如果获取不到元素，则返回为空的伪数组(因为获取不到对象)</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>ul<span class="token operator">></span>    <span class="token operator">&lt;</span>li<span class="token operator">></span>知否知否，应是等你好久<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>    <span class="token operator">&lt;</span>li<span class="token operator">></span>知否知否，应是等你好久<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>    <span class="token operator">&lt;</span>li<span class="token operator">></span>知否知否，应是等你好久<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>    <span class="token operator">&lt;</span>li<span class="token operator">></span>知否知否，应是等你好久<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>    <span class="token operator">&lt;</span>li<span class="token operator">></span>知否知否，应是等你好久<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span><span class="token operator">&lt;</span>script<span class="token operator">></span>    <span class="token comment">// 1.返回的是获取过来元素对象的集合 以伪数组的形式存储</span>    <span class="token keyword">var</span> lis <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lis<span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lis<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 2.依次打印,遍历</span>    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> lis<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lis<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token comment">// 3.如果页面中只有 1 个 li，返回的还是伪数组的形式</span>    <span class="token comment">// 4.如果页面中没有这个元素，返回的是空伪数组</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-4、根据标签名获取"><a href="#2-4、根据标签名获取" class="headerlink" title="2.4、根据标签名获取"></a>2.4、根据标签名获取</h2><p>还可以根据标签名获取某个元素（父元素）内部所有指定标签名的子元素,获取的时候不包括父元素自己</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">element<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'标签名'</span><span class="token punctuation">)</span>ol<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>注意：父元素必须是单个对象(必须指明是哪一个元素对象)，获取的时候不包括父元素自己</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span><span class="token comment">//element.getElementsByTagName('标签名'); 父元素必须是指定的单个元素</span>    <span class="token keyword">var</span> ol <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'ol'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ol<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-5、通过H5新增方法获取"><a href="#2-5、通过H5新增方法获取" class="headerlink" title="2.5、通过H5新增方法获取"></a>2.5、通过H5新增方法获取</h2><h3 id="①getElementsByClassName"><a href="#①getElementsByClassName" class="headerlink" title="①getElementsByClassName"></a>①getElementsByClassName</h3><p>根据类名返回元素对象合集</p><ul><li><code>document.getElementsByClassName(&#39;类名&#39;)</code></li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'类名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="②document-querySelector"><a href="#②document-querySelector" class="headerlink" title="②document.querySelector"></a>②document.querySelector</h3><p>根据指定选择器返回第一个元素对象</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'选择器'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 切记里面的选择器需要加符号 </span><span class="token comment">// 类选择器.box </span><span class="token comment">// id选择器 #nav</span><span class="token keyword">var</span> firstBox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="③document-querySelectorAll"><a href="#③document-querySelectorAll" class="headerlink" title="③document.querySelectorAll"></a>③document.querySelectorAll</h3><p>根据指定选择器返回所有元素对象</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'选择器'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：</p><p>querySelector 和 querySelectorAll 里面的选择器需要加符号,比如: document.querySelector(‘#nav’);</p><h3 id="④例子"><a href="#④例子" class="headerlink" title="④例子"></a>④例子</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>    <span class="token comment">// 1. getElementsByClassName 根据类名获得某些元素集合</span>    <span class="token keyword">var</span> boxs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>boxs<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 2. querySelector 返回指定选择器的第一个元素对象  切记 里面的选择器需要加符号 .box  #nav</span>    <span class="token keyword">var</span> firstBox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstBox<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">var</span> nav <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#nav'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>nav<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">var</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 3. querySelectorAll()返回指定选择器的所有元素对象集合</span>    <span class="token keyword">var</span> allBox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>allBox<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">var</span> lis <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lis<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-6、获取特殊元素"><a href="#2-6、获取特殊元素" class="headerlink" title="2.6、获取特殊元素"></a>2.6、获取特殊元素</h2><h5 id="①获取body元素"><a href="#①获取body元素" class="headerlink" title="①获取body元素"></a>①获取body元素</h5><p>返回body元素对象</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span>body<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="②获取html元素"><a href="#②获取html元素" class="headerlink" title="②获取html元素"></a>②获取html元素</h5><p>返回html元素对象</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span>documentElement<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="3、事件基础"><a href="#3、事件基础" class="headerlink" title="3、事件基础"></a>3、事件基础</h1><h3 id="3-1、事件概述"><a href="#3-1、事件概述" class="headerlink" title="3.1、事件概述"></a>3.1、事件概述</h3><p>JavaScript 使我们有能力创建动态页面，而事件是可以被 JavaScript 侦测到的行为。</p><p>简单理解： 触发— 响应机制。</p><p>网页中的每个元素都可以产生某些可以触发 JavaScript 的事件，例如，我们可以在用户点击某按钮时产生一个事件，然后去执行某些操作。</p><h3 id="3-2、事件三要素"><a href="#3-2、事件三要素" class="headerlink" title="3.2、事件三要素"></a>3.2、事件三要素</h3><ol><li>事件源(谁)</li><li>事件类型(什么事件)</li><li>事件处理程序(做啥)</li></ol><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>    <span class="token comment">// 点击一个按钮，弹出对话框</span>    <span class="token comment">// 1. 事件是有三部分组成  事件源  事件类型  事件处理程序   我们也称为事件三要素</span>    <span class="token comment">//(1) 事件源 事件被触发的对象   谁  按钮</span>    <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//(2) 事件类型  如何触发 什么事件 比如鼠标点击(onclick) 还是鼠标经过 还是键盘按下</span>    <span class="token comment">//(3) 事件处理程序  通过一个函数赋值的方式 完成</span>    btn<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'点秋香'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="3-3、执行事件的步骤"><a href="#3-3、执行事件的步骤" class="headerlink" title="3.3、执行事件的步骤"></a>3.3、执行事件的步骤</h3><ol><li>获取事件源</li><li>注册事件(绑定事件)</li><li>添加事件处理程序(采取函数赋值形式)</li></ol><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>    <span class="token comment">// 执行事件步骤</span>    <span class="token comment">// 点击div 控制台输出 我被选中了</span>    <span class="token comment">// 1. 获取事件源</span>    <span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 2.绑定事件 注册事件</span>    <span class="token comment">// div.onclick </span>    <span class="token comment">// 3.添加事件处理程序 </span>    div<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我被选中了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="3-4、鼠标事件"><a href="#3-4、鼠标事件" class="headerlink" title="3.4、鼠标事件"></a>3.4、鼠标事件</h3><table><thead><tr><th>鼠标事件</th><th>触发条件</th></tr></thead><tbody><tr><td>onclick</td><td>鼠标点击左键触发</td></tr><tr><td>onmouseover</td><td>鼠标经过触发</td></tr><tr><td>onmouseout</td><td>鼠标离开触发</td></tr><tr><td>onfocus</td><td>获得鼠标焦点触发</td></tr><tr><td>onblur</td><td>失去鼠标焦点触发</td></tr><tr><td>onmousemove</td><td>鼠标移动触发</td></tr><tr><td>onmouseup</td><td>鼠标弹起触发</td></tr><tr><td>onmousedown</td><td>鼠标按下触发</td></tr></tbody></table><h1 id="4、操作元素"><a href="#4、操作元素" class="headerlink" title="4、操作元素"></a>4、操作元素</h1><p>JavaScript 的 DOM 操作可以改变网页内容、结构和样式，我们可以利用 DOM 操作元素来改变元素里面的内容 、属性等。注意以下都是属性</p><h2 id="4-1、改变元素内容"><a href="#4-1、改变元素内容" class="headerlink" title="4.1、改变元素内容"></a>4.1、改变元素内容</h2><p>从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉。</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">element<span class="token punctuation">.</span>innerText<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>起始位置到终止位置的全部内容，包括HTML标签，同时保留空格和换行</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">element<span class="token punctuation">.</span>innerHTML<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>    <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>    <span class="token operator">&lt;</span>p<span class="token operator">></span>        我是文字        <span class="token operator">&lt;</span>span<span class="token operator">></span><span class="token number">123</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>    <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>    <span class="token operator">&lt;</span>script<span class="token operator">></span>        <span class="token comment">// innerText 和 innerHTML的区别 </span>        <span class="token comment">// 1. innerText 不识别html标签,去除空格和换行</span>        <span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        div<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">'&lt;strong>今天是：&lt;/strong> 2019'</span><span class="token punctuation">;</span>        <span class="token comment">// 2. innerHTML 识别html标签 保留空格和换行的</span>        div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'&lt;strong>今天是：&lt;/strong> 2019'</span><span class="token punctuation">;</span>        <span class="token comment">// 这两个属性是可读写的  可以获取元素里面的内容</span>        <span class="token keyword">var</span> p <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>innerText<span class="token punctuation">)</span><span class="token punctuation">;</span>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://s2.loli.net/2022/06/13/QXYHIfzU3GoL1tO.png" alt="image-20220613172131307"></p><h2 id="4-2、改变元素属性"><a href="#4-2、改变元素属性" class="headerlink" title="4.2、改变元素属性"></a>4.2、改变元素属性</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// img.属性</span>img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">"xxx"</span><span class="token punctuation">;</span>input<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">"xxx"</span><span class="token punctuation">;</span>input<span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">"xxx"</span><span class="token punctuation">;</span>input<span class="token punctuation">.</span>checked <span class="token operator">=</span> <span class="token string">"xxx"</span><span class="token punctuation">;</span>input<span class="token punctuation">.</span>selected <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">/</span> <span class="token boolean">false</span><span class="token punctuation">;</span>input<span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">/</span> <span class="token boolean">false</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="4-3、改变样式属性"><a href="#4-3、改变样式属性" class="headerlink" title="4.3、改变样式属性"></a>4.3、改变样式属性</h2><p>我们可以通过 JS 修改元素的大小、颜色、位置等样式。</p><ul><li>行内样式操作</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// element.style</span>div<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'pink'</span><span class="token punctuation">;</span>div<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token string">'250px'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>类名样式操作</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// element.className</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：</p><ol><li>JS里面的样式采取驼峰命名法，比如 fontSize ，backgroundColor</li><li>JS 修改 style 样式操作 ，产生的是行内样式，CSS权重比较高</li><li>如果样式修改较多，可以采取操作类名方式更改元素样式</li><li>class 因为是个保留字，因此使用className来操作元素类名属性</li><li>className 会直接更改元素的类名，会覆盖原先的类名</li></ol><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"first"</span><span class="token operator">></span>文本<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>    <span class="token operator">&lt;</span>script<span class="token operator">></span>        <span class="token comment">// 1. 使用 element.style 获得修改元素样式  如果样式比较少 或者 功能简单的情况下使用</span>        <span class="token keyword">var</span> test <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        test<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>            <span class="token comment">// this.style.backgroundColor = 'purple';</span>            <span class="token comment">// this.style.color = '#fff';</span>            <span class="token comment">// this.style.fontSize = '25px';</span>            <span class="token comment">// this.style.marginTop = '100px';</span>            <span class="token comment">// 让我们当前元素的类名改为了 change</span>            <span class="token comment">// 2. 我们可以通过 修改元素的className更改元素的样式 适合于样式较多或者功能复杂的情况</span>            <span class="token comment">// 3. 如果想要保留原先的类名，我们可以这么做 多类名选择器</span>            <span class="token comment">// this.className = 'change';</span>            <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">'first change'</span><span class="token punctuation">;</span>        <span class="token punctuation">&#125;</span>    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="4-4、总结"><a href="#4-4、总结" class="headerlink" title="4.4、总结"></a>4.4、总结</h2><p><img src="https://s2.loli.net/2022/06/13/KEOg24ubzeWqYpM.png" alt="image-20220613172342677"></p><h2 id="4-5、排他思想"><a href="#4-5、排他思想" class="headerlink" title="4.5、排他思想"></a>4.5、排他思想</h2><p>如果有同一组元素，我们相要某一个元素实现某种样式，需要用到循环的排他思想算法：</p><ol><li>所有元素全部清除样式（干掉其他人）</li><li>给当前元素设置样式 （留下我自己）</li><li>注意顺序不能颠倒，首先干掉其他人，再设置自己</li></ol><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>    <span class="token operator">&lt;</span>button<span class="token operator">></span>按钮<span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>    <span class="token operator">&lt;</span>button<span class="token operator">></span>按钮<span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>    <span class="token operator">&lt;</span>button<span class="token operator">></span>按钮<span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>    <span class="token operator">&lt;</span>button<span class="token operator">></span>按钮<span class="token number">4</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>    <span class="token operator">&lt;</span>button<span class="token operator">></span>按钮<span class="token number">5</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>    <span class="token operator">&lt;</span>script<span class="token operator">></span>        <span class="token comment">// 1. 获取所有按钮元素</span>        <span class="token keyword">var</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// btns得到的是伪数组  里面的每一个元素 btns[i]</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> btns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>            btns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>                <span class="token comment">// (1) 我们先把所有的按钮背景颜色去掉  干掉所有人</span>                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> btns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>                    btns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>                <span class="token punctuation">&#125;</span>                <span class="token comment">// (2) 然后才让当前的元素背景颜色为pink 留下我自己</span>                <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'pink'</span><span class="token punctuation">;</span>            <span class="token punctuation">&#125;</span>        <span class="token punctuation">&#125;</span>        <span class="token comment">//2. 首先先排除其他人，然后才设置自己的样式 这种排除其他人的思想我们成为排他思想</span>    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://img-blog.csdnimg.cn/c4ab0beac7444b208441727a380b437e.gif#pic_center" alt="在这里插入图片描述"></p><h2 id="4-6、自定义属性"><a href="#4-6、自定义属性" class="headerlink" title="4.6、自定义属性"></a>4.6、自定义属性</h2><h3 id="4-6-1、获取属性值"><a href="#4-6-1、获取属性值" class="headerlink" title="4.6.1、获取属性值"></a>4.6.1、获取属性值</h3><ul><li>获取内置属性值(元素本身自带的属性)</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">element<span class="token punctuation">.</span>属性<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>获取自定义的属性</li></ul><h3 id="4-6-2、设置属性值"><a href="#4-6-2、设置属性值" class="headerlink" title="4.6.2、设置属性值"></a>4.6.2、设置属性值</h3><ul><li>设置内置属性值</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">element<span class="token punctuation">.</span>属性 <span class="token operator">=</span> <span class="token string">'值'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>主要设置自定义的属性</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">element<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'属性'</span><span class="token punctuation">,</span><span class="token string">'值'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="4-6-3、移除属性"><a href="#4-6-3、移除属性" class="headerlink" title="4.6.3、移除属性"></a>4.6.3、移除属性</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">element<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token string">'属性'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript基础之对象与内置对象(三)</title>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-3/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-3/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript基础之函数与作用域(二)</title>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-2/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-2/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript基础大总结(一)</title>
       <link href="/liangjunyi.github.io/2022/06/13/javascript-1/"/>
       <url>/liangjunyi.github.io/2022/06/13/javascript-1/</url>
       
@@ -134,11 +538,11 @@
       
         <tags>
             
+            <tag> JavaScript </tag>
+            
             <tag> HTML </tag>
             
             <tag> CSS </tag>
-            
-            <tag> JavaScript </tag>
             
         </tags>
       
@@ -163,11 +567,11 @@
       
         <tags>
             
+            <tag> JavaScript </tag>
+            
             <tag> HTML </tag>
             
             <tag> CSS </tag>
-            
-            <tag> JavaScript </tag>
             
         </tags>
       
