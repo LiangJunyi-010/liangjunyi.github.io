@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Operating System 7 - Process and Thread, Home - Junyi Liang">
-    <meta name="description" content="Operating System 7 - Process and Thread">
+    <meta name="keywords" content="1.0.0 第一章操作系统概述错题整理, Home - Junyi Liang">
+    <meta name="description" content="1.0.0 第一章操作系统概述错题整理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Operating System 7 - Process and Thread | Home - Junyi Liang</title>
+    <title>1.0.0 第一章操作系统概述错题整理 | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -270,7 +270,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Operating System 7 - Process and Thread</h1>
+                    <h1 class="description center-align post-title">1.0.0 第一章操作系统概述错题整理</h1>
                 </div>
             </div>
         </div>
@@ -418,21 +418,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-06-19
+                    2022-06-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    4 Min
                 </div>
                 
 
@@ -455,7 +455,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p><img src="https://s2.loli.net/2022/06/21/ZcOxvUCng4PD8Tz.png" alt="20200307232926108"></p>
+<p><strong>1.操作系统与用户通信接口通常不包括（D）</strong><br>A：shell<br>B：命令解释器<br>C：广义指令<br>D：缓存管理指令</p>
+<blockquote>
+<p>解析：广义指令是系统调用命令；命令解释器属于命令接口，shell是命令解释器，它属于命令接口；系统中的缓存全部由操作系统管理，对用户是透明的，操作系统不提供管理系统缓存的系统调用。</p>
+</blockquote>
+<p><strong>2.计算机开机后，操作系统最终被加载到（D）</strong><br>A：BIOS<br>B：ROM<br>C：EPROM<br>D：RAM</p>
+<blockquote>
+<p>解析：系统开机后，操作系统的程序会被自动加载到内存中的系统区，这段区域是RAM；涉及到组成原理的各类存储介质。</p>
+</blockquote>
+<p><strong>3.在分时操作系统中，时间片一定，（C）响应时间越长</strong><br>A：内存越多<br>B：内存越少<br>C：用户数越多<br>D：用户数越少</p>
+<blockquote>
+<p>解析：在分时操作系统中，时间片固定时，用户数越多，每个用户分到的时间片就越少，响应时间自然就变成。</p>
+</blockquote>
+<p><strong>4.设某计算机系统有一个CPU，一台输入设备，一台打印机。</strong><br>现有两个进程同时进入就绪态，且A进程先得到CPU的运行，进程B后运行。<br>进程A的运行轨迹：计算50ms,打印信息100ms，再计算50ms，打印信息100ms，结束；<br>进程B的运行轨迹：计算50ms，输入数据80ms，再计算100ms，结束。<br>画出他们的时序关系图，并说明：<br>(1) 开始运行后，cpu有无空闲等待？若有，在哪段时间内等待？计算CPU的利用率。<br>CPU在100~150ms时间段内空闲，利用率250&#x2F;300&#x3D;83.3%</p>
+<p>(2) 进程A运行时有无等待现象？若有，在何时发生等待现象？<br>进程A无等待现象</p>
+<p>(3) 进程B运行时有无等待现象？若有，在何时发生等待现象？<br>进程B有等待现象，0<del>50ms, 180</del>200ms</p>
+<p><img src="https://s2.loli.net/2022/06/21/m7hPF1DcuKXlAwM.png" alt="image-20220621120022503"></p>
+<p><strong>5.下列操作系统的各个功能组成部分中，（A）可不需要硬件的支持</strong><br>A：进程调度<br>B：时钟管理<br>C：地址映射<br>D：中断系统</p>
+<blockquote>
+<p>解析：中断系统和地址映射都需要硬件的支持，因为中断指令和地址映射中的重定位都是离不开硬件的支持的。而时钟管理，重置时钟等是由硬件直接完成的。进程调度由调度算法决定CPU使用权，由操作系统实现，无序硬件的支持。</p>
+</blockquote>
+<p><strong>6.下列选项中，在用户态执行的是（A）</strong><br>A：命令解释程序<br>B：缺页处理程序<br>C：进程调度程序<br>D：时钟中断处理程序</p>
+<blockquote>
+<p>解析：命令解释程序属于命令接口，用户可以直接调用；缺页处理程序、时钟中断处理程序都属于中断，在核心态执行；进程调度程序在核心态执行；</p>
+</blockquote>
+<p><strong>7.下列选项中，不可能在用户态发生的是（C）</strong><br>A：系统调用<br>B：外部中断<br>C：进程切换<br>D：缺页</p>
+<blockquote>
+<p>解析：系统调用是提供给用户的程序接口，在用户态发生，被调用程序在核心态下执行；外部中断使用户态到核心态的“门”，也发生在用户态，在核心态完成中断处理程序；进程切换属于系统调用执行过程中的事件，只能发生在核心态；缺页发生后，在用户态发生缺页中断，然后进入核心态执行缺页中断服务程序；</p>
+</blockquote>
+<p><strong>8.在操作系统中，只能在核心态执行的指令是（C）</strong><br>A：读时钟<br>B：取数<br>C：广义指令<br>D：寄存器清“0”</p>
+<blockquote>
+<p>解析：广义指令即系统调用命令，必然工作在核心态；注意区分“调用”和“执行”，广义指令的调用可以在用户态发生，调用广义指令的那条指令不一定是特权指令，但广义指令存在于核心态中，所以执行一点在核心态</p>
+</blockquote>
+<p><strong>9.下列选项中，必须在核心态下执行的指令是（D</strong>）<br>A：从内存中取数<br>B：将运算结果装入内存<br>C：算术运算<br>D：输入&#x2F;输出</p>
+<blockquote>
+<p>解析：输入&#x2F;输出指令涉及到中断操作，而中断操作是由系统内核负责的，工作在核心态。A、B、C选项均可通过汇编语言编程来实现，因此它们可在用户态下执行。<br>操作系统管理内存时，管理的是内存中的数据放在哪里，哪里可以放数据，哪里不可以放数据（内存保护），哪里空闲等问题，而内存中的数据是什么，怎么读和写，都不是核心态关心的。</p>
+</blockquote>
+<p><strong>10.为什么说直到出现中断和通道技术后，多道程序概念才变得有用？</strong></p>
+<p><img src="https://s2.loli.net/2022/06/21/MCLhq8XRNGFYSxy.png" alt="image-20220621120149355"></p>
+<p><strong>几个概念;</strong></p>
+<ul>
+<li>时钟中断：表示一个固定的时间片已到，让处理机执行计时、启动定时运行的任务等，主要任务是处理和时间相关的信息及决定是否执行调度程序；</li>
+<li>外部中断处理过程中，PC值由中断隐指令自动保存，而通用寄存器内容由操作系统保存；</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -620,18 +664,18 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/06/19/operating-system-6-context-switch/">
+                <a href="/liangjunyi.github.io/2022/06/19/1.3.3-xi-tong-diao-yong-zhi-xing-guo-cheng-fang-guan-zhi-ling-ku-han-shu-yu-xi-tong-diao-yong/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="Operating System 6 - Context switch">
+                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="1.3.3 系统调用（执行过程、访管指令、库函数与系统调用）">
                         
-                        <span class="card-title">Operating System 6 - Context switch</span>
+                        <span class="card-title">1.3.3 系统调用（执行过程、访管指令、库函数与系统调用）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Operating System 6 - Context switch
+                            1.3.3 系统调用（执行过程、访管指令、库函数与系统调用）
                         
                     </div>
                     <div class="publish-info">
@@ -845,7 +889,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">28.6k</span>
+                        class="white-color">30k</span>
             
             
             
