@@ -183,7 +183,7 @@
       <link href="/liangjunyi.github.io/2022/06/19/operating-system-2-basic-operation/"/>
       <url>/liangjunyi.github.io/2022/06/19/operating-system-2-basic-operation/</url>
       
-        <content type="html"><![CDATA[<h2 id="操作系统的启动"><a href="#操作系统的启动" class="headerlink" title="操作系统的启动"></a>操作系统的启动</h2><ol><li><p>CPU, I&#x2F;O, 内存通过总线连接。</p></li><li><p>DISK: 存放OS</p><ul><li>BIOS：基本I&#x2F;O处理系统( basic I&#x2F;O system); Bootloader: 加载OS到内存中。</li></ul></li><li><p>当电脑通电时，段寄存器CS和指令寄存器IP能够确定一个内存地址，例如CS:IP &#x3D; 0xf000:fff0.</p></li><li><p>POST(加电自检)，寻找显卡和执行BIOS。(显示器，键盘…是否正常)。</p></li><li><p>步骤：</p><ul><li>BIOS: 将Bootloader从磁盘的磁盘的引导扇区(512字节)加载到0x7c00；跳转到CS:IP&#x3D;0000:7c00的内存区域(以便下一步)</li><li>Bootloader：将操作系统的代码和数据从硬盘加载到内存中；跳转到操作系统的起始地址。</li></ul></li><li><p>系统调用：(来源于应用程序)应用程序主动向操作系统发出服务请求。</p></li><li><p>异常：(来源于不良的应用程序)非法指令或其它花的处理状态(e.g.内存出错)。</p></li><li><p>中断：(来源于外设)来自不同的硬件设备的计时器和网络的中断。</p></li><li><p>为什么应用程序不能直接访问硬件而是通过操作系统？</p><ul><li>计算机运行时，内核是被信任的第三方。</li><li>只有内核可以执行特权指令。</li><li>为了方便应用程序。</li></ul></li><li><p>讨论的问题：操作系统如何设计和实现中断&#x2F;异常和系统调用；他们三者的区别和特点。</p></li><li><p>产生的源头</p><ul><li>中断：外设(键盘&#x2F;鼠标&#x2F;网卡&#x2F;声卡&#x2F;显卡，可以产生各种事件)</li><li>异常：应用程序意想不到的行为(e.g.异常，恶意程序，应用程序需要的资源未得到满足)</li><li>系统调用(system call)：应用程序请求操作提供服务(e.g.打开&#x2F;关闭&#x2F;读写文件，发送网络包)</li></ul></li><li><p>处理时间</p><ul><li>中断：异步；</li><li>异常：同步；</li><li>系统调用：同步或异步。</li></ul></li><li><p>响应</p><ul><li>中断：持续，对用户应用程序时透明的</li><li>异常：杀死或者重新执行意想不到的应用程序指令</li><li>系统调用：等待和持续</li></ul></li></ol><h2 id="中断-x2F-异常和系统调用"><a href="#中断-x2F-异常和系统调用" class="headerlink" title="中断&#x2F;异常和系统调用"></a>中断&#x2F;异常和系统调用</h2><ol><li>中断&#x2F;异常处理机制<ul><li>中断是外设的事件，异常是CPU的事件；中断&#x2F;异常迫使CPU访问一些被中断和异常服务访问的功能。</li></ul></li><li>中断处理机制<ul><li>硬件：设置中断标记(CPU初始化)<ul><li>将内部&#x2F;外部事件设置中断标记；</li><li>中断事件的ID(程序访问的中断向量地址)</li></ul></li><li>软件(操作系统)：<ul><li>保存当前处理状态</li><li>中断服务程序处理</li><li>清除中断标记</li><li>恢复之前保存的处理状态</li></ul></li></ul></li><li>异常处理机制<ul><li>异常：异常编号</li><li>保存现场</li><li>异常处理：杀死产生异常的程序；重新执行异常指令</li><li>恢复现场</li></ul></li><li>系统调用<ul><li><p>一条指令会触发一个系统调用</p></li><li><p>程序访问主要是通过高层次的API接口而不是直接进行系统调用。</p></li><li><p>通常情况下，存在与每个系统调用相关的序号，系统调用接口根据这些序号来维护表的索引。</p></li><li><p>系统调用接口调用内核态中预期的系统调用，并返回系统调用的状态和其它任何返回值。</p></li><li><p>用户不需要知道系统调用是如何实现的，只需要获取API和了解操作新系统将什么作为返回结果。操作系统接口的细节大部分都隐藏在API中，并通过运行程序支持的库来管理。</p></li><li><p>用户态：应用程序在执行的过程中，CPU执行的特权级的状态(很低，不能访问特殊机器指令和IO)。</p></li><li><p>内核态：应用程序在执行的过程中，CPU执行的特权级的状态(高，操作系统可以执行CPU任何一条指令)。</p></li><li><p>系统调用时涉及到特权级从用户态到内核态的转换，应用程序和操作系统有各自的堆栈，这两个变化比函数调用的开销更大，但更安全和可靠。(而程序调用是在一个栈空间实现参数的调用和返回)。</p></li></ul></li><li>跨越操作系统边界的开销<ul><li>在执行时间上超过程序调用</li><li>开销包括：<ul><li>建立中断&#x2F;异常&#x2F;系统调用号与对应服务例程映射关系的初始化开销；</li><li>建立内核堆栈(操作系统和应用程序的堆栈不一样)；</li><li>验证参数(操作系统会检查数据)；</li><li>内核态映射到用户态的地址空间，更新页面映射权限(内存拷贝开销)；</li><li>内核态独立地址空间TLB。</li></ul></li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="操作系统的启动"><a href="#操作系统的启动" class="headerlink" title="操作系统的启动"></a>操作系统的启动</h2><ol><li><p>CPU, I&#x2F;O, 内存通过总线连接。</p></li><li><p>DISK: 存放OS</p><ul><li>BIOS：基本I&#x2F;O处理系统( basic I&#x2F;O system); </li><li>Bootloader: 加载OS到内存中。</li></ul></li><li><p>当电脑通电时，段寄存器CS和指令寄存器IP能够确定一个内存地址，例如CS:IP &#x3D; 0xf000:fff0.</p></li><li><p>POST(加电自检)，寻找显卡和执行BIOS。(显示器，键盘…是否正常)。</p></li><li><p>步骤：</p><ul><li><p>BIOS: 将Bootloader从磁盘的磁盘的引导扇区(512字节)加载到0x7c00；跳转到CS:IP&#x3D;0000:7c00的内存区域(以便下一步)</p></li><li><p>Bootloader：将操作系统的代码和数据从硬盘加载到内存中；跳转到操作系统的起始地址。</p><p><img src="https://s2.loli.net/2022/06/19/hvBCcYUtNgW1S2f.png" alt="image-20220619135229640"></p></li></ul></li><li><p>系统调用：(来源于应用程序)应用程序主动向操作系统发出服务请求。</p></li><li><p>异常：(来源于不良的应用程序)非法指令或其它花的处理状态(e.g.内存出错)。</p></li><li><p>中断：(来源于外设)来自不同的硬件设备的计时器和网络的中断。</p></li><li><p>为什么应用程序不能直接访问硬件而是通过操作系统？</p><ul><li>计算机运行时，内核是被信任的第三方。</li><li>只有内核可以执行特权指令。</li><li>为了方便应用程序。</li></ul></li><li><p>讨论的问题：操作系统如何设计和实现中断&#x2F;异常和系统调用；他们三者的区别和特点。</p></li><li><p>产生的源头</p><ul><li>中断：外设(键盘&#x2F;鼠标&#x2F;网卡&#x2F;声卡&#x2F;显卡，可以产生各种事件)</li><li>异常：应用程序意想不到的行为(e.g.异常，恶意程序，应用程序需要的资源未得到满足)</li><li>系统调用(system call)：应用程序请求操作提供服务(e.g.打开&#x2F;关闭&#x2F;读写文件，发送网络包)</li></ul></li><li><p>处理时间</p><ul><li>中断：异步；（事件产生时，应用程序并不知道它什么时候会产生，只有当他产生了才去处理）</li><li>异常：同步；（一定是执行到某一条特定指令时一定会产生）</li><li>系统调用：同步或异步。（产生系统调用来看是同步的：一定是执行到某一条特定指令时一定会产生；从系统调用的返回时间来说：如果应用程序发出系统调用请求后一直在等待则为同步、如果应用程序去做别的事了就是异步）</li></ul></li><li><p>响应</p><ul><li>中断：持续，对用户应用程序是透明的</li><li>异常：杀死或者重新执行意想不到的应用程序指令</li><li>系统调用：等待和持续</li></ul></li></ol><h2 id="中断-x2F-异常和系统调用"><a href="#中断-x2F-异常和系统调用" class="headerlink" title="中断&#x2F;异常和系统调用"></a>中断&#x2F;异常和系统调用</h2><ol><li>中断&#x2F;异常处理机制<ul><li>中断是外设的事件，异常是CPU的事件；</li><li>中断&#x2F;异常迫使CPU访问一些被中断和异常服务访问的功能。</li></ul></li><li>中断处理机制<ul><li>硬件：设置中断标记(CPU初始化)<ul><li>将内部&#x2F;外部事件设置中断标记；</li><li>中断事件的ID(程序访问的中断向量地址)</li></ul></li><li>软件(操作系统)：<ul><li>保存当前处理状态</li><li>中断服务程序处理</li><li>清除中断标记</li><li>恢复之前保存的处理状态</li></ul></li></ul></li><li>异常处理机制<ul><li>异常：异常编号</li><li>保存现场</li><li>异常处理：<ul><li>杀死产生异常的程序；</li><li>重新执行异常指令</li></ul></li><li>恢复现场</li></ul></li><li>系统调用<ul><li><p>一条指令会触发一个系统调用</p></li><li><p>程序访问主要是通过高层次的API接口而不是直接进行系统调用。</p></li><li><p>通常情况下，存在与每个系统调用相关的序号，系统调用接口根据这些序号来维护表的索引。</p></li><li><p>系统调用接口调用内核态中预期的系统调用，并返回系统调用的状态和其它任何返回值。</p></li><li><p>用户不需要知道系统调用是如何实现的，只需要获取API和了解操作新系统将什么作为返回结果。操作系统接口的细节大部分都隐藏在API中，并通过运行程序支持的库来管理。</p></li><li><p>用户态：应用程序在执行的过程中，CPU执行的特权级的状态(很低，不能访问特殊机器指令和IO)。</p></li><li><p>内核态：应用程序在执行的过程中，CPU执行的特权级的状态(高，操作系统可以执行CPU任何一条指令)。</p></li><li><p>系统调用时涉及到特权级从用户态到内核态的转换，应用程序和操作系统有各自的堆栈，这两个变化比函数调用的开销更大，但更安全和可靠。(而程序调用是在一个栈空间实现参数的调用和返回)。</p></li></ul></li><li>跨越操作系统边界的开销<ul><li>在执行时间上超过程序调用</li><li>开销包括：<ul><li>建立中断&#x2F;异常&#x2F;系统调用号与对应服务例程映射关系的初始化开销；</li><li>建立内核堆栈(操作系统和应用程序的堆栈不一样)；</li><li>验证参数(操作系统会检查数据)；</li><li>内核态映射到用户态的地址空间，更新页面映射权限(内存拷贝开销)；</li><li>内核态独立地址空间TLB。</li></ul></li></ul></li></ol>]]></content>
       
       
       <categories>
@@ -204,11 +204,11 @@
     
     
     <entry>
-      <title>Operating System 1 - Introduction</title>
-      <link href="/liangjunyi.github.io/2022/06/19/operating-system-1-introduction/"/>
-      <url>/liangjunyi.github.io/2022/06/19/operating-system-1-introduction/</url>
+      <title>1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机）</title>
+      <link href="/liangjunyi.github.io/2022/06/19/1.1.1-cao-zuo-xi-tong-de-gai-nian-gong-neng-he-mu-biao-xi-tong-zi-yuan-de-guan-li-zhe-ti-gong-jie-kou-zuo-wei-kuo-chong-ji-qi-xu-ni-ji/"/>
+      <url>/liangjunyi.github.io/2022/06/19/1.1.1-cao-zuo-xi-tong-de-gai-nian-gong-neng-he-mu-biao-xi-tong-zi-yuan-de-guan-li-zhe-ti-gong-jie-kou-zuo-wei-kuo-chong-ji-qi-xu-ni-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="操作系统的定义"><a href="#操作系统的定义" class="headerlink" title="操作系统的定义"></a>操作系统的定义</h2><p><strong>用户角度：</strong>操作系统是一个控制软件</p><ul><li><p>管理应用程序</p></li><li><p>为应用程序提供服务</p></li><li><p>杀死应用程序</p></li><li><p>资源管理</p></li><li><p>管理外设&#x2F;分配资源</p></li></ul><ol><li><p>在操作系统下，进程&lt;-&gt;CPU, 文件&lt;-&gt;磁盘，地址空间&lt;-&gt;内存。</p></li><li><p>操作系统的架构层次：硬件之上，应用软件之下(为应用软件提供服务支持)。</p></li><li><p>Linux，Windows界面属于外壳shell(与User交互)，而不是内核kernel，而kernel是研究重点，在shell之下。</p></li><li><p>Kernel包括：</p><ul><li><p>CPU调度器</p></li><li><p>物理内存管理</p></li><li><p>虚拟内存管理</p></li><li><p>文件系统管理</p></li><li><p>中断处理和IO设备驱动 (底层硬件)</p></li></ul></li><li><p>(5) OS Kernel的特征：</p><ul><li><p>并发(指一段时间内多个程序运行；而并行是指一个时间点上多个程序运行，要求多个CPU):计算机系统中同时存在多个运行的程序，需要OS管理和调度</p></li><li><p>共享：“同时”访问 或 互斥共享</p></li><li><p>虚拟：利用多道程序设计技术，让每一个用户都觉得有一个计算机专门为他服务</p></li><li><p>异步：程序的执行不是一步到底的，而是走走停停，向前推进的速度不可预知</p></li><li><p>但只要运行环境相同，OS要保证程序运行的结果也相同</p></li></ul></li></ol><h2 id="操作系统的结构"><a href="#操作系统的结构" class="headerlink" title="操作系统的结构"></a>操作系统的结构</h2><p><strong>(1)简单的操作系统</strong><br>MS-DOS 不分模块的单体内核 (内部通过函数调用访问,缺点，复杂，紧耦合，易受攻击)</p><p><strong>(2)微内核</strong><br>尽可能把内核功能移植到用户空间，缺点性能低。</p><p><strong>(3)外核，内核分为一块</strong></p><p>一块负责和硬件打交道，另一部分和应用打交道。</p><p><strong>(4)虚拟机</strong><br>VMs(虚拟机)-&gt;VMM(虚拟机监视器)-&gt;物理机硬件，多操作系统共享硬件资源。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-熟悉的操作系统举例"><a href="#1-熟悉的操作系统举例" class="headerlink" title="1.熟悉的操作系统举例"></a>1.熟悉的操作系统举例</h2><p><img src="https://s2.loli.net/2022/06/21/k6HXmKLxBMzy4VR.png" alt="image-20220621111025642"></p><h2 id="2-操作系统的层次结构"><a href="#2-操作系统的层次结构" class="headerlink" title="2.操作系统的层次结构"></a>2.操作系统的层次结构</h2><p><img src="https://s2.loli.net/2022/06/21/mgKlxkNC8WE4y3s.png" alt="image-20220621111046027"></p><h2 id="3-操作系统的概念"><a href="#3-操作系统的概念" class="headerlink" title="3.操作系统的概念"></a>3.操作系统的概念</h2><ul><li>是系统最基本最核心的软件，属于系统软件</li><li>控制和管理整个计算机的硬件和软件资源</li><li>合理的组织、调度计算机的工作与资源的分配</li><li>为用户和其它软件提供方便的接口和环境</li></ul><p><img src="https://s2.loli.net/2022/06/21/E2AW5tQJvUo8OLq.png" alt="image-20220621111122182"></p><h2 id="4-操作系统的功能和目标"><a href="#4-操作系统的功能和目标" class="headerlink" title="4.操作系统的功能和目标"></a>4.操作系统的功能和目标</h2><ul><li>先放一张思维导图，大致知道操作系统的具体功能和目标，然后再一一展开叙述。</li></ul><p><img src="https://s2.loli.net/2022/06/21/GmkjeNg4HpYDy5B.png" alt="image-20220621111153388"></p><p>用一个直观的例子来理解上述图中操作系统的功能：</p><blockquote><ul><li>我们假设：用户是雇主，操作系统是工人（用来操作机器），计算机是机器（由处理机(CPU)、存储器、设备、文件几个部件构成）</li><li>工人有熟练的技能去控制和协调各个部件的工作，这就是操作系统对资源的管理</li><li>同时，工人必须接受雇主的命令，这就是“接口”</li><li>有了工人，机器就能发挥更大的作用，因此工人就成了“扩充机器”</li><li>工人操作机器、机器有了更大的作用比如GUI界面，于是工人便成了扩充机器，去扩充GUI界面等功能</li></ul></blockquote><h3 id="（1）作为计算机系统资源的管理者"><a href="#（1）作为计算机系统资源的管理者" class="headerlink" title="（1）作为计算机系统资源的管理者"></a>（1）作为计算机系统资源的管理者</h3><p>管理软硬件资源、合理的组织、调度计算机的工作与资源的分配</p><h4 id="1-处理器（CPU）管理"><a href="#1-处理器（CPU）管理" class="headerlink" title="1.处理器（CPU）管理"></a>1.处理器（CPU）管理</h4><ul><li>在多道程序环境下，cpu的分配和运行都以进程（或线程）为基本单位，因此对cpu的管理可理解为对进程的管理。进程管理的主要功能包括进程控制、进程同步、进程通信、死锁处理、处理机调度等。附上一张图理解对进程的管理。</li></ul><p><img src="https://s2.loli.net/2022/06/21/Ra2b85jhr34UcVx.png" alt="image-20220621111404154"></p><h4 id="2-存储器管理"><a href="#2-存储器管理" class="headerlink" title="2.存储器管理"></a>2.存储器管理</h4><ul><li>为多道程序的运行提供良好的环境，方便用户使用及提高内存的利用率，主要包括内存分配与回收、地址映射、内存保护与共享和内存扩充等功能。</li></ul><p><img src="https://s2.loli.net/2022/06/21/BsovC8NDUqzOb2E.png" alt="image-20220621111427133"></p><h4 id="3-文件管理"><a href="#3-文件管理" class="headerlink" title="3.文件管理"></a>3.文件管理</h4><ul><li>计算机中所有的信息都是以文件的形式存在的，操作系统中负责文件的管理的部分称为文件系统，文件管理包括文件存储空间的管理、目录管理及文件读写管理和保护等。</li></ul><p><img src="https://s2.loli.net/2022/06/21/dC2ORtiuVfNDsrT.png" alt="image-20220621111439925"></p><h4 id="4-设备管理"><a href="#4-设备管理" class="headerlink" title="4.设备管理"></a>4.设备管理</h4><ul><li>设备管理的主要任务是完成用户的I&#x2F;O请求，方便用户使用各种设备，并提高设备的利用率，主要包括缓存管理、设备分配、设备处理和虚拟设备等功能。</li></ul><p><img src="https://s2.loli.net/2022/06/21/xk7hVPsGezfubWL.png" alt="image-20220621111526215"></p><ul><li>以上4种管理功能都由“工人”负责，“雇主”无序关注。</li></ul><h3 id="（2）作为用户与计算机硬件系统之间的接口"><a href="#（2）作为用户与计算机硬件系统之间的接口" class="headerlink" title="（2）作为用户与计算机硬件系统之间的接口"></a>（2）作为用户与计算机硬件系统之间的接口</h3><ul><li>为了让用户方便、快捷、可靠的操作计算机硬件并执行自己的程序，操作系统提供了用户接口</li><li>操作系统提供的接口分为两类：命令接口和程序接口</li><li>命令接口：用户可以直接使用的，利用这些操作命令来组织和控制作业的执行</li><li>程序接口：用户通过程序间接使用的，编程人员可以使用它们来请求操作系统服务</li></ul><h4 id="1-命令接口"><a href="#1-命令接口" class="headerlink" title="1.命令接口"></a>1.命令接口</h4><ul><li><p>命令接口分为两类：联机命令接口和脱机命令接口，用户可以直接调用</p></li><li><p>联机命令接口：又称交互式命令接口，适用于分时或实时系统的接口，由一组键盘操作命令组成。用户输入一条指令，操作系统就执行一条指令；</p></li><li><p>脱机命令接口：又称批处理接口，使用于批处理系统，由一组作业控制命令组成。用户输入一堆指令，操作系统运行一堆指令。在操作系统运行这些命令时用户不可干预。</p></li></ul><p><img src="https://s2.loli.net/2022/06/21/rOsjNlF3umJ4hUD.png" alt="image-20220621111904435"></p><p><img src="https://s2.loli.net/2022/06/21/icfoJnKVyNTHB8q.png" alt="image-20220621111929735"></p><blockquote><p>批处理(Batch)，也称为批处理脚本。顾名思义，批处理就是对某对象进行批量的处理，通常被认为是一种简化的脚本语言，它应用于DOS和Windows系统中。批处理文件的扩展名为bat 。</p></blockquote><h4 id="2-程序接口"><a href="#2-程序接口" class="headerlink" title="2.程序接口"></a>2.程序接口</h4><ul><li>程序接口：由一组系统调用（也称广义指令）组成</li><li>用户通过在程序中使用这些系统调用来请求操作系统为其提供服务，只能通过用户程序间接调用</li><li>如使用各种外部设备、申请分配和回收内存及其它各种要求</li></ul><p><img src="https://s2.loli.net/2022/06/21/OoERwuxm3lAS2Va.png" alt="image-20220621112058606"></p><blockquote><p>动态链接库英文为DLL，是Dynamic Link Library的缩写。DLL是一个包含可由多个程序，同时使用的代码和数据的库。</p></blockquote><ul><li>比如常见的图形用户界面程序接口GUI</li></ul><p><img src="https://s2.loli.net/2022/06/21/UPvF9cm52VhMNzl.png" alt="image-20220621112114837"></p><blockquote><p>系统调用 &#x3D; 系统调用命令 &#x3D; 广义指令</p></blockquote><h4 id="3-作为扩充机器（虚拟机）"><a href="#3-作为扩充机器（虚拟机）" class="headerlink" title="3.作为扩充机器（虚拟机）"></a>3.作为扩充机器（虚拟机）</h4><p><img src="https://s2.loli.net/2022/06/21/T5bj4pN2qlWm8Vf.png" alt="image-20220621112441938"></p><ul><li>没有任何软件支持的计算机称为裸机</li><li>覆盖了软件的机器称为扩充机器或虚拟机</li></ul><p><img src="https://s2.loli.net/2022/06/21/qg175Jh6d3TKYMb.png" alt="image-20220621112456450"></p>]]></content>
       
       
       <categories>
@@ -259,8 +259,8 @@
     
     <entry>
       <title>JavaScript提高之面向对象(六)</title>
-      <link href="/liangjunyi.github.io/2022/06/13/javascript-7/"/>
-      <url>/liangjunyi.github.io/2022/06/13/javascript-7/</url>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-6/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-6/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -284,8 +284,8 @@
     
     <entry>
       <title>JavaScript提高之面向对象(六)</title>
-      <link href="/liangjunyi.github.io/2022/06/13/javascript-6/"/>
-      <url>/liangjunyi.github.io/2022/06/13/javascript-6/</url>
+      <link href="/liangjunyi.github.io/2022/06/13/javascript-7/"/>
+      <url>/liangjunyi.github.io/2022/06/13/javascript-7/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -451,9 +451,9 @@
             
             <tag> Python </tag>
             
-            <tag> Python test </tag>
-            
             <tag> Selenium </tag>
+            
+            <tag> Python test </tag>
             
         </tags>
       
@@ -509,9 +509,9 @@
       
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Kosaraju&#39;s Algorithm </tag>
             
@@ -596,42 +596,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
             
-            <tag> ROS </tag>
-            
-            <tag> python </tag>
-            
-            <tag> c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Implement Publisher</title>
-      <link href="/liangjunyi.github.io/2022/05/30/implement-publisher/"/>
-      <url>/liangjunyi.github.io/2022/05/30/implement-publisher/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Implement-Publisher"><a href="#Implement-Publisher" class="headerlink" title="Implement Publisher"></a>Implement Publisher</h1><h2 id="1-code-part"><a href="#1-code-part" class="headerlink" title="1. code part"></a>1. code part</h2><h3 id="1-python"><a href="#1-python" class="headerlink" title="(1) python"></a>(1) python</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python3</span><span class="token comment"># -*- coding: utf-8 -*-</span><span class="token comment">########################################################################</span><span class="token comment">####          Copyright 2020 GuYueHome (www.guyuehome.com).          ###</span><span class="token comment">########################################################################</span><span class="token comment"># 该例程将发布turtle1/cmd_vel话题，消息类型geometry_msgs::Twist</span><span class="token keyword">import</span> rospy<span class="token keyword">from</span> geometry_msgs<span class="token punctuation">.</span>msg <span class="token keyword">import</span> Twist<span class="token keyword">def</span> <span class="token function">velocity_publisher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment"># ROS节点初始化</span>    rospy<span class="token punctuation">.</span>init_node<span class="token punctuation">(</span><span class="token string">'velocity_publisher'</span><span class="token punctuation">,</span> anonymous<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token comment"># 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10</span>    turtle_vel_pub <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Publisher<span class="token punctuation">(</span><span class="token string">'/turtle1/cmd_vel'</span><span class="token punctuation">,</span> Twist<span class="token punctuation">,</span> queue_size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token comment">#设置循环的频率</span>    rate <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Rate<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>     <span class="token keyword">while</span> <span class="token keyword">not</span> rospy<span class="token punctuation">.</span>is_shutdown<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment"># 初始化geometry_msgs::Twist类型的消息</span>        vel_msg <span class="token operator">=</span> Twist<span class="token punctuation">(</span><span class="token punctuation">)</span>        vel_msg<span class="token punctuation">.</span>linear<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">0.5</span>        vel_msg<span class="token punctuation">.</span>angular<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token number">0.2</span><span class="token comment"># 发布消息</span>        turtle_vel_pub<span class="token punctuation">.</span>publish<span class="token punctuation">(</span>vel_msg<span class="token punctuation">)</span>        rospy<span class="token punctuation">.</span>loginfo<span class="token punctuation">(</span><span class="token string">"Publsh turtle velocity command[%0.2f m/s, %0.2f rad/s]"</span><span class="token punctuation">,</span> vel_msg<span class="token punctuation">.</span>linear<span class="token punctuation">.</span>x<span class="token punctuation">,</span> vel_msg<span class="token punctuation">.</span>angular<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token comment"># 按照循环频率延时</span>        rate<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>    <span class="token keyword">try</span><span class="token punctuation">:</span>        velocity_publisher<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token keyword">except</span> rospy<span class="token punctuation">.</span>ROSInterruptException<span class="token punctuation">:</span>        <span class="token keyword">pass</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-C"><a href="#2-C" class="headerlink" title="(2) C++"></a>(2) C++</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************Copyright 2020 GuYueHome (www.guyuehome.com).***********************************************************************&#x2F;&#x2F;** * 该例程将发布turtle1&#x2F;cmd_vel话题，消息类型geometry_msgs::Twist *&#x2F; #include &lt;ros&#x2F;ros.h&gt;#include &lt;geometry_msgs&#x2F;Twist.h&gt;int main(int argc, char **argv)&#123;&#x2F;&#x2F; ROS节点初始化ros::init(argc, argv, &quot;velocity_publisher&quot;);&#x2F;&#x2F; 创建节点句柄ros::NodeHandle n;&#x2F;&#x2F; 创建一个Publisher，发布名为&#x2F;turtle1&#x2F;cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10ros::Publisher turtle_vel_pub &#x3D; n.advertise&lt;geometry_msgs::Twist&gt;(&quot;&#x2F;turtle1&#x2F;cmd_vel&quot;, 10);&#x2F;&#x2F; 设置循环的频率ros::Rate loop_rate(10);int count &#x3D; 0;while (ros::ok())&#123;    &#x2F;&#x2F; 初始化geometry_msgs::Twist类型的消息geometry_msgs::Twist vel_msg;vel_msg.linear.x &#x3D; 0.5;vel_msg.angular.z &#x3D; 0.2;    &#x2F;&#x2F; 发布消息turtle_vel_pub.publish(vel_msg);ROS_INFO(&quot;Publsh turtle velocity command[%0.2f m&#x2F;s, %0.2f rad&#x2F;s]&quot;, vel_msg.linear.x, vel_msg.angular.z);    &#x2F;&#x2F; 按照循环频率延时    loop_rate.sleep();&#125;return 0;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-set-up-env"><a href="#2-set-up-env" class="headerlink" title="2. set up env"></a>2. set up env</h2><h3 id="1-python-1"><a href="#1-python-1" class="headerlink" title="(1) python"></a>(1) python</h3><ol><li>create a folder under your <code>&lt;package&gt;</code> named scripts, it is because distinguish between python and c++</li><li>go to the terminal</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node <span class="token comment"># another terminal</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun learning_topic velocity_publisher.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>we can see the turtle move</p><h3 id="2-C-1"><a href="#2-C-1" class="headerlink" title="(2) C++"></a>(2) C++</h3><ol><li><p>put the c code in the <code>&lt;package&gt;/src</code> folder </p></li><li><p>go to the <code>CMakeLists.txt</code> file, add these two command here</p><pre class="line-numbers language-none"><code class="language-none">add_executable(velocity_publisher src&#x2F;velocity_publisher.cpp)target_link_libraries(velocity_publisher $&#123;catkin_LIBRARIES&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="https://s2.loli.net/2022/05/30/zuVSMOZvqUNdGeQ.png" alt="image-20220530154424496"></p></li><li><p>go to the workspace root folder and open terminal here</p></li><li><p>compile the c++ file</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_make<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>if can see <code>0%</code> to <code>100%</code> means success</p></li><li><p>then go to the terminal </p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node <span class="token comment"># another terminal</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun learning_topic velocity_publisher<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> ROS </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
             <tag> Linux </tag>
-            
-            <tag> operating system </tag>
             
             <tag> ROS </tag>
             
@@ -662,9 +629,42 @@
       
         <tags>
             
+            <tag> operating system </tag>
+            
             <tag> Linux </tag>
             
+            <tag> ROS </tag>
+            
+            <tag> python </tag>
+            
+            <tag> c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Implement Publisher</title>
+      <link href="/liangjunyi.github.io/2022/05/30/implement-publisher/"/>
+      <url>/liangjunyi.github.io/2022/05/30/implement-publisher/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Implement-Publisher"><a href="#Implement-Publisher" class="headerlink" title="Implement Publisher"></a>Implement Publisher</h1><h2 id="1-code-part"><a href="#1-code-part" class="headerlink" title="1. code part"></a>1. code part</h2><h3 id="1-python"><a href="#1-python" class="headerlink" title="(1) python"></a>(1) python</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python3</span><span class="token comment"># -*- coding: utf-8 -*-</span><span class="token comment">########################################################################</span><span class="token comment">####          Copyright 2020 GuYueHome (www.guyuehome.com).          ###</span><span class="token comment">########################################################################</span><span class="token comment"># 该例程将发布turtle1/cmd_vel话题，消息类型geometry_msgs::Twist</span><span class="token keyword">import</span> rospy<span class="token keyword">from</span> geometry_msgs<span class="token punctuation">.</span>msg <span class="token keyword">import</span> Twist<span class="token keyword">def</span> <span class="token function">velocity_publisher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment"># ROS节点初始化</span>    rospy<span class="token punctuation">.</span>init_node<span class="token punctuation">(</span><span class="token string">'velocity_publisher'</span><span class="token punctuation">,</span> anonymous<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token comment"># 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10</span>    turtle_vel_pub <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Publisher<span class="token punctuation">(</span><span class="token string">'/turtle1/cmd_vel'</span><span class="token punctuation">,</span> Twist<span class="token punctuation">,</span> queue_size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token comment">#设置循环的频率</span>    rate <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Rate<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>     <span class="token keyword">while</span> <span class="token keyword">not</span> rospy<span class="token punctuation">.</span>is_shutdown<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment"># 初始化geometry_msgs::Twist类型的消息</span>        vel_msg <span class="token operator">=</span> Twist<span class="token punctuation">(</span><span class="token punctuation">)</span>        vel_msg<span class="token punctuation">.</span>linear<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">0.5</span>        vel_msg<span class="token punctuation">.</span>angular<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token number">0.2</span><span class="token comment"># 发布消息</span>        turtle_vel_pub<span class="token punctuation">.</span>publish<span class="token punctuation">(</span>vel_msg<span class="token punctuation">)</span>        rospy<span class="token punctuation">.</span>loginfo<span class="token punctuation">(</span><span class="token string">"Publsh turtle velocity command[%0.2f m/s, %0.2f rad/s]"</span><span class="token punctuation">,</span> vel_msg<span class="token punctuation">.</span>linear<span class="token punctuation">.</span>x<span class="token punctuation">,</span> vel_msg<span class="token punctuation">.</span>angular<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token comment"># 按照循环频率延时</span>        rate<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>    <span class="token keyword">try</span><span class="token punctuation">:</span>        velocity_publisher<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token keyword">except</span> rospy<span class="token punctuation">.</span>ROSInterruptException<span class="token punctuation">:</span>        <span class="token keyword">pass</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-C"><a href="#2-C" class="headerlink" title="(2) C++"></a>(2) C++</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;***********************************************************************Copyright 2020 GuYueHome (www.guyuehome.com).***********************************************************************&#x2F;&#x2F;** * 该例程将发布turtle1&#x2F;cmd_vel话题，消息类型geometry_msgs::Twist *&#x2F; #include &lt;ros&#x2F;ros.h&gt;#include &lt;geometry_msgs&#x2F;Twist.h&gt;int main(int argc, char **argv)&#123;&#x2F;&#x2F; ROS节点初始化ros::init(argc, argv, &quot;velocity_publisher&quot;);&#x2F;&#x2F; 创建节点句柄ros::NodeHandle n;&#x2F;&#x2F; 创建一个Publisher，发布名为&#x2F;turtle1&#x2F;cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10ros::Publisher turtle_vel_pub &#x3D; n.advertise&lt;geometry_msgs::Twist&gt;(&quot;&#x2F;turtle1&#x2F;cmd_vel&quot;, 10);&#x2F;&#x2F; 设置循环的频率ros::Rate loop_rate(10);int count &#x3D; 0;while (ros::ok())&#123;    &#x2F;&#x2F; 初始化geometry_msgs::Twist类型的消息geometry_msgs::Twist vel_msg;vel_msg.linear.x &#x3D; 0.5;vel_msg.angular.z &#x3D; 0.2;    &#x2F;&#x2F; 发布消息turtle_vel_pub.publish(vel_msg);ROS_INFO(&quot;Publsh turtle velocity command[%0.2f m&#x2F;s, %0.2f rad&#x2F;s]&quot;, vel_msg.linear.x, vel_msg.angular.z);    &#x2F;&#x2F; 按照循环频率延时    loop_rate.sleep();&#125;return 0;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-set-up-env"><a href="#2-set-up-env" class="headerlink" title="2. set up env"></a>2. set up env</h2><h3 id="1-python-1"><a href="#1-python-1" class="headerlink" title="(1) python"></a>(1) python</h3><ol><li>create a folder under your <code>&lt;package&gt;</code> named scripts, it is because distinguish between python and c++</li><li>go to the terminal</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node <span class="token comment"># another terminal</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun learning_topic velocity_publisher.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>we can see the turtle move</p><h3 id="2-C-1"><a href="#2-C-1" class="headerlink" title="(2) C++"></a>(2) C++</h3><ol><li><p>put the c code in the <code>&lt;package&gt;/src</code> folder </p></li><li><p>go to the <code>CMakeLists.txt</code> file, add these two command here</p><pre class="line-numbers language-none"><code class="language-none">add_executable(velocity_publisher src&#x2F;velocity_publisher.cpp)target_link_libraries(velocity_publisher $&#123;catkin_LIBRARIES&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="https://s2.loli.net/2022/05/30/zuVSMOZvqUNdGeQ.png" alt="image-20220530154424496"></p></li><li><p>go to the workspace root folder and open terminal here</p></li><li><p>compile the c++ file</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">catkin_make<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>if can see <code>0%</code> to <code>100%</code> means success</p></li><li><p>then go to the terminal </p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">roscore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun turtlesim turtlesim_node <span class="token comment"># another terminal</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rosrun learning_topic velocity_publisher<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> ROS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
             <tag> ROS </tag>
             
@@ -695,9 +695,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -722,9 +722,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
             <tag> ROS </tag>
             
@@ -751,9 +751,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
             <tag> ROS </tag>
             
@@ -780,9 +780,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
             <tag> ROS </tag>
             
@@ -809,9 +809,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -836,9 +836,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -863,9 +863,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -890,9 +890,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -917,9 +917,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -944,9 +944,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -971,9 +971,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -998,9 +998,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -1025,9 +1025,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -1116,9 +1116,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> operating system </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       

@@ -425,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
@@ -460,7 +460,8 @@
 </li>
 <li><p>DISK: 存放OS</p>
 <ul>
-<li>BIOS：基本I&#x2F;O处理系统( basic I&#x2F;O system); Bootloader: 加载OS到内存中。</li>
+<li>BIOS：基本I&#x2F;O处理系统( basic I&#x2F;O system); </li>
+<li>Bootloader: 加载OS到内存中。</li>
 </ul>
 </li>
 <li><p>当电脑通电时，段寄存器CS和指令寄存器IP能够确定一个内存地址，例如CS:IP &#x3D; 0xf000:fff0.</p>
@@ -469,8 +470,11 @@
 </li>
 <li><p>步骤：</p>
 <ul>
-<li>BIOS: 将Bootloader从磁盘的磁盘的引导扇区(512字节)加载到0x7c00；跳转到CS:IP&#x3D;0000:7c00的内存区域(以便下一步)</li>
-<li>Bootloader：将操作系统的代码和数据从硬盘加载到内存中；跳转到操作系统的起始地址。</li>
+<li><p>BIOS: 将Bootloader从磁盘的磁盘的引导扇区(512字节)加载到0x7c00；跳转到CS:IP&#x3D;0000:7c00的内存区域(以便下一步)</p>
+</li>
+<li><p>Bootloader：将操作系统的代码和数据从硬盘加载到内存中；跳转到操作系统的起始地址。</p>
+<p><img src="https://s2.loli.net/2022/06/19/hvBCcYUtNgW1S2f.png" alt="image-20220619135229640"></p>
+</li>
 </ul>
 </li>
 <li><p>系统调用：(来源于应用程序)应用程序主动向操作系统发出服务请求。</p>
@@ -497,14 +501,14 @@
 </li>
 <li><p>处理时间</p>
 <ul>
-<li>中断：异步；</li>
-<li>异常：同步；</li>
-<li>系统调用：同步或异步。</li>
+<li>中断：异步；（事件产生时，应用程序并不知道它什么时候会产生，只有当他产生了才去处理）</li>
+<li>异常：同步；（一定是执行到某一条特定指令时一定会产生）</li>
+<li>系统调用：同步或异步。（产生系统调用来看是同步的：一定是执行到某一条特定指令时一定会产生；从系统调用的返回时间来说：如果应用程序发出系统调用请求后一直在等待则为同步、如果应用程序去做别的事了就是异步）</li>
 </ul>
 </li>
 <li><p>响应</p>
 <ul>
-<li>中断：持续，对用户应用程序时透明的</li>
+<li>中断：持续，对用户应用程序是透明的</li>
 <li>异常：杀死或者重新执行意想不到的应用程序指令</li>
 <li>系统调用：等待和持续</li>
 </ul>
@@ -512,7 +516,8 @@
 </ol>
 <h2 id="中断-x2F-异常和系统调用"><a href="#中断-x2F-异常和系统调用" class="headerlink" title="中断&#x2F;异常和系统调用"></a>中断&#x2F;异常和系统调用</h2><ol>
 <li>中断&#x2F;异常处理机制<ul>
-<li>中断是外设的事件，异常是CPU的事件；中断&#x2F;异常迫使CPU访问一些被中断和异常服务访问的功能。</li>
+<li>中断是外设的事件，异常是CPU的事件；</li>
+<li>中断&#x2F;异常迫使CPU访问一些被中断和异常服务访问的功能。</li>
 </ul>
 </li>
 <li>中断处理机制<ul>
@@ -533,7 +538,11 @@
 <li>异常处理机制<ul>
 <li>异常：异常编号</li>
 <li>保存现场</li>
-<li>异常处理：杀死产生异常的程序；重新执行异常指令</li>
+<li>异常处理：<ul>
+<li>杀死产生异常的程序；</li>
+<li>重新执行异常指令</li>
+</ul>
+</li>
 <li>恢复现场</li>
 </ul>
 </li>
@@ -734,18 +743,18 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/06/19/operating-system-1-introduction/">
+                <a href="/liangjunyi.github.io/2022/06/19/1.1.1-cao-zuo-xi-tong-de-gai-nian-gong-neng-he-mu-biao-xi-tong-zi-yuan-de-guan-li-zhe-ti-gong-jie-kou-zuo-wei-kuo-chong-ji-qi-xu-ni-ji/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="Operating System 1 - Introduction">
+                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机）">
                         
-                        <span class="card-title">Operating System 1 - Introduction</span>
+                        <span class="card-title">1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Operating System 1 - Introduction
+                            1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机）
                         
                     </div>
                     <div class="publish-info">
@@ -959,7 +968,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">27.5k</span>
+                        class="white-color">28.4k</span>
             
             
             

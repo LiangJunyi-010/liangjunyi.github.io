@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Operating System 1 - Introduction, Home - Junyi Liang">
-    <meta name="description" content="Operating System 1 - Introduction">
+    <meta name="keywords" content="1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机）, Home - Junyi Liang">
+    <meta name="description" content="1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Operating System 1 - Introduction | Home - Junyi Liang</title>
+    <title>1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机） | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -270,7 +270,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Operating System 1 - Introduction</h1>
+                    <h1 class="description center-align post-title">1.1.1 操作系统的概念、功能和目标（系统资源的管理者、提供接口、作为扩充机器、虚拟机）</h1>
                 </div>
             </div>
         </div>
@@ -418,21 +418,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-06-19
+                    2022-06-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    477
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    4 Min
                 </div>
                 
 
@@ -455,60 +455,90 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="操作系统的定义"><a href="#操作系统的定义" class="headerlink" title="操作系统的定义"></a>操作系统的定义</h2><p><strong>用户角度：</strong>操作系统是一个控制软件</p>
+                <h2 id="1-熟悉的操作系统举例"><a href="#1-熟悉的操作系统举例" class="headerlink" title="1.熟悉的操作系统举例"></a>1.熟悉的操作系统举例</h2><p><img src="https://s2.loli.net/2022/06/21/k6HXmKLxBMzy4VR.png" alt="image-20220621111025642"></p>
+<h2 id="2-操作系统的层次结构"><a href="#2-操作系统的层次结构" class="headerlink" title="2.操作系统的层次结构"></a>2.操作系统的层次结构</h2><p><img src="https://s2.loli.net/2022/06/21/mgKlxkNC8WE4y3s.png" alt="image-20220621111046027"></p>
+<h2 id="3-操作系统的概念"><a href="#3-操作系统的概念" class="headerlink" title="3.操作系统的概念"></a>3.操作系统的概念</h2><ul>
+<li>是系统最基本最核心的软件，属于系统软件</li>
+<li>控制和管理整个计算机的硬件和软件资源</li>
+<li>合理的组织、调度计算机的工作与资源的分配</li>
+<li>为用户和其它软件提供方便的接口和环境</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/E2AW5tQJvUo8OLq.png" alt="image-20220621111122182"></p>
+<h2 id="4-操作系统的功能和目标"><a href="#4-操作系统的功能和目标" class="headerlink" title="4.操作系统的功能和目标"></a>4.操作系统的功能和目标</h2><ul>
+<li>先放一张思维导图，大致知道操作系统的具体功能和目标，然后再一一展开叙述。</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/GmkjeNg4HpYDy5B.png" alt="image-20220621111153388"></p>
+<p>用一个直观的例子来理解上述图中操作系统的功能：</p>
+<blockquote>
 <ul>
-<li><p>管理应用程序</p>
+<li>我们假设：用户是雇主，操作系统是工人（用来操作机器），计算机是机器（由处理机(CPU)、存储器、设备、文件几个部件构成）</li>
+<li>工人有熟练的技能去控制和协调各个部件的工作，这就是操作系统对资源的管理</li>
+<li>同时，工人必须接受雇主的命令，这就是“接口”</li>
+<li>有了工人，机器就能发挥更大的作用，因此工人就成了“扩充机器”</li>
+<li>工人操作机器、机器有了更大的作用比如GUI界面，于是工人便成了扩充机器，去扩充GUI界面等功能</li>
+</ul>
+</blockquote>
+<h3 id="（1）作为计算机系统资源的管理者"><a href="#（1）作为计算机系统资源的管理者" class="headerlink" title="（1）作为计算机系统资源的管理者"></a>（1）作为计算机系统资源的管理者</h3><p>管理软硬件资源、合理的组织、调度计算机的工作与资源的分配</p>
+<h4 id="1-处理器（CPU）管理"><a href="#1-处理器（CPU）管理" class="headerlink" title="1.处理器（CPU）管理"></a>1.处理器（CPU）管理</h4><ul>
+<li>在多道程序环境下，cpu的分配和运行都以进程（或线程）为基本单位，因此对cpu的管理可理解为对进程的管理。进程管理的主要功能包括进程控制、进程同步、进程通信、死锁处理、处理机调度等。附上一张图理解对进程的管理。</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/Ra2b85jhr34UcVx.png" alt="image-20220621111404154"></p>
+<h4 id="2-存储器管理"><a href="#2-存储器管理" class="headerlink" title="2.存储器管理"></a>2.存储器管理</h4><ul>
+<li>为多道程序的运行提供良好的环境，方便用户使用及提高内存的利用率，主要包括内存分配与回收、地址映射、内存保护与共享和内存扩充等功能。</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/BsovC8NDUqzOb2E.png" alt="image-20220621111427133"></p>
+<h4 id="3-文件管理"><a href="#3-文件管理" class="headerlink" title="3.文件管理"></a>3.文件管理</h4><ul>
+<li>计算机中所有的信息都是以文件的形式存在的，操作系统中负责文件的管理的部分称为文件系统，文件管理包括文件存储空间的管理、目录管理及文件读写管理和保护等。</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/dC2ORtiuVfNDsrT.png" alt="image-20220621111439925"></p>
+<h4 id="4-设备管理"><a href="#4-设备管理" class="headerlink" title="4.设备管理"></a>4.设备管理</h4><ul>
+<li>设备管理的主要任务是完成用户的I&#x2F;O请求，方便用户使用各种设备，并提高设备的利用率，主要包括缓存管理、设备分配、设备处理和虚拟设备等功能。</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/xk7hVPsGezfubWL.png" alt="image-20220621111526215"></p>
+<ul>
+<li>以上4种管理功能都由“工人”负责，“雇主”无序关注。</li>
+</ul>
+<h3 id="（2）作为用户与计算机硬件系统之间的接口"><a href="#（2）作为用户与计算机硬件系统之间的接口" class="headerlink" title="（2）作为用户与计算机硬件系统之间的接口"></a>（2）作为用户与计算机硬件系统之间的接口</h3><ul>
+<li>为了让用户方便、快捷、可靠的操作计算机硬件并执行自己的程序，操作系统提供了用户接口</li>
+<li>操作系统提供的接口分为两类：命令接口和程序接口</li>
+<li>命令接口：用户可以直接使用的，利用这些操作命令来组织和控制作业的执行</li>
+<li>程序接口：用户通过程序间接使用的，编程人员可以使用它们来请求操作系统服务</li>
+</ul>
+<h4 id="1-命令接口"><a href="#1-命令接口" class="headerlink" title="1.命令接口"></a>1.命令接口</h4><ul>
+<li><p>命令接口分为两类：联机命令接口和脱机命令接口，用户可以直接调用</p>
 </li>
-<li><p>为应用程序提供服务</p>
+<li><p>联机命令接口：又称交互式命令接口，适用于分时或实时系统的接口，由一组键盘操作命令组成。用户输入一条指令，操作系统就执行一条指令；</p>
 </li>
-<li><p>杀死应用程序</p>
-</li>
-<li><p>资源管理</p>
-</li>
-<li><p>管理外设&#x2F;分配资源</p>
+<li><p>脱机命令接口：又称批处理接口，使用于批处理系统，由一组作业控制命令组成。用户输入一堆指令，操作系统运行一堆指令。在操作系统运行这些命令时用户不可干预。</p>
 </li>
 </ul>
-<ol>
-<li><p>在操作系统下，进程&lt;-&gt;CPU, 文件&lt;-&gt;磁盘，地址空间&lt;-&gt;内存。</p>
-</li>
-<li><p>操作系统的架构层次：硬件之上，应用软件之下(为应用软件提供服务支持)。</p>
-</li>
-<li><p>Linux，Windows界面属于外壳shell(与User交互)，而不是内核kernel，而kernel是研究重点，在shell之下。</p>
-</li>
-<li><p>Kernel包括：</p>
-<ul>
-<li><p>CPU调度器</p>
-</li>
-<li><p>物理内存管理</p>
-</li>
-<li><p>虚拟内存管理</p>
-</li>
-<li><p>文件系统管理</p>
-</li>
-<li><p>中断处理和IO设备驱动 (底层硬件)</p>
-</li>
+<p><img src="https://s2.loli.net/2022/06/21/rOsjNlF3umJ4hUD.png" alt="image-20220621111904435"></p>
+<p><img src="https://s2.loli.net/2022/06/21/icfoJnKVyNTHB8q.png" alt="image-20220621111929735"></p>
+<blockquote>
+<p>批处理(Batch)，也称为批处理脚本。顾名思义，批处理就是对某对象进行批量的处理，通常被认为是一种简化的脚本语言，它应用于DOS和Windows系统中。批处理文件的扩展名为bat 。</p>
+</blockquote>
+<h4 id="2-程序接口"><a href="#2-程序接口" class="headerlink" title="2.程序接口"></a>2.程序接口</h4><ul>
+<li>程序接口：由一组系统调用（也称广义指令）组成</li>
+<li>用户通过在程序中使用这些系统调用来请求操作系统为其提供服务，只能通过用户程序间接调用</li>
+<li>如使用各种外部设备、申请分配和回收内存及其它各种要求</li>
 </ul>
-</li>
-<li><p>(5) OS Kernel的特征：</p>
+<p><img src="https://s2.loli.net/2022/06/21/OoERwuxm3lAS2Va.png" alt="image-20220621112058606"></p>
+<blockquote>
+<p>动态链接库英文为DLL，是Dynamic Link Library的缩写。DLL是一个包含可由多个程序，同时使用的代码和数据的库。</p>
+</blockquote>
 <ul>
-<li><p>并发(指一段时间内多个程序运行；而并行是指一个时间点上多个程序运行，要求多个CPU):计算机系统中同时存在多个运行的程序，需要OS管理和调度</p>
-</li>
-<li><p>共享：“同时”访问 或 互斥共享</p>
-</li>
-<li><p>虚拟：利用多道程序设计技术，让每一个用户都觉得有一个计算机专门为他服务</p>
-</li>
-<li><p>异步：程序的执行不是一步到底的，而是走走停停，向前推进的速度不可预知</p>
-</li>
-<li><p>但只要运行环境相同，OS要保证程序运行的结果也相同</p>
-</li>
+<li>比如常见的图形用户界面程序接口GUI</li>
 </ul>
-</li>
-</ol>
-<h2 id="操作系统的结构"><a href="#操作系统的结构" class="headerlink" title="操作系统的结构"></a>操作系统的结构</h2><p><strong>(1)简单的操作系统</strong><br>MS-DOS 不分模块的单体内核 (内部通过函数调用访问,缺点，复杂，紧耦合，易受攻击)</p>
-<p><strong>(2)微内核</strong><br>尽可能把内核功能移植到用户空间，缺点性能低。</p>
-<p><strong>(3)外核，内核分为一块</strong></p>
-<p>一块负责和硬件打交道，另一部分和应用打交道。</p>
-<p><strong>(4)虚拟机</strong><br>VMs(虚拟机)-&gt;VMM(虚拟机监视器)-&gt;物理机硬件，多操作系统共享硬件资源。</p>
+<p><img src="https://s2.loli.net/2022/06/21/UPvF9cm52VhMNzl.png" alt="image-20220621112114837"></p>
+<blockquote>
+<p>系统调用 &#x3D; 系统调用命令 &#x3D; 广义指令</p>
+</blockquote>
+<h4 id="3-作为扩充机器（虚拟机）"><a href="#3-作为扩充机器（虚拟机）" class="headerlink" title="3.作为扩充机器（虚拟机）"></a>3.作为扩充机器（虚拟机）</h4><p><img src="https://s2.loli.net/2022/06/21/T5bj4pN2qlWm8Vf.png" alt="image-20220621112441938"></p>
+<ul>
+<li>没有任何软件支持的计算机称为裸机</li>
+<li>覆盖了软件的机器称为扩充机器或虚拟机</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/21/qg175Jh6d3TKYMb.png" alt="image-20220621112456450"></p>
 
                 
             </div>
@@ -535,7 +565,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/19/operating-system-1-introduction/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/19/operating-system-1-introduction/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/19/1.1.1-cao-zuo-xi-tong-de-gai-nian-gong-neng-he-mu-biao-xi-tong-zi-yuan-de-guan-li-zhe-ti-gong-jie-kou-zuo-wei-kuo-chong-ji-qi-xu-ni-ji/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/19/1.1.1-cao-zuo-xi-tong-de-gai-nian-gong-neng-he-mu-biao-xi-tong-zi-yuan-de-guan-li-zhe-ti-gong-jie-kou-zuo-wei-kuo-chong-ji-qi-xu-ni-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -907,7 +937,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">27.5k</span>
+                        class="white-color">28.4k</span>
             
             
             
