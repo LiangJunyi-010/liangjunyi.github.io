@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript进阶之BOM技术(五), Home - Junyi Liang">
-    <meta name="description" content="JavaScript BOM概述，window对象的常见事件，定时器，JS执行机制，location对象，navigator对象，history对象">
+    <meta name="keywords" content="2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先）, Home - Junyi Liang">
+    <meta name="description" content="2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>JavaScript进阶之BOM技术(五) | Home - Junyi Liang</title>
+    <title>2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先） | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/06/13/CfhYScraDkoKPMd.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript进阶之BOM技术(五)</h1>
+                    <h1 class="description center-align post-title">2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先）</h1>
                 </div>
             </div>
         </div>
@@ -386,8 +386,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/liangjunyi.github.io/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
+                            <a href="/liangjunyi.github.io/tags/operating-system/">
+                                <span class="chip bg-color">operating system</span>
                             </a>
                         
                     </div>
@@ -398,8 +398,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/liangjunyi.github.io/categories/JavaScript/" class="post-category">
-                                JavaScript
+                            <a href="/liangjunyi.github.io/categories/Operating-System/" class="post-category">
+                                Operating System
                             </a>
                         
                     </div>
@@ -411,21 +411,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-06-13
+                    2022-06-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-06-13
+                    2022-06-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    65
                 </div>
                 
 
@@ -455,7 +455,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h4 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h4><p><img src="https://s2.loli.net/2022/06/22/ot82ispjvGBVDFJ.png" alt="image-20220622150108569"></p>
+<h4 id="1-先来先服务—FCFS"><a href="#1-先来先服务—FCFS" class="headerlink" title="1.先来先服务—FCFS"></a>1.先来先服务—FCFS</h4><ul>
+<li>First come first sever</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/22/iVqTCQGj1YcE2Wu.png" alt="image-20220622150128479"></p>
+<p><img src="https://s2.loli.net/2022/06/22/SoEZWXF6deRPk7m.png" alt="image-20220622150137853"></p>
+<h4 id="2-短作业优先—SJF"><a href="#2-短作业优先—SJF" class="headerlink" title="2.短作业优先—SJF"></a>2.短作业优先—SJF</h4><ul>
+<li>Shortest Job First</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/22/QCihWDGM1SPRFeb.png" alt="image-20220622150201710"></p>
+<ul>
+<li>非抢占式—SJF</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/22/oXiAk1usnlcbdV3.png" alt="image-20220622150219442"></p>
+<ul>
+<li>抢占式—SJF(SRTN)</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/22/c8dqtJSQDwvIzOk.png" alt="image-20220622150240056"></p>
+<p><img src="https://s2.loli.net/2022/06/22/PcCEZMBDXde1z4Q.png" alt="image-20220622150300154"></p>
+<ul>
+<li>注意几个细节</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/22/vEBUDSN9OztWrdm.png" alt="image-20220622150318165"></p>
+<h4 id="3-高响应比优先—HRRN"><a href="#3-高响应比优先—HRRN" class="headerlink" title="3.高响应比优先—HRRN"></a>3.高响应比优先—HRRN</h4><ul>
+<li>Highest Response Ratio Next</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/22/9afIhjdckgyZlbP.png" alt="image-20220622150331878"></p>
+<p><img src="https://s2.loli.net/2022/06/22/mDT9QJOh5rPloiF.png" alt="image-20220622150342301"></p>
+<p><img src="https://s2.loli.net/2022/06/22/IurUpPD1sdwijBc.png" alt="image-20220622150352036"></p>
+<h4 id="4-三种算法的对比和总结"><a href="#4-三种算法的对比和总结" class="headerlink" title="4.三种算法的对比和总结"></a>4.三种算法的对比和总结</h4><p><img src="https://s2.loli.net/2022/06/22/UaAkXWFfq25OM64.png" alt="image-20220622150407782"></p>
+
                 
             </div>
             <hr/>
@@ -471,7 +501,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/liangjunyi.github.io/about" rel="external nofollow noreferrer">生命是有光的</a>
+                    <a href="/liangjunyi.github.io/about" rel="external nofollow noreferrer">Liang Junyi</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -481,7 +511,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/13/javascript-5/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/13/javascript-5/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/22/2.2.4-cao-zuo-xi-tong-zhi-zuo-ye-jin-cheng-diao-du-suan-fa-fcfs-xian-lai-xian-fu-wu-sjf-duan-zuo-ye-you-xian-hrrn-gao-xiang-ying-bi-you-xian/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/22/2.2.4-cao-zuo-xi-tong-zhi-zuo-ye-jin-cheng-diao-du-suan-fa-fcfs-xian-lai-xian-fu-wu-sjf-duan-zuo-ye-you-xian-hrrn-gao-xiang-ying-bi-you-xian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -494,7 +524,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint policy. If reproduced, please indicate source
-                    <a href="/liangjunyi.github.io/about" target="_blank">生命是有光的</a>
+                    <a href="/liangjunyi.github.io/about" target="_blank">Liang Junyi</a>
                     !
                 </span>
             </div>
@@ -519,8 +549,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/liangjunyi.github.io/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
+                                <a href="/liangjunyi.github.io/tags/operating-system/">
+                                    <span class="chip bg-color">operating system</span>
                                 </a>
                             
                         </div>
@@ -568,45 +598,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/06/13/javascript-7/">
+                <a href="/liangjunyi.github.io/2022/06/22/2.2.4-cao-zuo-xi-tong-zhi-zuo-ye-jin-cheng-diao-du-suan-fa-fcfs-xian-lai-xian-fu-wu-sjf-duan-zuo-ye-you-xian-hrrn-gao-xiang-ying-bi-you-xian/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/06/13/CfhYScraDkoKPMd.png" class="responsive-img" alt="JavaScript提高之面向对象(六)">
+                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先）">
                         
-                        <span class="card-title">JavaScript提高之面向对象(六)</span>
+                        <span class="card-title">2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaScript 严格模式，严格模式中的变化，高阶函数，闭包，递归，浅拷贝和深拷贝，正则表达式
+                            2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先）
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/JavaScript/" class="post-category">
-                                    JavaScript
+                            <a href="/liangjunyi.github.io/categories/Operating-System/" class="post-category">
+                                    Operating System
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liangjunyi.github.io/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
                     </a>
                     
                 </div>
@@ -620,30 +652,30 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/06/13/javascript-4/">
+                <a href="/liangjunyi.github.io/2022/06/22/2.2.3-cao-zuo-xi-tong-zhi-diao-du-suan-fa-de-ping-jie-zhi-biao-cpu-li-yong-lu-xi-tong-tun-tu-liang-zhou-zhuan-shi-jian-deng-dai-shi-jian-xiang-ying-shi-jian/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/06/13/CfhYScraDkoKPMd.png" class="responsive-img" alt="JavaScript进阶之DOM技术(四)">
+                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="2.2.3 操作系统之调度算法的评价指标（cpu利用率、系统吞吐量、周转时间、等待时间、响应时间）">
                         
-                        <span class="card-title">JavaScript进阶之DOM技术(四)</span>
+                        <span class="card-title">2.2.3 操作系统之调度算法的评价指标（cpu利用率、系统吞吐量、周转时间、等待时间、响应时间）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaScript DOM简介，获取元素，事件基础，操作元素，节点操作，DOM核心，事件高级
+                            2.2.3 操作系统之调度算法的评价指标（cpu利用率、系统吞吐量、周转时间、等待时间、响应时间）
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liangjunyi.github.io/categories/JavaScript/" class="post-category">
-                                    JavaScript
+                            <a href="/liangjunyi.github.io/categories/Operating-System/" class="post-category">
+                                    Operating System
                                 </a>
                             
                             
@@ -653,8 +685,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liangjunyi.github.io/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/liangjunyi.github.io/tags/operating-system/">
+                        <span class="chip bg-color">operating system</span>
                     </a>
                     
                 </div>

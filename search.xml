@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>2.2.4 操作系统之作业/进程调度算法（FCFS先来先服务、SJF短作业优先、HRRN高响应比优先）</title>
+      <link href="/liangjunyi.github.io/2022/06/22/2.2.4-cao-zuo-xi-tong-zhi-zuo-ye-jin-cheng-diao-du-suan-fa-fcfs-xian-lai-xian-fu-wu-sjf-duan-zuo-ye-you-xian-hrrn-gao-xiang-ying-bi-you-xian/"/>
+      <url>/liangjunyi.github.io/2022/06/22/2.2.4-cao-zuo-xi-tong-zhi-zuo-ye-jin-cheng-diao-du-suan-fa-fcfs-xian-lai-xian-fu-wu-sjf-duan-zuo-ye-you-xian-hrrn-gao-xiang-ying-bi-you-xian/</url>
+      
+        <content type="html"><![CDATA[<h4 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h4><p><img src="https://s2.loli.net/2022/06/22/ot82ispjvGBVDFJ.png" alt="image-20220622150108569"></p><h4 id="1-先来先服务—FCFS"><a href="#1-先来先服务—FCFS" class="headerlink" title="1.先来先服务—FCFS"></a>1.先来先服务—FCFS</h4><ul><li>First come first sever</li></ul><p><img src="https://s2.loli.net/2022/06/22/iVqTCQGj1YcE2Wu.png" alt="image-20220622150128479"></p><p><img src="https://s2.loli.net/2022/06/22/SoEZWXF6deRPk7m.png" alt="image-20220622150137853"></p><h4 id="2-短作业优先—SJF"><a href="#2-短作业优先—SJF" class="headerlink" title="2.短作业优先—SJF"></a>2.短作业优先—SJF</h4><ul><li>Shortest Job First</li></ul><p><img src="https://s2.loli.net/2022/06/22/QCihWDGM1SPRFeb.png" alt="image-20220622150201710"></p><ul><li>非抢占式—SJF</li></ul><p><img src="https://s2.loli.net/2022/06/22/oXiAk1usnlcbdV3.png" alt="image-20220622150219442"></p><ul><li>抢占式—SJF(SRTN)</li></ul><p><img src="https://s2.loli.net/2022/06/22/c8dqtJSQDwvIzOk.png" alt="image-20220622150240056"></p><p><img src="https://s2.loli.net/2022/06/22/PcCEZMBDXde1z4Q.png" alt="image-20220622150300154"></p><ul><li>注意几个细节</li></ul><p><img src="https://s2.loli.net/2022/06/22/vEBUDSN9OztWrdm.png" alt="image-20220622150318165"></p><h4 id="3-高响应比优先—HRRN"><a href="#3-高响应比优先—HRRN" class="headerlink" title="3.高响应比优先—HRRN"></a>3.高响应比优先—HRRN</h4><ul><li>Highest Response Ratio Next</li></ul><p><img src="https://s2.loli.net/2022/06/22/9afIhjdckgyZlbP.png" alt="image-20220622150331878"></p><p><img src="https://s2.loli.net/2022/06/22/mDT9QJOh5rPloiF.png" alt="image-20220622150342301"></p><p><img src="https://s2.loli.net/2022/06/22/IurUpPD1sdwijBc.png" alt="image-20220622150352036"></p><h4 id="4-三种算法的对比和总结"><a href="#4-三种算法的对比和总结" class="headerlink" title="4.三种算法的对比和总结"></a>4.三种算法的对比和总结</h4><p><img src="https://s2.loli.net/2022/06/22/UaAkXWFfq25OM64.png" alt="image-20220622150407782"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2.2.3 操作系统之调度算法的评价指标（cpu利用率、系统吞吐量、周转时间、等待时间、响应时间）</title>
+      <link href="/liangjunyi.github.io/2022/06/22/2.2.3-cao-zuo-xi-tong-zhi-diao-du-suan-fa-de-ping-jie-zhi-biao-cpu-li-yong-lu-xi-tong-tun-tu-liang-zhou-zhuan-shi-jian-deng-dai-shi-jian-xiang-ying-shi-jian/"/>
+      <url>/liangjunyi.github.io/2022/06/22/2.2.3-cao-zuo-xi-tong-zhi-diao-du-suan-fa-de-ping-jie-zhi-biao-cpu-li-yong-lu-xi-tong-tun-tu-liang-zhou-zhuan-shi-jian-deng-dai-shi-jian-xiang-ying-shi-jian/</url>
+      
+        <content type="html"><![CDATA[<h4 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h4><p><img src="https://s2.loli.net/2022/06/22/AL3NjazkZu9xHnp.png" alt="image-20220622145812862"></p><h4 id="1-CPU利用率"><a href="#1-CPU利用率" class="headerlink" title="1.CPU利用率"></a>1.CPU利用率</h4><p><img src="https://s2.loli.net/2022/06/22/q9nzbtcGpWkgIlN.png" alt="image-20220622145826906"></p><h4 id="2-系统吞吐量"><a href="#2-系统吞吐量" class="headerlink" title="2.系统吞吐量"></a>2.系统吞吐量</h4><p><img src="https://s2.loli.net/2022/06/22/uZ6bnzYDk1SghdU.png" alt="image-20220622145852015"></p><h4 id="3-周转时间"><a href="#3-周转时间" class="headerlink" title="3.周转时间"></a>3.周转时间</h4><p><img src="https://s2.loli.net/2022/06/22/uaH3RwrSdKXVZ5J.png" alt="image-20220622145906116"></p><p><img src="https://s2.loli.net/2022/06/22/qrvs4nWFeyAk1uM.png" alt="image-20220622145921661"></p><h4 id="4-等待时间"><a href="#4-等待时间" class="headerlink" title="4.等待时间"></a>4.等待时间</h4><p><img src="https://s2.loli.net/2022/06/22/BPmg8Hx9oztI6aM.png" alt="image-20220622145935513"></p><h4 id="5-响应时间"><a href="#5-响应时间" class="headerlink" title="5.响应时间"></a>5.响应时间</h4><p><img src="https://s2.loli.net/2022/06/22/t9n4wuhNkbFgU5p.png" alt="image-20220622145952270"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2.2.2 操作系统之进程调度的时机（主动放弃与被动放弃）、切换与过程（广义与狭义）、方式（非剥夺与剥夺）</title>
       <link href="/liangjunyi.github.io/2022/06/22/2.2.2-cao-zuo-xi-tong-zhi-jin-cheng-diao-du-de-shi-ji-zhu-dong-fang-qi-yu-bei-dong-fang-qi-qie-huan-yu-guo-cheng-guang-yi-yu-xia-yi-fang-shi-fei-bo-duo-yu-bo-duo/"/>
       <url>/liangjunyi.github.io/2022/06/22/2.2.2-cao-zuo-xi-tong-zhi-jin-cheng-diao-du-de-shi-ji-zhu-dong-fang-qi-yu-bei-dong-fang-qi-qie-huan-yu-guo-cheng-guang-yi-yu-xia-yi-fang-shi-fei-bo-duo-yu-bo-duo/</url>
@@ -576,9 +626,9 @@
             
             <tag> Python </tag>
             
-            <tag> Python test </tag>
-            
             <tag> Selenium </tag>
+            
+            <tag> Python test </tag>
             
         </tags>
       
