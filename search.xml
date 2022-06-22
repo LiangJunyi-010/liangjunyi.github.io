@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>2.2.1操作系统之处理机调度的概念及层次</title>
+      <link href="/liangjunyi.github.io/2022/06/22/2.2.1-cao-zuo-xi-tong-zhi-chu-li-ji-diao-du-de-gai-nian-ji-ceng-ci/"/>
+      <url>/liangjunyi.github.io/2022/06/22/2.2.1-cao-zuo-xi-tong-zhi-chu-li-ji-diao-du-de-gai-nian-ji-ceng-ci/</url>
+      
+        <content type="html"><![CDATA[<h4 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h4><p><img src="https://s2.loli.net/2022/06/22/RKPclXFrLUAONu3.png" alt="image-20220622145057251"></p><h4 id="1-调度的基本概念"><a href="#1-调度的基本概念" class="headerlink" title="1.调度的基本概念"></a>1.调度的基本概念</h4><p><img src="https://s2.loli.net/2022/06/22/Sa7wB5J86eYN2CE.png" alt="image-20220622145112236"></p><h4 id="2-调度的三个层次"><a href="#2-调度的三个层次" class="headerlink" title="2.调度的三个层次"></a>2.调度的三个层次</h4><h5 id="（1）高级调度（-作业调度）"><a href="#（1）高级调度（-作业调度）" class="headerlink" title="（1）高级调度（ 作业调度）"></a>（1）高级调度（ 作业调度）</h5><p><img src="https://s2.loli.net/2022/06/22/p2NACeDaxJXrol5.png" alt="image-20220622145130248"></p><h5 id="（2）中级调度（内存调度）"><a href="#（2）中级调度（内存调度）" class="headerlink" title="（2）中级调度（内存调度）"></a>（2）中级调度（内存调度）</h5><p><img src="https://s2.loli.net/2022/06/22/MxgYLoUTj9CqdJ3.png" alt="image-20220622145145368"></p><h5 id="（3）进程的挂起状态与七状态模型"><a href="#（3）进程的挂起状态与七状态模型" class="headerlink" title="（3）进程的挂起状态与七状态模型"></a>（3）进程的<a href="https://so.csdn.net/so/search?q=%E6%8C%82%E8%B5%B7&spm=1001.2101.3001.7020">挂起</a>状态与七状态模型</h5><p><img src="https://s2.loli.net/2022/06/22/k5xs8PSqAWC94gy.png" alt="image-20220622145159237"></p><h5 id="（4）低级调度（进程调度）"><a href="#（4）低级调度（进程调度）" class="headerlink" title="（4）低级调度（进程调度）"></a>（4）低级调度（进程调度）</h5><p><img src="https://s2.loli.net/2022/06/22/SAwqX6GKaoVTenW.png" alt="image-20220622145214846"></p><h5 id="（5）三层调度的联系和对比"><a href="#（5）三层调度的联系和对比" class="headerlink" title="（5）三层调度的联系和对比"></a>（5）三层调度的联系和对比</h5><p><img src="https://s2.loli.net/2022/06/22/sMoEpNB5F3WrzAT.png" alt="image-20220622145228286"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2.1.4 进程之间的通信（共享通信、消息传递、管道通信）</title>
       <link href="/liangjunyi.github.io/2022/06/22/2.1.5-cao-zuo-xi-tong-zhi-xian-cheng-gai-nian-yu-duo-xian-cheng-mo-xing/"/>
       <url>/liangjunyi.github.io/2022/06/22/2.1.5-cao-zuo-xi-tong-zhi-xian-cheng-gai-nian-yu-duo-xian-cheng-mo-xing/</url>
@@ -526,9 +551,9 @@
             
             <tag> Python </tag>
             
-            <tag> Python test </tag>
-            
             <tag> Selenium </tag>
+            
+            <tag> Python test </tag>
             
         </tags>
       
