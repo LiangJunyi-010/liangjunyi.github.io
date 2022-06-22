@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="2.1.4 进程之间的通信（共享通信、消息传递、管道通信）, Home - Junyi Liang">
-    <meta name="description" content="2.1.4 进程之间的通信（共享通信、消息传递、管道通信）">
+    <meta name="keywords" content="2.3.4 操作系统之信号量机制（整型信号量、记录型信号量P、V）, Home - Junyi Liang">
+    <meta name="description" content="2.3.4 操作系统之信号量机制（整型信号量、记录型信号量P、V）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>2.1.4 进程之间的通信（共享通信、消息传递、管道通信） | Home - Junyi Liang</title>
+    <title>2.3.4 操作系统之信号量机制（整型信号量、记录型信号量P、V） | Home - Junyi Liang</title>
     <link rel="icon" type="image/png" href="/liangjunyi.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liangjunyi.github.io/libs/awesome/css/all.min.css">
@@ -270,7 +270,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">2.1.4 进程之间的通信（共享通信、消息传递、管道通信）</h1>
+                    <h1 class="description center-align post-title">2.3.4 操作系统之信号量机制（整型信号量、记录型信号量P、V）</h1>
                 </div>
             </div>
         </div>
@@ -425,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    149
+                    109
                 </div>
                 
 
@@ -455,21 +455,27 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h3><p><img src="https://s2.loli.net/2022/06/22/yrpt7R68aUI3zx9.png" alt="image-20220622144155478"></p>
-<h3 id="1-什么是进程通信？"><a href="#1-什么是进程通信？" class="headerlink" title="1.什么是进程通信？"></a>1.什么是进程通信？</h3><ul>
-<li>图中我们可以知道什么是进程通信，以及进程通信的低级和高级方式；</li>
-<li>我们还可以知道为什么要引入进程通信方式，以及它的意义</li>
+                <h4 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h4><p><img src="https://s2.loli.net/2022/06/22/XoIHdB7gnQhEO82.png" alt="image-20220622152311995"></p>
+<h4 id="1-为什么引入信号量机制？"><a href="#1-为什么引入信号量机制？" class="headerlink" title="1.为什么引入信号量机制？"></a>1.为什么引入信号量机制？</h4><ul>
+<li>为了更好的解决进程互斥与同步的问题</li>
 </ul>
-<p><img src="https://s2.loli.net/2022/06/22/gGiOmH9kAx8L4dh.png" alt="image-20220622144227582"></p>
-<h3 id="2-共享存储"><a href="#2-共享存储" class="headerlink" title="2.共享存储"></a>2.共享存储</h3><ul>
-<li>共享一块大家都可以访问的空间，一次只能有一个进程进行读或写操作</li>
+<p><img src="https://s2.loli.net/2022/06/22/5jxRYZni14Wgh7l.png" alt="image-20220622152342718"></p>
+<h4 id="2-什么是信号量机制？"><a href="#2-什么是信号量机制？" class="headerlink" title="2.什么是信号量机制？"></a>2.什么是信号量机制？</h4><p><img src="https://s2.loli.net/2022/06/22/Udm71XOWI5wnoeM.png" alt="image-20220622152358132"></p>
+<h4 id="3-整型信号量"><a href="#3-整型信号量" class="headerlink" title="3.整型信号量"></a>3.整型信号量</h4><p><img src="https://s2.loli.net/2022/06/22/RjqELfw82PnxsH3.png" alt="image-20220622152428146"></p>
+<h4 id="4-记录型信号量"><a href="#4-记录型信号量" class="headerlink" title="4.记录型信号量"></a>4.记录型信号量</h4><p><img src="https://s2.loli.net/2022/06/22/x4eWu2g85pmCBPL.png" alt="image-20220622152443229"></p>
+<h5 id="（1）举一个生动形象的例子了解记录型信号量"><a href="#（1）举一个生动形象的例子了解记录型信号量" class="headerlink" title="（1）举一个生动形象的例子了解记录型信号量"></a>（1）举一个生动形象的例子了解记录型信号量</h5><ul>
+<li>一张图咱们回忆一下进程的状态</li>
 </ul>
-<p><img src="https://s2.loli.net/2022/06/22/RVscEbqWnyxukvJ.png" alt="image-20220622144252938"></p>
-<h3 id="3-管道通信"><a href="#3-管道通信" class="headerlink" title="3.管道通信"></a>3.管道通信</h3><p><img src="https://s2.loli.net/2022/06/22/ICgRpuVQWfkix4P.png" alt="image-20220622144318225"></p>
-<h3 id="4-消息传递"><a href="#4-消息传递" class="headerlink" title="4.消息传递"></a>4.消息传递</h3><ul>
-<li>发送信息的进程将消息头写好，接受信息进程根据消息头读取信息或寻找信封是哪一个</li>
+<p><img src="https://s2.loli.net/2022/06/22/SHlcPDjt6BNKow3.png" alt="image-20220622152506520"></p>
+<ul>
+<li>一个例子</li>
 </ul>
-<p><img src="https://s2.loli.net/2022/06/22/hSJ1kuv8DfTrFjH.png" alt="image-20220622144341383"></p>
+<p><img src="https://s2.loli.net/2022/06/22/pJ2m3HXbgSuZMso.png" alt="image-20220622152524234"></p>
+<p><img src="https://s2.loli.net/2022/06/22/SMRyIAX5mblxQpJ.png" alt="image-20220622152535745"></p>
+<p><img src="https://s2.loli.net/2022/06/22/P6dYZVnUuDewOaI.png" alt="image-20220622152548328"></p>
+<p><img src="https://s2.loli.net/2022/06/22/frwBIsVyRTnhUuY.png" alt="image-20220622152558442"></p>
+<p><img src="https://s2.loli.net/2022/06/22/PkIpoBM8qOEs1gt.png" alt="image-20220622152609098"></p>
+<h5 id="（2）梳理一下记录型信号量的知识点（P、V）"><a href="#（2）梳理一下记录型信号量的知识点（P、V）" class="headerlink" title="（2）梳理一下记录型信号量的知识点（P、V）"></a>（2）梳理一下记录型信号量的知识点（P、V）</h5><p><img src="https://s2.loli.net/2022/06/22/bW74DxjgI5yMKQP.png" alt="image-20220622152625070"></p>
 
                 
             </div>
@@ -496,7 +502,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/22/2.1.4-jin-cheng-zhi-jian-de-tong-xin-gong-xiang-tong-xin-xiao-xi-chuan-di-guan-dao-tong-xin/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/22/2.1.4-jin-cheng-zhi-jian-de-tong-xin-gong-xiang-tong-xin-xiao-xi-chuan-di-guan-dao-tong-xin/</a>
+                    <a href="https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/22/2.3.4-cao-zuo-xi-tong-zhi-xin-hao-liang-ji-zhi-zheng-xing-xin-hao-liang-ji-lu-xing-xin-hao-liang-p-v/">https://LiangJunyi-010.github.io/liangjunyi.github.io/2022/06/22/2.3.4-cao-zuo-xi-tong-zhi-xin-hao-liang-ji-zhi-zheng-xing-xin-hao-liang-ji-lu-xing-xin-hao-liang-p-v/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -583,28 +589,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/06/22/2.1.5-cao-zuo-xi-tong-zhi-xian-cheng-gai-nian-yu-duo-xian-cheng-mo-xing/">
+                <a href="/liangjunyi.github.io/2022/06/22/2.3.4-cao-zuo-xi-tong-zhi-xin-hao-liang-ji-zhi-zheng-xing-xin-hao-liang-ji-lu-xing-xin-hao-liang-p-v/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="2.1.4 进程之间的通信（共享通信、消息传递、管道通信）">
+                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="2.3.4 操作系统之信号量机制（整型信号量、记录型信号量P、V）">
                         
-                        <span class="card-title">2.1.4 进程之间的通信（共享通信、消息传递、管道通信）</span>
+                        <span class="card-title">2.3.4 操作系统之信号量机制（整型信号量、记录型信号量P、V）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            2.1.4 进程之间的通信（共享通信、消息传递、管道通信）
+                            2.3.4 操作系统之信号量机制（整型信号量、记录型信号量P、V）
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -617,6 +624,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -635,18 +643,18 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liangjunyi.github.io/2022/06/22/2.1.3-cao-zuo-xi-tong-zhi-yuan-yu-shi-xian-dui-jin-cheng-de-kong-zhi/">
+                <a href="/liangjunyi.github.io/2022/06/22/2.3.3-cao-zuo-xi-tong-zhi-shi-xian-lin-jie-qu-jin-cheng-hu-chi-de-ying-jian-shi-xian-fang-fa/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="2.1.3 操作系统之原语实现对进程的控制">
+                        <img src="https://s2.loli.net/2022/06/19/ZNwHrdVcv2Kih1a.png" class="responsive-img" alt="2.3.3 操作系统之实现临界区进程互斥的硬件实现方法">
                         
-                        <span class="card-title">2.1.3 操作系统之原语实现对进程的控制</span>
+                        <span class="card-title">2.3.3 操作系统之实现临界区进程互斥的硬件实现方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            2.1.3 操作系统之原语实现对进程的控制
+                            2.3.3 操作系统之实现临界区进程互斥的硬件实现方法
                         
                     </div>
                     <div class="publish-info">
