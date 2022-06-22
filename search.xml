@@ -5,6 +5,31 @@
     
     <entry>
       <title>2.1.4 进程之间的通信（共享通信、消息传递、管道通信）</title>
+      <link href="/liangjunyi.github.io/2022/06/22/2.1.5-cao-zuo-xi-tong-zhi-xian-cheng-gai-nian-yu-duo-xian-cheng-mo-xing/"/>
+      <url>/liangjunyi.github.io/2022/06/22/2.1.5-cao-zuo-xi-tong-zhi-xian-cheng-gai-nian-yu-duo-xian-cheng-mo-xing/</url>
+      
+        <content type="html"><![CDATA[<h3 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h3><p><img src="https://s2.loli.net/2022/06/22/taBpDyKwYd9qNGs.png" alt="image-20220622144520100"></p><h3 id="1-为什么要引入线程？"><a href="#1-为什么要引入线程？" class="headerlink" title="1.为什么要引入线程？"></a>1.为什么要引入线程？</h3><p><img src="https://s2.loli.net/2022/06/22/MkLWR1UXerbYvAF.png" alt="image-20220622144535055"></p><ul><li>为了方便于理解，我打开了我的任务管理器，可以看出chrome一个进程，下面有很多分支，可以把这些分支当做线程看待，PID即进程和线程都有的标识符。</li></ul><p><img src="https://s2.loli.net/2022/06/22/TgkBl6NDSWZF9rL.png" alt="image-20220622144550774"></p><h3 id="2-什么是线程？"><a href="#2-什么是线程？" class="headerlink" title="2.什么是线程？"></a>2.什么是线程？</h3><p><img src="https://s2.loli.net/2022/06/22/DRcCwfdtGFyoOY2.png" alt="image-20220622144604040"></p><h3 id="3-引入线程带来的变化及进程与线程的比较"><a href="#3-引入线程带来的变化及进程与线程的比较" class="headerlink" title="3.引入线程带来的变化及进程与线程的比较"></a>3.引入线程带来的变化及进程与线程的比较</h3><p><img src="https://s2.loli.net/2022/06/22/1Lld5ihYqzGZs6H.png" alt="image-20220622144616321"></p><h3 id="4-线程的属性"><a href="#4-线程的属性" class="headerlink" title="4.线程的属性"></a>4.线程的属性</h3><p><img src="https://s2.loli.net/2022/06/22/qFXdQjt1wEA2JeB.png" alt="image-20220622144631630"></p><h3 id="5-线程的实现方式"><a href="#5-线程的实现方式" class="headerlink" title="5.线程的实现方式"></a>5.线程的实现方式</h3><ul><li>前面我们了解了引入线程的好处和引入线程的变化，以及线程的属性，那么线程如何实现呢？</li><li>线程的实现分为两类：<code>用户级线程</code>(User-Level Thread,UTL)和<code>内核级线程</code>(Kernel-Level Thread, KTL)l。内核级线程又称<code>内核支持的线程</code>。</li></ul><h4 id="（1）用户级线程"><a href="#（1）用户级线程" class="headerlink" title="（1）用户级线程"></a>（1）用户级线程</h4><p><img src="https://s2.loli.net/2022/06/22/vd5Me1UgcPWHTfB.png" alt="image-20220622144653647"></p><h4 id="（2）内核级线程"><a href="#（2）内核级线程" class="headerlink" title="（2）内核级线程"></a>（2）内核级线程</h4><p><img src="https://s2.loli.net/2022/06/22/WyqTCvDBcISrKi5.png" alt="image-20220622144707510"></p><h4 id="（3）特殊的组合方式及重点注意"><a href="#（3）特殊的组合方式及重点注意" class="headerlink" title="（3）特殊的组合方式及重点注意"></a>（3）特殊的组合方式及重点注意</h4><p><img src="https://s2.loli.net/2022/06/22/Z3xOgo1s4Q7qYHk.png" alt="image-20220622144723973"></p><h3 id="6-多线程模型"><a href="#6-多线程模型" class="headerlink" title="6.多线程模型"></a>6.多线程模型</h3><ul><li>前面我们提到了线程的实现方式，有用户级和内核级。那么这两种模式的交叉组合就会产生几种不一样的组织结构，即不一样的模型。</li></ul><h4 id="（1）多对一模型"><a href="#（1）多对一模型" class="headerlink" title="（1）多对一模型"></a>（1）多对一模型</h4><p><img src="https://s2.loli.net/2022/06/22/Ix41BqlZYnsDewN.png" alt="image-20220622144803020"></p><h4 id="（2）一对一模型"><a href="#（2）一对一模型" class="headerlink" title="（2）一对一模型"></a>（2）一对一模型</h4><p><img src="https://s2.loli.net/2022/06/22/cJLrEpx3lTS428h.png" alt="image-20220622144816731"></p><h4 id="（3）多对多模型"><a href="#（3）多对多模型" class="headerlink" title="（3）多对多模型"></a>（3）多对多模型</h4><ul><li>此种模型效率是三种模型中最好的</li></ul><p><img src="https://s2.loli.net/2022/06/22/lYEW89ZsIGqiAX4.png" alt="image-20220622144837010"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2.1.4 进程之间的通信（共享通信、消息传递、管道通信）</title>
       <link href="/liangjunyi.github.io/2022/06/22/2.1.4-jin-cheng-zhi-jian-de-tong-xin-gong-xiang-tong-xin-xiao-xi-chuan-di-guan-dao-tong-xin/"/>
       <url>/liangjunyi.github.io/2022/06/22/2.1.4-jin-cheng-zhi-jian-de-tong-xin-gong-xiang-tong-xin-xiao-xi-chuan-di-guan-dao-tong-xin/</url>
       
