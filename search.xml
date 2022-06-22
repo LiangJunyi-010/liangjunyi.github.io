@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>2.3.1 进程的同步与互斥</title>
+      <link href="/liangjunyi.github.io/2022/06/22/2.3.1-jin-cheng-de-tong-bu-yu-hu-chi/"/>
+      <url>/liangjunyi.github.io/2022/06/22/2.3.1-jin-cheng-de-tong-bu-yu-hu-chi/</url>
+      
+        <content type="html"><![CDATA[<h4 id="0-思维导图"><a href="#0-思维导图" class="headerlink" title="0.思维导图"></a>0.思维导图</h4><p><img src="https://s2.loli.net/2022/06/22/MFjmJZUdbQisvrY.png" alt="image-20220622151424484"></p><h4 id="1-进程同步"><a href="#1-进程同步" class="headerlink" title="1.进程同步"></a>1.进程同步</h4><ul><li>同步也称为直接制约关系。</li><li>在多道程序环境下，进程是并发执行的，不同进程之间存在着不同的相互制约关系。为了协调进程之间的相互制约关系,如等待、传递信息等，引入了进程同步的概念。进程同步是为了解决进程的异步问题。</li><li>一个简单的例子来理解这个概念。</li><li>例如，让系统计算1 + 2x3，假设系统产生两个进程: 一个是加法进程，一个是乘法进程。要让计算结果是正确的，一定要让加法进程发生在乘法进程之后,但实际上操作系统具有异步性,若不加以制约，加法进程发生在乘法进程之前是绝对有可能的，因此要制定一定的机制去约束加法进程，让它在乘法进程完成之后才发生。</li></ul><blockquote><p>异步性：进程具有异步性的特征。异步性是指，各<a href="https://so.csdn.net/so/search?q=%E5%B9%B6%E5%8F%91&spm=1001.2101.3001.7020">并发</a>执行的进程以各自独立的、不可预知的速度向前推进。</p></blockquote><h4 id="2-进程互斥"><a href="#2-进程互斥" class="headerlink" title="2.进程互斥"></a>2.进程互斥</h4><ul><li>互斥，亦称间接制约关系。进程互斥指当一个进程访问某临界资源时，另一个想要访问该临界资源的进程必须等待。当前访问临界资源的进程访问结束，释放该资源之后，另一个进程才能去访问临界资源。</li><li>在这里需复习一下临界资源的概念。</li><li>我们把一个时间段内只允许一个进程使用的资源称为临界资源。许多物理设备(比如摄像头、打印机)都属于临界资源。此外还有许多变量、数据、内存缓冲区等都属于临界资源。</li><li>对临界资源的访问，必须互斥地进行。</li></ul><p><img src="https://s2.loli.net/2022/06/22/mopxkX65ncr3DK2.png" alt="image-20220622151526495"></p><ul><li>为了禁止两个进程同时进入<code>临界区</code>，需遵循以下准则</li></ul><p><img src="https://s2.loli.net/2022/06/22/UuOM5yHCh793xWR.png" alt="image-20220622151548520"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Operating System </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2.2.5 操作系统之调度算法（时间片轮转调度算法、优先级调度算法、多级反馈队列调度算法）</title>
       <link href="/liangjunyi.github.io/2022/06/22/2.2.5-cao-zuo-xi-tong-zhi-diao-du-suan-fa-shi-jian-pian-lun-zhuan-diao-du-suan-fa-you-xian-ji-diao-du-suan-fa-duo-ji-fan-kui-dui-lie-diao-du-suan-fa/"/>
       <url>/liangjunyi.github.io/2022/06/22/2.2.5-cao-zuo-xi-tong-zhi-diao-du-suan-fa-shi-jian-pian-lun-zhuan-diao-du-suan-fa-you-xian-ji-diao-du-suan-fa-duo-ji-fan-kui-dui-lie-diao-du-suan-fa/</url>
